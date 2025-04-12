@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kursy Języka Angielskiego - Step Up Speak</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+    
+        .button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+    
+        .button:active {
+            background-color: #388e3c;
+            transform: scale(1);
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            position: relative;
+            font-size: 1.2em;
+        }
+
+        header img {
+            width: 130px;
+            height: auto;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5em;
+            margin: 0 20px;
+            padding: 12px 20px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #4CAF50;
+            border-radius: 5px;
+        }
+
+        .course-container {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .course-container h2 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .course-container p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            line-height: 1.5;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .course-list {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .course {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 35px;
+            margin: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .course h3 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #4CAF50;
+        }
+
+        .course p {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Шапка -->
+    <header>
+        <a href="index.html">
+            <img src="Images/LogoSchool.png" alt="Step Up Speak Logo">
+        </a>
+        <h1>Step Up Speak</h1>
+    </header>
+
+    <!-- Навигация -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="courses.html">Kursy</a>
+        <a href="pricing.html">Ceny</a>
+        <a href="contacts.html">Kontakty</a>
+        <a href="blog.html">Blog</a>
+    </nav>
+
+    <!-- Страница курсов английского -->
+    <section class="course-container">
+        <h2>Kursy Języka Angielskiego</h2>
+        <p>Oferujemy kursy języka angielskiego na różnych poziomach zaawansowania, od A1 do B2, dostosowane do indywidualnych potrzeb uczniów. Kursy obejmują różnorodne tematy i umiejętności komunikacyjne, pozwalając Ci rozwijać biegłość w języku angielskim.</p>
+
+        <div class="course-list">
+            <div class="course">
+                <h3>Angielski A1</h3>
+                <p>Podstawowy kurs dla osób, które dopiero zaczynają naukę języka angielskiego. Nauczysz się podstawowych zwrotów i zasad gramatycznych w codziennych sytuacjach.</p>
+            </div>
+            <div class="course">
+                <h3>Angielski A2</h3>
+                <p>Kontynuacja kursu A1, rozszerzająca umiejętności w zakresie gramatyki i słownictwa. Kurs pomaga lepiej komunikować się w prostych sytuacjach.</p>
+            </div>
+            <div class="course">
+                <h3>Angielski B1</h3>
+                <p>Kurs średniozaawansowany, który pomaga w płynniejszym posługiwaniu się językiem angielskim. Rozszerzenie słownictwa i umiejętności komunikacyjnych w różnych kontekstach.</p>
+            </div>
+            <div class="course">
+                <h3>Angielski B2</h3>
+                <p>Zaawansowany kurs, który umożliwia swobodne porozumiewanie się w angielskim. Kurs pomoże w rozwoju bardziej zaawansowanej gramatyki, słownictwa i umiejętności konwersacyjnych.</p>
+            </div>
+        </div>
+
+        <a href="enroll.html" class="button">Zapisz się na kurs</a>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <p>&copy; 2024 Step Up Speak. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

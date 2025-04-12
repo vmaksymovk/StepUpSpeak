@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Step Up Speak | Porady i Wskazówki Językowe</title>
+    <meta name="description" content="Odkryj nasz blog z poradami językowymi. Skuteczne metody nauki angielskiego, wskazówki gramatyczne i strategie efektywnej nauki. Zostań mistrzem języka!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2E8B57;
+            --primary-dark: #276749;
+            --primary-light: #48BB78;
+            --secondary-color: #3182CE;
+            --accent-color: #DD6B20;
+            --text-color: #2D3748;
+            --text-light: #718096;
+            --background-light: #F7FAFC;
+            --background-gradient: linear-gradient(135deg, #f0f9f0 0%, #e6f4e6 100%);
+            --white: #FFFFFF;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: var(--background-light);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 1.5rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: var(--shadow-md);
+            position: relative;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        header img {
+            width: 100px;
+            height: auto;
+            transition: var(--transition);
+        }
+
+        header img:hover {
+            transform: scale(1.05);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: -0.5px;
+        }
+
+        .tagline {
+            font-size: 1rem;
+            font-weight: 300;
+            opacity: 0.9;
+            margin-top: 0.3rem;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: var(--text-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-sm);
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin: 0 1rem;
+            padding: 0.7rem 1.5rem;
+            transition: var(--transition);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        nav a:hover, nav a:focus {
+            background-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        nav a i {
+            font-size: 1.1rem;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            padding-bottom: 4rem;
+        }
+
+        /* Blog Hero */
+        .blog-hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.05)" d="M0,0 L100,0 L100,100 L0,100 Z"></path></svg>');
+            background-size: cover;
+            opacity: 0.1;
+        }
+
+        .blog-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .blog-hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .blog-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        /* Blog Articles */
+        .blog-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .article-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .article-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .article-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .article-header {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .article-header h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-right: 1rem;
+        }
+        
+
+        .article-arrow {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+
+        .article-arrow.open {
+            transform: rotate(180deg);
+        }
+
+        .article-excerpt {
+            padding: 0 1.5rem 1.5rem;
+            font-size: 1.1rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .article-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+            background: rgba(72, 187, 120, 0.05);
+        }
+
+        .article-content-inner {
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        .article-content p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .article-content strong {
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+
+        /* Categories */
+        .category-filter {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .category-btn {
+            padding: 0.6rem 1.2rem;
+            background: var(--white);
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .category-btn:hover, .category-btn.active {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Newsletter */
+        .newsletter-section {
+            background: var(--background-gradient);
+            padding: 3rem 2rem;
+            margin-top: 3rem;
+            text-align: center;
+            border-radius: 12px;
+        }
+
+        .newsletter-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .newsletter-container h3 {
+            font-size: 1.8rem;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-container p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 1rem;
+        }
+
+        @media (max-width: 576px) {
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 0.8rem 1.2rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .newsletter-btn {
+            background: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 0.8rem 1.8rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .newsletter-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-color);
+            color: var(--white);
+            padding: 2rem;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .social-links a {
+            color: var(--white);
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            color: var(--primary-light);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            color: #A0AEC0;
+            margin-top: 1.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            .logo-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .blog-hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-wrap: wrap;
+                padding: 0.8rem;
+            }
+            
+            nav a {
+                font-size: 0.95rem;
+                padding: 0.5rem 1rem;
+                margin: 0.2rem;
+            }
+            
+            .blog-hero {
+                padding: 3rem 1rem;
+            }
+            
+            .blog-container {
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .blog-hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .blog-hero p {
+                font-size: 1rem;
+            }
+            
+            .article-header h3 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <a href="index.html"><img src="Images/LogoSchool.png" alt="Step Up Speak Logo"></a>
+            <div>
+                <h1>Step Up Speak</h1>
+                <p class="tagline">Profesjonalne kursy językowe online</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="courses.html"><i class="fas fa-book-open"></i> Kursy</a>
+        <a href="pricing.html"><i class="fas fa-tags"></i> Ceny</a>
+        <a href="contacts.html"><i class="fas fa-envelope"></i> Kontakty</a>
+        <a href="blog.html"><i class="fas fa-blog"></i> Blog</a>
+    </nav>
+
+    <div class="main-content">
+        <!-- Blog Hero -->
+        <section class="blog-hero">
+            <div class="blog-hero-content">
+                <h1>Blog Step Up Speak</h1>
+                <p>Odkryj nasze artykuły pełne praktycznych porad językowych, skutecznych metod nauki i inspiracji do doskonalenia umiejętności językowych. Bądź na bieżąco z najnowszymi trendami w edukacji językowej!</p>
+            </div>
+        </section>
+
+        <!-- Blog Content -->
+        <div class="blog-container">
+            <!-- Category Filter -->
+            <div class="category-filter">
+                <button class="category-btn active">Wszystkie</button>
+                <button class="category-btn">Metody nauki</button>
+                <button class="category-btn">Gramatyka</button>
+                <button class="category-btn">Słownictwo</button>
+                <button class="category-btn">Wymowa</button>
+                <button class="category-btn">Motywacja</button>
+            </div>
+
+            <!-- Article List -->
+            <div class="article-list">
+                <!-- Article 1 -->
+                <div class="article-card">
+                    <div class="article-header" onclick="toggleArticle(this)">
+                        <h3>Jak efektywnie uczyć się angielskiego?</h3>
+                        <div class="article-arrow">&#9660;</div>
+                    </div>
+                    <div class="article-excerpt">
+                        Dowiedz się, jak poprawić swoje umiejętności językowe, stosując sprawdzone metody nauki.
+                    </div>
+                    <div class="article-content">
+                        <div class="article-content-inner">
+                            <p><strong>Wskazówka 1:</strong> Używaj technik pamięciowych, takich jak mapy myśli czy skojarzenia, aby skutecznie zapamiętywać słówka i zasady gramatyczne.</p>
+                            <p><strong>Wskazówka 2:</strong> Pracuj z native speakerami – nic nie poprawi Twojej wymowy tak skutecznie jak rozmowy z osobami, które posługują się językiem na co dzień.</p>
+                            <p><strong>Wskazówka 3:</strong> Korzystaj z multimediów – oglądaj filmy, słuchaj podcastów i czytaj artykuły w języku angielskim, by przyswajać materiał w kontekście.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 2 -->
+                <div class="article-card">
+                    <div class="article-header" onclick="toggleArticle(this)">
+                        <h3>5 kroków do płynnej wymowy w angielskim</h3>
+                        <div class="article-arrow">&#9660;</div>
+                    </div>
+                    <div class="article-excerpt">
+                        Poznaj skuteczne techniki, które pomogą Ci poprawić wymowę w języku angielskim.
+                    </div>
+                    <div class="article-content">
+                        <div class="article-content-inner">
+                            <p><strong>Wskazówka 1:</strong> Regularne ćwiczenia wymowy są kluczowe – systematyczne ćwiczenie trudnych dźwięków pomoże Ci poprawić wymowę.</p>
+                            <p><strong>Wskazówka 2:</strong> Praca z native speakerem pozwala wyeliminować błędy w wymowie i intonacji, poprawiając akcent.</p>
+                            <p><strong>Wskazówka 3:</strong> Słuchaj nagrań z native speakerami i powtarzaj usłyszane słowa, aby poprawić akcent i intonację.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 3 -->
+                <div class="article-card">
+                    <div class="article-header" onclick="toggleArticle(this)">
+                        <h3>Jak rozwinąć słownictwo w języku obcym?</h3>
+                        <div class="article-arrow">&#9660;</div>
+                    </div>
+                    <div class="article-excerpt">
+                        Poznaj skuteczne sposoby na poszerzanie słownictwa w obcym języku.
+                    </div>
+                    <div class="article-content">
+                        <div class="article-content-inner">
+                            <p><strong>Wskazówka 1:</strong> Używaj fiszek, by regularnie powtarzać nowe słówka i utrwalać je w pamięci.</p>
+                            <p><strong>Wskazówka 2:</strong> Rozmawiaj z native speakerami – to najlepszy sposób na naukę słówek w kontekście.</p>
+                            <p><strong>Wskazówka 3:</strong> Czytaj książki, artykuły i oglądaj filmy w języku obcym, aby poznawać słownictwo w naturalny sposób.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 4 -->
+                <div class="article-card">
+                    <div class="article-header" onclick="toggleArticle(this)">
+                        <h3>Jak przezwyciężyć lęk przed mówieniem w języku obcym?</h3>
+                        <div class="article-arrow">&#9660;</div>
+                    </div>
+                    <div class="article-excerpt">
+                        Podpowiedzi, jak zyskać pewność siebie podczas rozmów w obcym języku.
+                    </div>
+                    <div class="article-content">
+                        <div class="article-content-inner">
+                            <p><strong>Wskazówka 1:</strong> Praktyka czyni mistrza – im więcej rozmawiasz, tym bardziej komfortowo będziesz się czuł.</p>
+                            <p><strong>Wskazówka 2:</strong> Nie bój się popełniać błędów – najważniejsze to komunikować się i wyrażać swoje myśli.</p>
+                            <p><strong>Wskazówka 3:</strong> Znajdź partnera do nauki, z którym będziesz mógł swobodnie ćwiczyć mówienie bez presji.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 5 -->
+                <div class="article-card">
+                    <div class="article-header" onclick="toggleArticle(this)">
+                        <h3>Jak nauczyć się gramatyki w języku obcym?</h3>
+                        <div class="article-arrow">&#9660;</div>
+                    </div>
+                    <div class="article-excerpt">
+                        Skuteczne metody nauki gramatyki, które pozwolą Ci opanować trudne zasady.
+                    </div>
+                    <div class="article-content">
+                        <div class="article-content-inner">
+                            <p><strong>Wskazówka 1:</strong> Używaj książek do gramatyki z ćwiczeniami, aby regularnie trenować trudne zasady.</p>
+                            <p><strong>Wskazówka 2:</strong> Rozwiązuj testy gramatyczne online, które pozwolą Ci sprawdzić postępy.</p>
+                            <p><strong>Wskazówka 3:</strong> Ucz się gramatyki w kontekście – zamiast reguł, ucz się jej na podstawie przykładów z życia codziennego.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 6 -->
+                <div class="article-card">
+                    <div class="article-header" onclick="toggleArticle(this)">
+                        <h3>Jak poprawić swoje umiejętności mówienia po angielsku?</h3>
+                        <div class="article-arrow">&#9660;</div>
+                    </div>
+                    <div class="article-excerpt">
+                        Praktyczne porady na temat poprawy płynności i pewności siebie podczas mówienia w języku angielskim.
+                    </div>
+                    <div class="article-content">
+                        <div class="article-content-inner">
+                            <p><strong>Wskazówka 1:</strong> Regularnie rozmawiaj z native speakerami, aby osłuchać się z naturalnym rytmem i akcentem.</p>
+                            <p><strong>Wskazówka 2:</strong> Używaj aplikacji do rozmów online, takich jak Tandem czy HelloTalk, aby znaleźć partnerów do nauki.</p>
+                            <p><strong>Wskazówka 3:</strong> Nagrywaj swoje wypowiedzi i odsłuchuj je, aby poprawić wymowę i identyfikować błędy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Newsletter -->
+            <section class="newsletter-section">
+                <div class="newsletter-container">
+                    <h3>Zapisz się do naszego newslettera</h3>
+                    <p>Otrzymuj najnowsze artykuły i porady językowe prosto na swoją skrzynkę mailową!</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Twój adres email" required>
+                        <button type="submit" class="newsletter-btn">Zapisz się</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Step Up Speak</h3>
+                <p>Profesjonalne kursy językowe online, które pomogą Ci osiągnąć płynność językową i pewność siebie w komunikacji.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Kursy</h3>
+                <ul>
+                    <li><a href="#">Angielski ogólny</a></li>
+                    <li><a href="#">Business English</a></li>
+                    <li><a href="#">Przygotowanie do egzaminów</a></li>
+                    <li><a href="#">Kursy specjalistyczne</a></li>
+                    <li><a href="#">Zajęcia indywidualne</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Informacje</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-phone-alt"></i> +48 123 456 789</a></li>
+                    <li><a href="#"><i class="fas fa-envelope"></i> kontakt@stepupspeak.pl</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> ul. Językowa 15, Warszawa</a></li>
+                    <li><a href="#"><i class="fas fa-clock"></i> Pn-Pt: 8:00-20:00</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Przydatne linki</h3>
+                <ul>
+                    <li><a href="#">Regulamin</a></li>
+                    <li><a href="#">Polityka prywatności</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Opinie studentów</a></li>
+                    <li><a href="#">Kariera</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2024 Step Up Speak. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle article content
+        function toggleArticle(header) {
+            const article = header.parentElement;
+            const content = article.querySelector('.article-content');
+            const arrow = article.querySelector('.article-arrow');
+            
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                arrow.classList.remove('open');
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                arrow.classList.add('open');
+            }
+        }
+
+        // Initialize - close all articles
+        document.addEventListener('DOMContentLoaded', function() {
+            const articles = document.querySelectorAll('.article-content');
+            articles.forEach(article => {
+                article.style.maxHeight = null;
+            });
+        });
+
+        // Category filter functionality
+        const categoryBtns = document.querySelectorAll('.category-btn');
+        categoryBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                categoryBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                // Here you would add filtering logic
+            });
+        });
+    </script>
+</body>
+
+</html>
