@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zapisy na Kurs - Step Up Speak | Premium Językowe Online</title>
-    <meta name="description" content="Zapisz się na kurs językowy w Step Up Speak. Wybierz poziom i rozpocznij naukę z najlepszymi nauczycielami. Prosty proces rejestracji.">
+    <meta name="description"
+        content="Zapisz się na kurs językowy w Step Up Speak. Wybierz poziom i rozpocznij naukę z najlepszymi nauczycielami. Prosty proces rejestracji.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
@@ -112,7 +115,8 @@
             gap: 0.5rem;
         }
 
-        nav a:hover, nav a:focus {
+        nav a:hover,
+        nav a:focus {
             background-color: var(--primary-color);
             transform: translateY(-2px);
         }
@@ -509,16 +513,16 @@
                 text-align: center;
                 gap: 1rem;
             }
-            
+
             .logo-container {
                 flex-direction: column;
                 gap: 1rem;
             }
-            
+
             header h1 {
                 font-size: 2rem;
             }
-            
+
             .enrollment-hero h1 {
                 font-size: 2.2rem;
             }
@@ -529,21 +533,21 @@
                 flex-wrap: wrap;
                 padding: 0.8rem;
             }
-            
+
             nav a {
                 font-size: 0.95rem;
                 padding: 0.5rem 1rem;
                 margin: 0.2rem;
             }
-            
+
             .section-title h2 {
                 font-size: 2rem;
             }
-            
+
             .section-title p {
                 font-size: 1rem;
             }
-            
+
             .form-container {
                 padding: 1.5rem;
             }
@@ -553,11 +557,11 @@
             .enrollment-hero h1 {
                 font-size: 1.8rem;
             }
-            
+
             .enrollment-hero p {
                 font-size: 1rem;
             }
-            
+
             .steps-grid {
                 grid-template-columns: 1fr;
             }
@@ -591,7 +595,8 @@
         <section class="enrollment-hero">
             <div class="enrollment-hero-content">
                 <h1>Zapisz się na kurs już dziś!</h1>
-                <p>Rozpocznij swoją przygodę z nauką języka w Step Up Speak. Wypełnij formularz, a nasz zespół skontaktuje się z Tobą, aby dopasować idealny kurs do Twoich potrzeb.</p>
+                <p>Rozpocznij swoją przygodę z nauką języka w Step Up Speak. Wypełnij formularz, a nasz zespół
+                    skontaktuje się z Tobą, aby dopasować idealny kurs do Twoich potrzeb.</p>
             </div>
         </section>
 
@@ -601,20 +606,20 @@
                 <h2>Jak działa proces zapisów?</h2>
                 <p>Prosta i przejrzysta procedura, która zajmie Ci tylko kilka minut</p>
             </div>
-            
+
             <div class="steps-grid">
                 <div class="step-card">
                     <div class="step-number">1</div>
                     <h3>Wypełnij formularz</h3>
                     <p>Podaj nam podstawowe informacje o sobie i wybierz interesujący Cię kurs językowy.</p>
                 </div>
-                
+
                 <div class="step-card">
                     <div class="step-number">2</div>
                     <h3>Konsultacja z metodykiem</h3>
                     <p>Nasz specjalista skontaktuje się z Tobą, aby omówić szczegóły i dopasować odpowiedni poziom.</p>
                 </div>
-                
+
                 <div class="step-card">
                     <div class="step-number">3</div>
                     <h3>Rozpocznij naukę</h3>
@@ -623,7 +628,6 @@
             </div>
         </section>
 
-        
 
 
 
@@ -631,68 +635,73 @@
 
 
 
-<!-- Form Section -->
-<section class="form-section">
-    <div class="form-container">
-        <div class="form-title">
-            <h3>Formularz zapisów</h3>
-            <p>Wypełnij poniższe pola, aby zapisać się na kurs</p>
-        </div>
-        
-        <form id="enrollmentForm" action="https://formspree.io/f/mnnpwrjo" method="POST">
-            <div class="form-group">
-                <label for="course">Wybierz kurs:</label>
-                <select id="course" name="course" class="form-control" required>
-                    <option value="">-- Wybierz kurs --</option>
-                    <option value="A1">Angielski A1 (Beginner)</option>
-                    <option value="A2">Angielski A2 (Elementary)</option>
-                    <option value="B1">Angielski A2+ (Pre-Intermediate)</option>
-                    <option value="B1">Angielski B1 (Intermediate)</option>
-                    <option value="B1">Angielski B1+ (Intermediate Plus)</option>
-                    <option value="B2">Angielski B2 (Upper-Intermediate)</option>
-                    <option value="C1">Angielski C1 (Advanced)</option>
-                    <option value="C1">Angielski C1 (Advanced Plus)</option>
-                </select>
-                <div class="error-message" id="courseError"></div>
+
+        <!-- Form Section -->
+        <section class="form-section">
+            <div class="form-container">
+                <div class="form-title">
+                    <h3>Formularz zapisów</h3>
+                    <p>Wypełnij poniższe pola, aby zapisać się na kurs</p>
+                </div>
+
+                <form id="enrollmentForm" action="https://formspree.io/f/mnnpwrjo" method="POST">
+                    <div class="form-group">
+                        <label for="course">Wybierz kurs:</label>
+                        <select id="course" name="course" class="form-control" required>
+                            <option value="">-- Wybierz kurs --</option>
+                            <option value="A1">Angielski A1 (Beginner)</option>
+                            <option value="A2">Angielski A2 (Elementary)</option>
+                            <option value="B1">Angielski A2+ (Pre-Intermediate)</option>
+                            <option value="B1">Angielski B1 (Intermediate)</option>
+                            <option value="B1">Angielski B1+ (Intermediate Plus)</option>
+                            <option value="B2">Angielski B2 (Upper-Intermediate)</option>
+                            <option value="C1">Angielski C1 (Advanced)</option>
+                            <option value="C1">Angielski C1 (Advanced Plus)</option>
+                        </select>
+                        <div class="error-message" id="courseError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Imię i nazwisko:</label>
+                        <input type="text" id="name" name="name" class="form-control"
+                            placeholder="Wpisz swoje imię i nazwisko" required>
+                        <div class="error-message" id="nameError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Adres e-mail:</label>
+                        <input type="email" id="email" name="email" class="form-control"
+                            placeholder="Wpisz swój adres e-mail" required>
+                        <div class="error-message" id="emailError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Numer telefonu:</label>
+                        <input type="tel" id="phone" name="phone" class="form-control"
+                            placeholder="Wpisz swój numer telefonu" required>
+                        <div class="error-message" id="phoneError"></div>
+                    </div>
+
+                    <!-- Hidden fields for Formspree -->
+                    <input type="hidden" name="_subject" value="New Course Registration">
+                    <input type="text" name="_gotcha" style="display:none">
+
+                    <button type="submit" class="button">Zapisz się na kurs</button>
+                </form>
+
+                <div class="success-message" id="successMessage" style="display:none">
+                    <h4>Dziękujemy za zgłoszenie!</h4>
+                    <p>Nasz manager skontaktuje się z Tobą w ciągu 24 godzin, aby omówić szczegóły i ustalić termin
+                        testu poziomującego.</p>
+                </div>
             </div>
-            
-            <div class="form-group">
-                <label for="name">Imię i nazwisko:</label>
-                <input type="text" id="name" name="name" class="form-control" placeholder="Wpisz swoje imię i nazwisko" required>
-                <div class="error-message" id="nameError"></div>
-            </div>
-            
-            <div class="form-group">
-                <label for="email">Adres e-mail:</label>
-                <input type="email" id="email" name="email" class="form-control" placeholder="Wpisz swój adres e-mail" required>
-                <div class="error-message" id="emailError"></div>
-            </div>
-            
-            <div class="form-group">
-                <label for="phone">Numer telefonu:</label>
-                <input type="tel" id="phone" name="phone" class="form-control" placeholder="Wpisz swój numer telefonu" required>
-                <div class="error-message" id="phoneError"></div>
-            </div>
-            
-            <!-- Hidden fields for Formspree -->
-            <input type="hidden" name="_subject" value="New Course Registration">
-            <input type="text" name="_gotcha" style="display:none">
-            
-            <button type="submit" class="button">Zapisz się na kurs</button>
-        </form>
-        
-        <div class="success-message" id="successMessage" style="display:none">
-            <h4>Dziękujemy za zgłoszenie!</h4>
-            <p>Nasz manager skontaktuje się z Tobą w ciągu 24 godzin, aby omówić szczegóły i ustalić termin testu poziomującego.</p>
-        </div>
-    </div>
-</section>
+        </section>
 
 
 
 
 
-        
+
     </div>
 
 
@@ -703,16 +712,19 @@
         <div class="footer-content">
             <div class="footer-column">
                 <h3>Step Up Speak</h3>
-                <p>Profesjonalne kursy językowe online, które pomogą Ci osiągnąć płynność językową i pewność siebie w komunikacji.</p>
+                <p>Profesjonalne kursy językowe online, które pomogą Ci osiągnąć płynność językową i pewność siebie w
+                    komunikacji.</p>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/groups/1007789447828292" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.facebook.com/groups/1007789447828292" target="_blank" rel="noopener"><i
+                            class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.tiktok.com/@stepupspeak" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.tiktok.com/@stepupspeak" target="_blank" rel="noopener"><i
+                            class="fab fa-tiktok"></i></a>
 
                 </div>
             </div>
-            
+
             <div class="footer-column">
                 <h3>Kursy</h3>
                 <ul>
@@ -723,18 +735,20 @@
                     <li><a href="#">Zajęcia indywidualne</a></li>
                 </ul>
             </div>
-            
-            
+
+
             <div class="footer-column">
                 <h3>Informacje</h3>
                 <ul>
                     <li><a href="tel:+48791016175"><i class="fas fa-phone-alt"></i> +48 791 016 175</a></li>
-                    <li><a href="mailto:stepupspeakofficial@gmail.com"><i class="fas fa-envelope"></i> stepupspeakofficial@gmail.com</a></li>
-                    <li><a href="contacts.html"><i class="fas fa-map-marker-alt"></i> Al. Jana Pawła II 20, Warszawa</a></li>
+                    <li><a href="mailto:stepupspeakofficial@gmail.com"><i class="fas fa-envelope"></i>
+                            stepupspeakofficial@gmail.com</a></li>
+                    <li><a href="contacts.html"><i class="fas fa-map-marker-alt"></i> Al. Jana Pawła II 20, Warszawa</a>
+                    </li>
                     <li><a href="contacts.html"><i class="fas fa-clock"></i> Pn-Pt: 8:00-20:00</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-column">
                 <h3>Przydatne linki</h3>
                 <ul>
@@ -746,26 +760,26 @@
                 </ul>
             </div>
         </div>
-        
+
         <div class="copyright">
             <p>&copy; 2024 Step Up Speak. Wszelkie prawa zastrzeżone.</p>
         </div>
     </footer>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             const form = document.getElementById("enrollmentForm");
             const successMessage = document.getElementById("successMessage");
-            
+
             // Client-side validation
-            form.addEventListener("submit", function(e) {
+            form.addEventListener("submit", function (e) {
                 let isValid = true;
-                
+
                 // Reset errors
                 document.querySelectorAll('.error-message').forEach(error => {
                     error.style.display = 'none';
                 });
-                
+
                 // Validate course
                 const course = document.getElementById("course");
                 if (!course.value) {
@@ -773,7 +787,7 @@
                     document.getElementById("courseError").style.display = 'block';
                     isValid = false;
                 }
-                
+
                 // Validate name
                 const name = document.getElementById("name");
                 if (!name.value.trim()) {
@@ -781,7 +795,7 @@
                     document.getElementById("nameError").style.display = 'block';
                     isValid = false;
                 }
-                
+
                 // Validate email
                 const email = document.getElementById("email");
                 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -790,7 +804,7 @@
                     document.getElementById("emailError").style.display = 'block';
                     isValid = false;
                 }
-                
+
                 // Validate phone
                 const phone = document.getElementById("phone");
                 if (!phone.value.trim()) {
@@ -798,16 +812,16 @@
                     document.getElementById("phoneError").style.display = 'block';
                     isValid = false;
                 }
-                
+
                 if (!isValid) {
                     e.preventDefault();
                 }
             });
-            
+
             // Handle Formspree submission response
-            form.addEventListener("submit", function(e) {
+            form.addEventListener("submit", function (e) {
                 e.preventDefault();
-                
+
                 // Submit form via Fetch API
                 fetch(form.action, {
                     method: 'POST',
@@ -816,20 +830,20 @@
                         'Accept': 'application/json'
                     }
                 })
-                .then(response => {
-                    if (response.ok) {
-                        // Show success message
-                        successMessage.style.display = 'block';
-                        form.reset();
-                        successMessage.scrollIntoView({ behavior: 'smooth' });
-                    } else {
-                        throw new Error('Form submission failed');
-                    }
-                })
-                .catch(error => {
-                    alert('Wystąpił błąd podczas wysyłania formularza. Proszę spróbować ponownie.');
-                    console.error('Error:', error);
-                });
+                    .then(response => {
+                        if (response.ok) {
+                            // Show success message
+                            successMessage.style.display = 'block';
+                            form.reset();
+                            successMessage.scrollIntoView({ behavior: 'smooth' });
+                        } else {
+                            throw new Error('Form submission failed');
+                        }
+                    })
+                    .catch(error => {
+                        alert('Wystąpił błąd podczas wysyłania formularza. Proszę spróbować ponownie.');
+                        console.error('Error:', error);
+                    });
             });
         });
     </script>

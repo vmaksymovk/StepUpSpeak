@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt - Step Up Speak | Szkoła Językowa Online</title>
-    <meta name="description" content="Skontaktuj się z nami - Step Up Speak. Mamy różne formy kontaktu: telefon, email, formularz kontaktowy. Odpowiadamy szybko na wszystkie zapytania.">
+    <meta name="description"
+        content="Skontaktuj się z nami - Step Up Speak. Mamy różne formy kontaktu: telefon, email, formularz kontaktowy. Odpowiadamy szybko na wszystkie zapytania.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
@@ -112,7 +115,8 @@
             gap: 0.5rem;
         }
 
-        nav a:hover, nav a:focus {
+        nav a:hover,
+        nav a:focus {
             background-color: var(--primary-color);
             transform: translateY(-2px);
         }
@@ -222,6 +226,7 @@
             min-height: 150px;
             resize: vertical;
         }
+
         /* Footer */
         footer {
             background-color: var(--text-color);
@@ -335,6 +340,27 @@
             box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
         }
 
+        /* Success Message */
+        .success-message {
+            display: none;
+            background: rgba(46, 139, 87, 0.1);
+            border-left: 4px solid var(--primary-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .success-message h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .success-message p {
+            color: var(--text-light);
+        }
+
         /* Contact Info */
         .contact-info {
             background: var(--background-light);
@@ -373,7 +399,8 @@
             color: var(--text-color);
         }
 
-        .contact-text p, .contact-text a {
+        .contact-text p,
+        .contact-text a {
             color: var(--text-light);
             text-decoration: none;
             transition: var(--transition);
@@ -405,12 +432,12 @@
                 text-align: center;
                 gap: 1rem;
             }
-            
+
             .logo-container {
                 flex-direction: column;
                 gap: 1rem;
             }
-            
+
             header h1 {
                 font-size: 2rem;
             }
@@ -421,25 +448,25 @@
                 flex-wrap: wrap;
                 padding: 0.8rem;
             }
-            
+
             nav a {
                 font-size: 0.95rem;
                 padding: 0.5rem 1rem;
                 margin: 0.2rem;
             }
-            
+
             .section-title h2 {
                 font-size: 2rem;
             }
-            
+
             .section-title p {
                 font-size: 1rem;
             }
-            
+
             .contact-section {
                 padding: 3rem 1rem;
             }
-            
+
             .contact-grid {
                 grid-template-columns: 1fr;
             }
@@ -449,8 +476,9 @@
             .button {
                 padding: 1rem;
             }
-            
-            .contact-form, .contact-info {
+
+            .contact-form,
+            .contact-info {
                 padding: 1.5rem;
             }
         }
@@ -484,33 +512,134 @@
             <div class="section-container">
                 <div class="section-title">
                     <h2>Skontaktuj się z nami</h2>
-                    <p>Masz pytania dotyczące naszych kursów? Chcesz zapisać się na zajęcia lub umówić na bezpłatną lekcję próbną? Napisz do nas!</p>
+                    <p>Masz pytania dotyczące naszych kursów? Chcesz zapisać się na zajęcia lub umówić na bezpłatną
+                        lekcję próbną? Napisz do nas!</p>
                 </div>
 
                 <div class="contact-grid">
                     <!-- Contact Form -->
-                    <div class="contact-form">
-                        <h3>Wyślij wiadomość</h3>
-                        <form>
+                    <!-- Contact Form -->
+                    <div class="contact-form" style="max-width: 600px; margin: 0 auto; padding: 2rem;">
+                        <h3
+                            style="text-align: center; font-size: 1.8rem; color: var(--primary-color); margin-bottom: 0.5rem;">
+                            Wyślij wiadomość</h3>
+                        <p style="text-align: center; color: var(--text-light); margin-bottom: 2rem;">Wypełnij poniższe
+                            pola, aby skontaktować się z nami</p>
+
+                        <form id="contactForm" action="https://formspree.io/f/mvgklngp" method="POST">
                             <div class="form-group">
-                                <label for="name">Imię i nazwisko</label>
-                                <input type="text" id="name" class="form-control" placeholder="Wprowadź swoje imię i nazwisko" required>
+                                <label for="contact-name">Imię i nazwisko</label>
+                                <input type="text" id="contact-name" name="name" class="form-control"
+                                    placeholder="Wprowadź swoje imię i nazwisko" required>
+                                <div class="error-message" id="contactNameError"></div>
                             </div>
                             <div class="form-group">
-                                <label for="email">Adres email</label>
-                                <input type="email" id="email" class="form-control" placeholder="Wprowadź swój email" required>
+                                <label for="contact-email">Adres email</label>
+                                <input type="email" id="contact-email" name="email" class="form-control"
+                                    placeholder="Wprowadź swój email" required>
+                                <div class="error-message" id="contactEmailError"></div>
                             </div>
                             <div class="form-group">
-                                <label for="phone">Numer telefonu (opcjonalnie)</label>
-                                <input type="tel" id="phone" class="form-control" placeholder="Wprowadź swój numer telefonu">
+                                <label for="contact-phone">Numer telefonu (opcjonalnie)</label>
+                                <input type="tel" id="contact-phone" name="phone" class="form-control"
+                                    placeholder="Wprowadź swój numer telefonu">
                             </div>
                             <div class="form-group">
-                                <label for="message">Twoja wiadomość</label>
-                                <textarea id="message" class="form-control" placeholder="Opisz nam, w czym możemy Ci pomóc..." required></textarea>
+                                <label for="contact-message">Twoja wiadomość</label>
+                                <textarea id="contact-message" name="message" class="form-control"
+                                    placeholder="Opisz nam, w czym możemy Ci pomóc..." required></textarea>
+                                <div class="error-message" id="contactMessageError"></div>
                             </div>
+
+                            <!-- Hidden fields for Formspree -->
+                            <input type="hidden" name="_subject" value="Nowa wiadomość kontaktowa">
+                            <input type="text" name="_gotcha" style="display:none">
+
                             <button type="submit" class="button">Wyślij wiadomość</button>
                         </form>
+
+                        <!-- Success message (same style as enrollment form) -->
+                        <div class="success-message" id="contactSuccessMessage" style="display:none">
+                            <h4>Dziękujemy za wiadomość!</h4>
+                            <p>Nasz manager skontaktuje się z Tobą w ciągu 24 godzin, aby omówić szczegóły i ustalić
+                                termin testu poziomującego.</p>
+                        </div>
                     </div>
+
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            const contactForm = document.getElementById("contactForm");
+                            const successMessage = document.getElementById("contactSuccessMessage");
+
+                            // Client-side validation
+                            contactForm.addEventListener("submit", function (e) {
+                                let isValid = true;
+
+                                // Reset errors
+                                document.querySelectorAll('#contactForm .error-message').forEach(error => {
+                                    error.style.display = 'none';
+                                });
+
+                                // Validate name
+                                const name = document.getElementById("contact-name");
+                                if (!name.value.trim()) {
+                                    document.getElementById("contactNameError").textContent = "Proszę podać imię i nazwisko";
+                                    document.getElementById("contactNameError").style.display = 'block';
+                                    isValid = false;
+                                }
+
+                                // Validate email
+                                const email = document.getElementById("contact-email");
+                                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                                if (!email.value.trim() || !emailRegex.test(email.value)) {
+                                    document.getElementById("contactEmailError").textContent = "Proszę podać poprawny adres e-mail";
+                                    document.getElementById("contactEmailError").style.display = 'block';
+                                    isValid = false;
+                                }
+
+                                // Validate message
+                                const message = document.getElementById("contact-message");
+                                if (!message.value.trim()) {
+                                    document.getElementById("contactMessageError").textContent = "Proszę wpisać wiadomość";
+                                    document.getElementById("contactMessageError").style.display = 'block';
+                                    isValid = false;
+                                }
+
+                                if (!isValid) {
+                                    e.preventDefault();
+                                }
+                            });
+
+                            // Handle Formspree submission response
+                            contactForm.addEventListener("submit", function (e) {
+                                e.preventDefault();
+
+                                // Submit form via Fetch API
+                                fetch(contactForm.action, {
+                                    method: 'POST',
+                                    body: new FormData(contactForm),
+                                    headers: {
+                                        'Accept': 'application/json'
+                                    }
+                                })
+                                    .then(response => {
+                                        if (response.ok) {
+                                            // Show success message
+                                            successMessage.style.display = 'block';
+                                            contactForm.reset();
+                                            successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                        } else {
+                                            throw new Error('Form submission failed');
+                                        }
+                                    })
+                                    .catch(error => {
+                                        alert('Wystąpił błąd podczas wysyłania wiadomości. Proszę spróbować ponownie.');
+                                        console.error('Error:', error);
+                                    });
+                            });
+                        });
+                    </script>
+
 
                     <!-- Contact Info -->
                     <div class="contact-info">
@@ -558,8 +687,8 @@
 
                 <!-- Map -->
                 <div class="map-container">
-                    <iframe id="map" 
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12152.438504520236!2d21.0055102!3d52.232759!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc3cc2e92891%3A0x7672b5743ff3254d!2sAl.%20Jana%20Paw%C5%82a%20II%2020%2C%2000-133%20Warszawa!5e0!3m2!1spl!2spl!4v1699345242641!5m2!1spl!2spl" 
+                    <iframe id="map"
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12152.438504520236!2d21.0055102!3d52.232759!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc3cc2e92891%3A0x7672b5743ff3254d!2sAl.%20Jana%20Paw%C5%82a%20II%2020%2C%2000-133%20Warszawa!5e0!3m2!1spl!2spl!4v1699345242641!5m2!1spl!2spl"
                         allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
@@ -570,16 +699,19 @@
         <div class="footer-content">
             <div class="footer-column">
                 <h3>Step Up Speak</h3>
-                <p>Profesjonalne kursy językowe online, które pomogą Ci osiągnąć płynność językową i pewność siebie w komunikacji.</p>
+                <p>Profesjonalne kursy językowe online, które pomogą Ci osiągnąć płynność językową i pewność siebie w
+                    komunikacji.</p>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/groups/1007789447828292" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.facebook.com/groups/1007789447828292" target="_blank" rel="noopener"><i
+                            class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.tiktok.com/@stepupspeak" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.tiktok.com/@stepupspeak" target="_blank" rel="noopener"><i
+                            class="fab fa-tiktok"></i></a>
 
                 </div>
             </div>
-            
+
             <div class="footer-column">
                 <h3>Kursy</h3>
                 <ul>
@@ -590,17 +722,18 @@
                     <li><a href="#">Zajęcia indywidualne</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-column">
                 <h3>Informacje</h3>
                 <ul>
                     <li><a href="tel:+48791016175"><i class="fas fa-phone-alt"></i> +48 791 016 175</a></li>
                     <li><a href="#"><i class="fas fa-envelope"></i> stepupspeakofficial@gmail.com</a></li>
-                    <li><a href="contacts.html"><i class="fas fa-map-marker-alt"></i> Al. Jana Pawła II 20, Warszawa</a></li>
+                    <li><a href="contacts.html"><i class="fas fa-map-marker-alt"></i> Al. Jana Pawła II 20, Warszawa</a>
+                    </li>
                     <li><a href="contacts.html"><i class="fas fa-clock"></i> Pn-Pt: 8:00-20:00</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-column">
                 <h3>Przydatne linki</h3>
                 <ul>
@@ -612,7 +745,7 @@
                 </ul>
             </div>
         </div>
-        
+
         <div class="copyright">
             <p>&copy; 2024 Step Up Speak. Wszelkie prawa zastrzeżone.</p>
         </div>
