@@ -623,7 +623,15 @@
             </div>
         </section>
 
-        <!-- Form Section -->
+        
+
+
+
+
+
+
+
+<!-- Form Section -->
 <section class="form-section">
     <div class="form-container">
         <div class="form-title">
@@ -631,7 +639,6 @@
             <p>Wypełnij poniższe pola, aby zapisać się na kurs</p>
         </div>
         
-        <!-- Working Form (simplified structure like Form 2 but with Form 1 fields) -->
         <form id="enrollmentForm" action="https://formspree.io/f/mnnpwrjo" method="POST">
             <div class="form-group">
                 <label for="course">Wybierz kurs:</label>
@@ -646,84 +653,46 @@
                     <option value="C1">Angielski C1 (Advanced)</option>
                     <option value="C1">Angielski C1 (Advanced Plus)</option>
                 </select>
+                <div class="error-message" id="courseError"></div>
             </div>
             
             <div class="form-group">
                 <label for="name">Imię i nazwisko:</label>
                 <input type="text" id="name" name="name" class="form-control" placeholder="Wpisz swoje imię i nazwisko" required>
+                <div class="error-message" id="nameError"></div>
             </div>
             
             <div class="form-group">
                 <label for="email">Adres e-mail:</label>
                 <input type="email" id="email" name="email" class="form-control" placeholder="Wpisz swój adres e-mail" required>
+                <div class="error-message" id="emailError"></div>
             </div>
             
             <div class="form-group">
                 <label for="phone">Numer telefonu:</label>
                 <input type="tel" id="phone" name="phone" class="form-control" placeholder="Wpisz swój numer telefonu" required>
+                <div class="error-message" id="phoneError"></div>
             </div>
             
-            <!-- Hidden field to identify this as a course registration -->
+            <!-- Hidden fields for Formspree -->
             <input type="hidden" name="_subject" value="New Course Registration">
+            <input type="text" name="_gotcha" style="display:none">
             
             <button type="submit" class="button">Zapisz się na kurs</button>
         </form>
+        
+        <div class="success-message" id="successMessage" style="display:none">
+            <h4>Dziękujemy za zgłoszenie!</h4>
+            <p>Nasz manager skontaktuje się z Tobą w ciągu 24 godzin, aby omówić szczegóły i ustalić termin testu poziomującego.</p>
+        </div>
     </div>
 </section>
 
-        <!-- OLD Form Section -->
-        <!-- <section class="form-section">
-            <div class="form-container">
-                <div class="form-title">
-                    <h3>Formularz zapisów</h3>
-                    <p>Wypełnij poniższe pola, aby zapisać się na kurs</p>
-                </div>
-                
-                <form id="enrollmentForm" novalidate>
-                    <div class="form-group">
-                        <label for="course">Wybierz kurs:</label>
-                        <select id="course" name="course" class="form-control" required>
-                            <option value="">-- Wybierz kurs --</option>
-                            <option value="A1">Angielski A1 (Beginner)</option>
-                            <option value="A2">Angielski A2 (Elementary)</option>
-                            <option value="B1">Angielski A2+ (Pre-Intermediate)</option>
-                            <option value="B1">Angielski B1 (Intermediate)</option>
-                            <option value="B1">Angielski B1+ (Intermediate Plus)</option>
-                            <option value="B2">Angielski B2 (Upper-Intermediate)</option>
-                            <option value="C1">Angielski C1 (Advanced)</option>
-                            <option value="C1">Angielski C1 (Advanced Plus)</option>
-                            
-                        </select>
-                        <div class="error-message" id="courseError"></div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="name">Imię i nazwisko:</label>
-                        <input type="text" id="name" name="name" class="form-control" placeholder="Wpisz swoje imię i nazwisko" required>
-                        <div class="error-message" id="nameError"></div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Adres e-mail:</label>
-                        <input type="email" id="email" name="email" class="form-control" placeholder="Wpisz swój adres e-mail" required>
-                        <div class="error-message" id="emailError"></div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Numer telefonu:</label>
-                        <input type="tel" id="phone" name="phone" class="form-control" placeholder="Wpisz swój numer telefonu" required>
-                        <div class="error-message" id="phoneError"></div>
-                    </div>
-                    
-                    <button type="submit" class="button">Zapisz się na kurs</button>
-                </form>
-                
-                <div class="success-message" id="successMessage">
-                    <h4>Dziękujemy za zgłoszenie!</h4>
-                    <p>Nasz manager skontaktuje się z Tobą w ciągu 24 godzin, aby omówić szczegóły i ustalić termin testu poziomującego.</p>
-                </div>
-            </div>
-        </section> -->
+
+
+
+
+        
     </div>
 
 
@@ -788,8 +757,8 @@
             const form = document.getElementById("enrollmentForm");
             const successMessage = document.getElementById("successMessage");
             
+            // Client-side validation
             form.addEventListener("submit", function(e) {
-                e.preventDefault();
                 let isValid = true;
                 
                 // Reset errors
@@ -830,14 +799,37 @@
                     isValid = false;
                 }
                 
-                if (isValid) {
-                    // Show success message
-                    successMessage.style.display = 'block';
-                    form.reset();
-                    
-                    // Scroll to success message
-                    successMessage.scrollIntoView({ behavior: 'smooth' });
+                if (!isValid) {
+                    e.preventDefault();
                 }
+            });
+            
+            // Handle Formspree submission response
+            form.addEventListener("submit", function(e) {
+                e.preventDefault();
+                
+                // Submit form via Fetch API
+                fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        // Show success message
+                        successMessage.style.display = 'block';
+                        form.reset();
+                        successMessage.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                })
+                .catch(error => {
+                    alert('Wystąpił błąd podczas wysyłania formularza. Proszę spróbować ponownie.');
+                    console.error('Error:', error);
+                });
             });
         });
     </script>
