@@ -624,7 +624,55 @@
         </section>
 
         <!-- Form Section -->
-        <section class="form-section">
+<section class="form-section">
+    <div class="form-container">
+        <div class="form-title">
+            <h3>Formularz zapisów</h3>
+            <p>Wypełnij poniższe pola, aby zapisać się na kurs</p>
+        </div>
+        
+        <!-- Working Form (simplified structure like Form 2 but with Form 1 fields) -->
+        <form id="enrollmentForm" action="https://formspree.io/f/mnnpwrjo" method="POST">
+            <div class="form-group">
+                <label for="course">Wybierz kurs:</label>
+                <select id="course" name="course" class="form-control" required>
+                    <option value="">-- Wybierz kurs --</option>
+                    <option value="A1">Angielski A1 (Beginner)</option>
+                    <option value="A2">Angielski A2 (Elementary)</option>
+                    <option value="B1">Angielski A2+ (Pre-Intermediate)</option>
+                    <option value="B1">Angielski B1 (Intermediate)</option>
+                    <option value="B1">Angielski B1+ (Intermediate Plus)</option>
+                    <option value="B2">Angielski B2 (Upper-Intermediate)</option>
+                    <option value="C1">Angielski C1 (Advanced)</option>
+                    <option value="C1">Angielski C1 (Advanced Plus)</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="name">Imię i nazwisko:</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Wpisz swoje imię i nazwisko" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Adres e-mail:</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Wpisz swój adres e-mail" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Numer telefonu:</label>
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="Wpisz swój numer telefonu" required>
+            </div>
+            
+            <!-- Hidden field to identify this as a course registration -->
+            <input type="hidden" name="_subject" value="New Course Registration">
+            
+            <button type="submit" class="button">Zapisz się na kurs</button>
+        </form>
+    </div>
+</section>
+
+        <!-- OLD Form Section -->
+        <!-- <section class="form-section">
             <div class="form-container">
                 <div class="form-title">
                     <h3>Formularz zapisów</h3>
@@ -675,8 +723,12 @@
                     <p>Nasz manager skontaktuje się z Tobą w ciągu 24 godzin, aby omówić szczegóły i ustalić termin testu poziomującego.</p>
                 </div>
             </div>
-        </section>
+        </section> -->
     </div>
+
+
+
+
 
     <footer>
         <div class="footer-content">
