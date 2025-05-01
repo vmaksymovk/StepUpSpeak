@@ -2,24 +2,13 @@
 <html lang="pl">
 
 <head>
-    <link rel="icon" type="image/png" href="/TabImage/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/TabImage/favicon.svg" />
-    <link rel="shortcut icon" href="/TabImage/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/TabImage/apple-touch-icon.png" />
-    <link rel="manifest" href="/TabImage/site.webmanifest" />
-    
-    
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Step Up Speak - Premium Nauka Języków Online</title>
-    <meta name="description"
-        content="Profesjonalne kursy językowe online dla dzieci i młodzieży. Angielski i polski z doświadczonymi nauczycielami. Rozpocznij naukę już dziś!">
+    <title>Polityka Prywatności | Step Up Speak</title>
+    <meta name="description" content="Polityka prywatności Step Up Speak. Informacje o przetwarzaniu danych osobowych i plikach cookies.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
@@ -133,77 +122,86 @@
             font-size: 1.1rem;
         }
 
-
-        /* Hero Section */
-        #home {
-            text-align: center;
-            padding: 5rem 2rem;
-            background: var(--background-gradient);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-content {
-            max-width: 900px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-
-        #home h2 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            color: var(--primary-dark);
-            line-height: 1.2;
-        }
-
-        #home p {
-            font-size: 1.2rem;
-            color: var(--text-color);
-            margin-bottom: 2.5rem;
-            line-height: 1.8;
-        }
-
-        /* Features Section */
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+        /* Main content */
+        .main-content {
+            flex: 1;
+            padding: 2rem;
             max-width: 1200px;
-            margin: 3rem auto;
+            margin: 0 auto;
+            width: 100%;
         }
 
-        .feature {
+        .legal-container {
             background-color: var(--white);
             border-radius: 12px;
-            padding: 2.5rem;
-            text-align: center;
+            padding: 3rem;
             box-shadow: var(--shadow-md);
-            transition: var(--transition);
-            border-top: 4px solid var(--primary-color);
+            margin: 2rem 0;
         }
 
-        .feature:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-lg);
+        .legal-header {
+            text-align: center;
+            margin-bottom: 3rem;
         }
 
-        .feature-icon {
+        .legal-header h1 {
             font-size: 2.5rem;
             color: var(--primary-color);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
 
-        .feature h3 {
-            font-size: 1.5rem;
+        .legal-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .legal-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .legal-section h2 {
+            font-size: 1.8rem;
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-light);
+        }
+
+        .legal-section h3 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin: 1.5rem 0 1rem;
+        }
+
+        .legal-section p,
+        .legal-section ul {
             margin-bottom: 1rem;
             color: var(--text-color);
         }
 
-        .feature p {
+        .legal-section ul {
+            padding-left: 2rem;
+        }
+
+        .legal-section li {
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .legal-section li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .update-date {
+            text-align: right;
+            font-style: italic;
             color: var(--text-light);
-            font-size: 1rem;
+            margin-top: 2rem;
         }
 
         /* Footer */
@@ -212,7 +210,7 @@
             color: var(--white);
             padding: 3rem 2rem 2rem;
             text-align: center;
-            margin-top: 3rem;
+            margin-top: auto;
         }
 
         .footer-content {
@@ -296,77 +294,6 @@
             color: #A0AEC0;
         }
 
-        /* Banner */
-        .banner {
-            background-image: url('Images/1200x400footer.webp');
-            background-size: cover;
-            background-position: center;
-            height: 300px;
-            border-radius: 12px;
-            margin: 3rem auto;
-            max-width: 1200px;
-            box-shadow: var(--shadow-md);
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .banner::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.3);
-        }
-
-        .banner-content {
-            position: relative;
-            z-index: 2;
-            color: var(--white);
-            padding: 2rem;
-            text-align: center;
-        }
-
-        .banner h3 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Button */
-        .button {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: var(--white);
-            padding: 1rem 2.5rem;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 50px;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-            margin-top: 1.5rem;
-        }
-
-        .button:hover {
-            background-color: var(--primary-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
-        }
-
-        .button-large {
-            padding: 1.2rem 3rem;
-            font-size: 1.2rem;
-        }
-
-
-
         /* Responsive */
         @media (max-width: 992px) {
             header {
@@ -383,10 +310,6 @@
             header h1 {
                 font-size: 2rem;
             }
-
-            #home h2 {
-                font-size: 2.5rem;
-            }
         }
 
         @media (max-width: 768px) {
@@ -401,40 +324,26 @@
                 margin: 0.2rem;
             }
 
-            #home {
-                padding: 3rem 1rem;
+            .legal-container {
+                padding: 2rem;
             }
 
-            #home h2 {
+            .legal-header h1 {
                 font-size: 2rem;
             }
-
-            #home p {
-                font-size: 1rem;
-            }
-
-            .features {
-                grid-template-columns: 1fr;
-            }
-
-            .banner {
-                height: 200px;
-            }
         }
 
         @media (max-width: 480px) {
-            .button {
-                width: 100%;
-            }
-        }
-
-        @media (max-width: 480px) {
-            section {
-                padding: 3rem 1rem;
+            .main-content {
+                padding: 1rem;
             }
 
-            .pricing-table {
-                grid-template-columns: 1fr;
+            .legal-container {
+                padding: 1.5rem;
+            }
+
+            .legal-header h1 {
+                font-size: 1.8rem;
             }
 
             .footer-content {
@@ -465,7 +374,6 @@
         </div>
     </header>
 
-    <!-- Navigation -->
     <nav>
         <a href="index.html"><i class="fas fa-home"></i> Strona Główna</a>
         <a href="courses.html"><i class="fas fa-book-open"></i> Kursy</a>
@@ -474,66 +382,118 @@
         <a href="blog.html"><i class="fas fa-blog"></i> Blog</a>
     </nav>
 
-    <!-- Main Content -->
-    <section id="home">
-        <div class="hero-content">
-            <h2>Witamy w Step Up Speak!</h2>
-            <p>Step Up Speak to nowoczesna szkoła językowa online, specjalizująca się w nauczaniu angielskiego i
-                polskiego dzieci i młodzieży. Nasze interaktywne lekcje, prowadzone przez doświadczonych nauczycieli,
-                pomagają uczniom szybko i skutecznie opanować język obcy w przyjaznej atmosferze.</p>
-
-            <div class="features">
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-laptop"></i>
-                    </div>
-                    <h3>Interaktywne Lekcje</h3>
-                    <p>Wykorzystujemy nowoczesne technologie i kreatywne metody nauczania, które utrzymują zaangażowanie
-                        młodych uczniów i motywują ich do aktywnego uczestnictwa.</p>
-                </div>
-
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                    </div>
-                    <h3>Doświadczeni Nauczyciele</h3>
-                    <p>Nasi lektorzy to certyfikowani specjaliści z udokumentowanym doświadczeniem w nauczaniu dzieci i
-                        młodzieży, znający najskuteczniejsze metody edukacyjne.</p>
-                </div>
-
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-calendar-alt"></i>
-                    </div>
-                    <h3>Elastyczny Harmonogram</h3>
-                    <p>Dostosowujemy godziny zajęć do indywidualnych potrzeb uczniów, oferując możliwość nauki w
-                        optymalnym dla nich czasie i tempie.</p>
-                </div>
+    <div class="main-content">
+        <div class="legal-container">
+            <div class="legal-header">
+                <h1>Polityka Prywatności</h1>
+                <p>Niniejsza polityka prywatności określa zasady przetwarzania danych osobowych w serwisie Step Up Speak.</p>
             </div>
 
-            <div class="banner">
-                <div class="banner-content">
-                    <h3>Rozpocznij swoją językową przygodę już dziś!</h3>
-                    <a href="courses.html" class="button button-large">Zobacz nasze kursy</a>
-                </div>
+            <div class="legal-section">
+                <h2>1. Postanowienia ogólne</h2>
+                <p>Administratorem danych osobowych jest Step Up Speak z siedzibą w Warszawie, adres: Al. Jana Pawła II 20, 00-001 Warszawa, NIP: [NUMER NIP], REGON: [NUMER REGON].</p>
+                <p>Kontakt z Administratorem możliwy jest pod adresem e-mail: <a href="mailto:stepupspeakofficial@gmail.com">stepupspeakofficial@gmail.com</a> lub telefonicznie: +48 791 016 175.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>2. Zakres przetwarzanych danych</h2>
+                <h3>2.1. Dane przekazywane przez użytkownika</h3>
+                <p>Przetwarzamy następujące dane osobowe:</p>
+                <ul>
+                    <li>Podczas rejestracji: imię i nazwisko, adres e-mail, numer telefonu;</li>
+                    <li>Przy zakupie kursów: dane niezbędne do faktury (NIP, adres);</li>
+                    <li>W formularzach kontaktowych: treść wiadomości wraz z danymi kontaktowymi.</li>
+                </ul>
+
+                <h3>2.2. Dane zbierane automatycznie</h3>
+                <p>W trakcie korzystania z serwisu zbierane są dane techniczne:</p>
+                <ul>
+                    <li>Adres IP;</li>
+                    <li>Typ przeglądarki;</li>
+                    <li>Czas przebywania na stronie;</li>
+                    <li>Dane o urządzeniu.</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2>3. Cele przetwarzania danych</h2>
+                <p>Dane przetwarzamy w celu:</p>
+                <ul>
+                    <li>Realizacji usług edukacyjnych (art. 6 ust. 1 lit. b RODO);</li>
+                    <li>Wysyłki newslettera (tylko za wyrażoną zgodą, art. 6 ust. 1 lit. a RODO);</li>
+                    <li>Analizy ruchu na stronie (art. 6 ust. 1 lit. f RODO);</li>
+                    <li>Realizacji obowiązków prawnych (np. fakturowania, art. 6 ust. 1 lit. c RODO).</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2>4. Okres przechowywania danych</h2>
+                <p>Dane przechowujemy przez okres:</p>
+                <ul>
+                    <li>Niezbędny do realizacji usługi - do 5 lat od zakończenia współpracy;</li>
+                    <li>Wymagany przepisami prawa (np. dane do faktur - 5 lat);</li>
+                    <li>Do czasu wycofania zgody na marketing bezpośredni.</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2>5. Prawa użytkownika</h2>
+                <p>Przysługują Ci następujące prawa:</p>
+                <ul>
+                    <li>Dostępu do swoich danych;</li>
+                    <li>Sprostowania danych;</li>
+                    <li>Usunięcia danych ("prawo do bycia zapomnianym");</li>
+                    <li>Ograniczenia przetwarzania;</li>
+                    <li>Przenoszenia danych;</li>
+                    <li>Wniesienia sprzeciwu;</li>
+                    <li>Wycofania zgody w dowolnym momencie.</li>
+                </ul>
+                <p>Żeby skorzystać z tych praw, skontaktuj się z nami pod adresem <a href="mailto:stepupspeakofficial@gmail.com">stepupspeakofficial@gmail.com</a>.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>6. Odbiorcy danych</h2>
+                <p>Dane mogą być udostępniane:</p>
+                <ul>
+                    <li>Podmiotom przetwarzającym (np. dostawcom usług płatności, hostingowym);</li>
+                    <li>Organom państwowym na żądanie zgodnie z prawem;</li>
+                    <li>Innym podmiotom tylko za wyrażoną zgodą.</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2>7. Pliki cookies</h2>
+                <p>Serwis używa plików cookies w celu:</p>
+                <ul>
+                    <li>Prawidłowego działania strony (niezbędne cookies);</li>
+                    <li>Analizy ruchu (analityczne cookies);</li>
+                    <li>Personalizacji treści (funkcjonalne cookies).</li>
+                </ul>
+                <p>Szczegóły znajdziesz w <a href="cookie-policy.html">Polityce Cookies</a>.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>8. Postanowienia końcowe</h2>
+                <p>Administrator zastrzega sobie prawo do zmian w polityce prywatności. O wszelkich zmianach poinformujemy z wyprzedzeniem.</p>
+                <p>W sprawach spornych masz prawo wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych.</p>
+            </div>
+
+            <div class="update-date">
+                <p>Ostatnia aktualizacja: 1 maja 2025 r.</p>
             </div>
         </div>
-    </section>
+    </div>
 
     <footer>
         <div class="footer-content">
             <div class="footer-column">
                 <h3>Step Up Speak</h3>
-                <p>Profesjonalne kursy językowe online, które pomogą Ci osiągnąć płynność językową i pewność siebie w
-                    komunikacji.</p>
+                <p>Profesjonalne kursy językowe online, które pomogą Ci osiągnąć płynność językową i pewność siebie w komunikacji.</p>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/groups/1007789447828292" target="_blank" rel="noopener"><i
-                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.facebook.com/groups/1007789447828292" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/stepupspeak_english/"><i class="fab fa-instagram"></i></a>
                     <a href="https://www.linkedin.com/company/stepupspeak" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.tiktok.com/@stepupspeak" target="_blank" rel="noopener"><i
-                            class="fab fa-tiktok"></i></a>
-
+                    <a href="https://www.tiktok.com/@stepupspeak" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
                 </div>
             </div>
 
@@ -549,16 +509,13 @@
                 <h3>Informacje</h3>
                 <ul>
                     <li><a href="tel:+48791016175"><i class="fas fa-phone-alt"></i> +48 791 016 175</a></li>
-                    <li><a href="mailto:stepupspeakofficial@gmail.com"><i class="fas fa-envelope"></i>
-                            stepupspeakofficial@gmail.com</a></li>
-                    <li><a href="contacts.html"><i class="fas fa-map-marker-alt"></i> Al. Jana Pawła II 20, Warszawa</a>
-                    </li>
-                    <li><a href="contacts.html"><i class="fas fa-clock"></i> Pn-Pt: 8:00-20:00</a></li>
+                    <li><a href="mailto:stepupspeakofficial@gmail.com"><i class="fas fa-envelope"></i> stepupspeakofficial@gmail.com</a></li>
+                    <li><a href="contacts.html"><i class="fas fa-map-marker-alt"></i> Al. Jana Pawła II 20, Warszawa</a></li>
                 </ul>
             </div>
 
             <div class="footer-column">
-                <h3>Przydatne linki</h3>
+                <h3>Informacje prawne</h3>
                 <ul>
                     <li><a href="terms-of-service.html">Regulamin</a></li>
                     <li><a href="privacy-policy.html">Polityka prywatności</a></li>

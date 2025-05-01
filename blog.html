@@ -498,6 +498,10 @@
                 font-size: 1.3rem;
             }
         }
+
+        .article-card {
+            transition: all 0.3s ease;
+        }
     </style>
 </head>
 
@@ -547,8 +551,9 @@
 
             <!-- Article List -->
             <div class="article-list">
+
                 <!-- Article 1 -->
-                <div class="article-card">
+                <div class="article-card" data-category="Metody nauki">
                     <div class="article-header" onclick="toggleArticle(this)">
                         <h3>Jak efektywnie uczyć się angielskiego?</h3>
                         <div class="article-arrow">&#9660;</div>
@@ -569,7 +574,7 @@
                 </div>
 
                 <!-- Article 2 -->
-                <div class="article-card">
+                <div class="article-card" data-category="Wymowa">
                     <div class="article-header" onclick="toggleArticle(this)">
                         <h3>5 kroków do płynnej wymowy w angielskim</h3>
                         <div class="article-arrow">&#9660;</div>
@@ -590,7 +595,7 @@
                 </div>
 
                 <!-- Article 3 -->
-                <div class="article-card">
+                <div class="article-card" data-category="Słownictwo">
                     <div class="article-header" onclick="toggleArticle(this)">
                         <h3>Jak rozwinąć słownictwo w języku obcym?</h3>
                         <div class="article-arrow">&#9660;</div>
@@ -611,7 +616,7 @@
                 </div>
 
                 <!-- Article 4 -->
-                <div class="article-card">
+                <div class="article-card" data-category="Motywacja">
                     <div class="article-header" onclick="toggleArticle(this)">
                         <h3>Jak przezwyciężyć lęk przed mówieniem w języku obcym?</h3>
                         <div class="article-arrow">&#9660;</div>
@@ -632,7 +637,7 @@
                 </div>
 
                 <!-- Article 5 -->
-                <div class="article-card">
+                <div class="article-card" data-category="Gramatyka">
                     <div class="article-header" onclick="toggleArticle(this)">
                         <h3>Jak nauczyć się gramatyki w języku obcym?</h3>
                         <div class="article-arrow">&#9660;</div>
@@ -653,7 +658,7 @@
                 </div>
 
                 <!-- Article 6 -->
-                <div class="article-card">
+                <div class="article-card" data-category="Metody nauki">
                     <div class="article-header" onclick="toggleArticle(this)">
                         <h3>Jak poprawić swoje umiejętności mówienia po angielsku?</h3>
                         <div class="article-arrow">&#9660;</div>
@@ -673,6 +678,64 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="article-card" data-category="Metody nauki">
+                    <div class="article-header" onclick="toggleArticle(this)">
+                        <h3>Metoda Pomodoro w nauce angielskiego: Jak uczyć się skutecznie w 25-minutowych blokach</h3>
+                        <div class="article-arrow">&#9660;</div>
+                    </div>
+                    <div class="article-excerpt">
+                        Zwiększ produktywność dzięki technice Pomodoro, potwierdzonej badaniami z Uniwersytetu w Illinois.
+                    </div>
+                    <div class="article-content">
+                        <div class="article-content-inner">
+                            <p><strong>Jak działa?</strong> Nauka w 25-minutowych sesjach z 5-minutowymi przerwami (4 cykle = długa przerwa).</p>
+                            <p><strong>Dlaczego działa?</strong> Badania wykazują, że krótkie sesje poprawiają koncentrację o 40% (Journal of Applied Psychology, 2018).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="article-card" data-category="Metody nauki">
+                    <div class="article-header" onclick="toggleArticle(this)">
+                        <h3>Mapy myśli w nauce słownictwa: Jak zapamiętywać 50 słów dziennie</h3>
+                        <div class="article-arrow">&#9660;</div>
+                    </div>
+                    <div class="article-excerpt">
+                        Wizualna metoda nauki, która aktywuje obie półkule mózgu (badania NASA, 2020).
+                    </div>
+                    <div class="article-content">
+                        <div class="article-content-inner">
+                            <p><strong>Krok 1:</strong> Wybierz temat (np. "Podróże").</p>
+                            <p><strong>Krok 2:</strong> Narysuj centralny obrazek (np. samolot).</p>
+                            <p><strong>Krok 3:</strong> Dodaj gałęzie z kategoriami: <em>Verbs</em> (fly, book), <em>Nouns</em> (passport, luggage).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="article-card" data-category="Metody nauki">
+                    <div class="article-header" onclick="toggleArticle(this)">
+                        <h3>Immersja językowa w domu: Jak stworzyć środowisko anglojęzyczne bez wyjazdu</h3>
+                        <div class="article-arrow">&#9660;</div>
+                    </div>
+                    <div class="article-excerpt">
+                        Metoda stosowana przez poliglotów (np. Benny Lewis), która przyspiesza naukę 3-krotnie.
+                    </div>
+                    <div class="article-content">
+                        <div class="article-content-inner">
+                            <p><strong>4 zmiany w codziennych nawykach:</strong></p>
+                            <ol>
+                                <li><strong>Telefon:</strong> Zmień język systemu na angielski.</li>
+                                <li><strong>Muzyka:</strong> Słuchaj podcastów.</li>
+                                <li><strong>TV:</strong> Oglądaj Netflix z angielskimi napisami.</li>
+                                <li><strong>Czytanie:</strong> Codziennie 1 artykuł.</li>
+                            </ol>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                
             </div>
 
             <!-- Newsletter -->
@@ -762,8 +825,8 @@
             <div class="footer-column">
                 <h3>Przydatne linki</h3>
                 <ul>
-                    <li><a href="#">Regulamin</a></li>
-                    <li><a href="#">Polityka prywatności</a></li>
+                    <li><a href="terms-of-service.html">Regulamin</a></li>
+                    <li><a href="privacy-policy.html">Polityka prywatności</a></li>
                     <li><a href="#">FAQ</a></li>
                     <li><a href="#">Opinie studentów</a></li>
                     <li><a href="#">Kariera</a></li>
@@ -801,14 +864,33 @@
         });
 
         // Category filter functionality
-        const categoryBtns = document.querySelectorAll('.category-btn');
-        categoryBtns.forEach(btn => {
-            btn.addEventListener('click', function () {
-                categoryBtns.forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
-                // Here you would add filtering logic
-            });
+const categoryBtns = document.querySelectorAll('.category-btn');
+const articleCards = document.querySelectorAll('.article-card');
+
+categoryBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+        // Удаляем активный класс у всех кнопок
+        categoryBtns.forEach(b => b.classList.remove('active'));
+        // Добавляем активный класс к текущей кнопке
+        this.classList.add('active');
+        
+        const selectedCategory = this.textContent.trim();
+        
+        // Фильтруем статьи
+        articleCards.forEach(card => {
+            if (selectedCategory === 'Wszystkie') {
+                card.style.display = 'block';
+            } else {
+                const cardCategory = card.getAttribute('data-category');
+                if (cardCategory === selectedCategory) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            }
         });
+    });
+});
     </script>
 </body>
 

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kariera - Step Up Speak | Dołącz do Naszego Zespołu</title>
+    <meta name="description" content="Dołącz do zespołu Step Up Speak. Sprawdź nasze aktualne oferty pracy dla nauczycieli języka angielskiego i nie tylko.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2E8B57;
+            --primary-dark: #276749;
+            --primary-light: #48BB78;
+            --secondary-color: #3182CE;
+            --accent-color: #DD6B20;
+            --text-color: #2D3748;
+            --text-light: #718096;
+            --background-light: #F7FAFC;
+            --background-gradient: linear-gradient(135deg, #f0f9f0 0%, #e6f4e6 100%);
+            --white: #FFFFFF;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: var(--background-light);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 1.5rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: var(--shadow-md);
+            position: relative;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        header img {
+            width: 100px;
+            height: auto;
+            transition: var(--transition);
+        }
+
+        header img:hover {
+            transform: scale(1.05);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: -0.5px;
+        }
+
+        .tagline {
+            font-size: 1rem;
+            font-weight: 300;
+            opacity: 0.9;
+            margin-top: 0.3rem;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: var(--text-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-sm);
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin: 0 1rem;
+            padding: 0.7rem 1.5rem;
+            transition: var(--transition);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        nav a:hover, nav a:focus {
+            background-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        nav a i {
+            font-size: 1.1rem;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            padding-bottom: 4rem;
+        }
+
+        /* Careers Hero */
+        .careers-hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .careers-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.05)" d="M0,0 L100,0 L100,100 L0,100 Z"></path></svg>');
+            background-size: cover;
+            opacity: 0.1;
+        }
+
+        .careers-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .careers-hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .careers-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        /* Job Listings */
+        .jobs-section {
+            padding: 4rem 2rem;
+            background: var(--white);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--accent-color);
+            margin: 1rem auto 0;
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .job-listings {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .job-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-md);
+            border-left: 4px solid var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .job-title {
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .job-type {
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .job-location {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .job-description {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .job-requirements {
+            margin-bottom: 1.5rem;
+        }
+
+        .job-requirements h4 {
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        .job-requirements ul {
+            padding-left: 1.5rem;
+        }
+
+        .job-requirements li {
+            margin-bottom: 0.5rem;
+        }
+
+        .apply-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 0.8rem 1.8rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .apply-button:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* No Jobs Message */
+        .no-jobs {
+            text-align: center;
+            padding: 2rem;
+            background: var(--background-light);
+            border-radius: 12px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-color);
+            color: var(--white);
+            padding: 2rem;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .social-links a {
+            color: var(--white);
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            color: var(--primary-light);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            color: #A0AEC0;
+            margin-top: 1.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            .logo-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .careers-hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-wrap: wrap;
+                padding: 0.8rem;
+            }
+            
+            nav a {
+                font-size: 0.95rem;
+                padding: 0.5rem 1rem;
+                margin: 0.2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .section-title p {
+                font-size: 1rem;
+            }
+            
+            .job-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .careers-hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .careers-hero p {
+                font-size: 1rem;
+            }
+            
+            .job-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <a href="index.html"><img src="Images/LogoSchool.png" alt="Step Up Speak Logo"></a>
+            <div>
+                <h1>Step Up Speak</h1>
+                <p class="tagline">Profesjonalne kursy językowe online</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html"><i class="fas fa-home"></i> Strona Główna</a>
+        <a href="courses.html"><i class="fas fa-book-open"></i> Kursy</a>
+        <a href="pricing.html"><i class="fas fa-tags"></i> Ceny</a>
+        <a href="contacts.html"><i class="fas fa-envelope"></i> Kontakt</a>
+        <a href="blog.html"><i class="fas fa-blog"></i> Blog</a>
+        <a href="careers.html"><i class="fas fa-briefcase"></i> Kariera</a>
+    </nav>
+
+    <div class="main-content">
+        <!-- Careers Hero -->
+        <section class="careers-hero">
+            <div class="careers-hero-content">
+                <h1>Dołącz do naszego zespołu</h1>
+                <p>Poszukujemy pasjonatów języków obcych, którzy chcą rozwijać się w dynamicznym środowisku edukacyjnym. Sprawdź nasze aktualne oferty pracy.</p>
+            </div>
+        </section>
+
+        <!-- Job Listings -->
+        <section class="jobs-section">
+            <div class="section-title">
+                <h2>Aktualne Oferty Pracy</h2>
+                <p>Oferujemy konkurencyjne wynagrodzenie, elastyczne godziny pracy i możliwość rozwoju zawodowego</p>
+            </div>
+            
+            <div class="job-listings">
+                <!-- Job 1 -->
+                <div class="job-card">
+                    <div class="job-header">
+                        <div>
+                            <h3 class="job-title">Nauczyciel języka angielskiego online</h3>
+                            <div class="job-location">
+                                <i class="fas fa-map-marker-alt"></i> Praca zdalna
+                            </div>
+                        </div>
+                        <span class="job-type">Pełny etat</span>
+                    </div>
+                    
+                    <div class="job-description">
+                        <p>Poszukujemy doświadczonego nauczyciela języka angielskiego do prowadzenia zajęć online dla dorosłych i młodzieży na różnych poziomach zaawansowania.</p>
+                    </div>
+                    
+                    <div class="job-requirements">
+                        <h4>Wymagania:</h4>
+                        <ul>
+                            <li>Certyfikat nauczycielski (CELTA, TEFL lub równoważny)</li>
+                            <li>Minimum 2 lata doświadczenia w nauczaniu</li>
+                            <li>Znajomość metod nauczania online</li>
+                            <li>Dobra organizacja pracy własnej</li>
+                            <li>Komunikatywność i zaangażowanie</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="job-requirements">
+                        <h4>Oferujemy:</h4>
+                        <ul>
+                            <li>Stałe godziny pracy</li>
+                            <li>Materiały dydaktyczne zapewnione przez szkołę</li>
+                            <li>Możliwość rozwoju zawodowego</li>
+                            <li>Atrakcyjne wynagrodzenie</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="apply.html?position=Nauczyciel angielskiego" class="apply-button">Aplikuj teraz</a>
+                </div>
+                
+                <!-- Job 2 -->
+                <div class="job-card">
+                    <div class="job-header">
+                        <div>
+                            <h3 class="job-title">Korepetytor języka polskiego dla obcokrajowców</h3>
+                            <div class="job-location">
+                                <i class="fas fa-map-marker-alt"></i> Warszawa / Zdalnie
+                            </div>
+                        </div>
+                        <span class="job-type">Część etatu</span>
+                    </div>
+                    
+                    <div class="job-description">
+                        <p>Poszukujemy osoby do prowadzenia indywidualnych lekcji języka polskiego dla obcokrajowców na poziomach A1-B2.</p>
+                    </div>
+                    
+                    <div class="job-requirements">
+                        <h4>Wymagania:</h4>
+                        <ul>
+                            <li>Wykształcenie filologiczne (mile widziane)</li>
+                            <li>Doświadczenie w nauczaniu języka polskiego jako obcego</li>
+                            <li>Znajomość języka angielskiego na poziomie min. B2</li>
+                            <li>Umiejętność pracy z dorosłymi</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="job-requirements">
+                        <h4>Oferujemy:</h4>
+                        <ul>
+                            <li>Elastyczny grafik</li>
+                            <li>Pracę w międzynarodowym środowisku</li>
+                            <li>Wynagrodzenie godzinowe</li>
+                            <li>Możliwość pracy zdalnej</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="apply.html?position=Korepetytor polskiego" class="apply-button">Aplikuj teraz</a>
+                </div>
+                
+                <!-- Job 3 -->
+                <div class="job-card">
+                    <div class="job-header">
+                        <div>
+                            <h3 class="job-title">Specjalista ds. marketingu</h3>
+                            <div class="job-location">
+                                <i class="fas fa-map-marker-alt"></i> Warszawa
+                            </div>
+                        </div>
+                        <span class="job-type">Pełny etat</span>
+                    </div>
+                    
+                    <div class="job-description">
+                        <p>Poszukujemy kreatywnej osoby do zarządzania marketingiem szkoły językowej, ze szczególnym uwzględnieniem social media i content marketingu.</p>
+                    </div>
+                    
+                    <div class="job-requirements">
+                        <h4>Wymagania:</h4>
+                        <ul>
+                            <li>Minimum 2 lata doświadczenia w marketingu</li>
+                            <li>Znajomość platform social media (Facebook, Instagram, LinkedIn)</li>
+                            <li>Umiejętność tworzenia treści</li>
+                            <li>Podstawowa znajomość narzędzi graficznych (Canva, Photoshop)</li>
+                            <li>Znajomość języka angielskiego min. B2</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="job-requirements">
+                        <h4>Oferujemy:</h4>
+                        <ul>
+                            <li>Umowę o pracę</li>
+                            <li>Pracę w młodym, dynamicznym zespole</li>
+                            <li>Możliwość realizacji własnych pomysłów</li>
+                            <li>Pakiet benefitów (karta multisport, prywatna opieka medyczna)</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="apply.html?position=Marketing" class="apply-button">Aplikuj teraz</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="copyright">&copy; 2024 Step Up Speak. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
