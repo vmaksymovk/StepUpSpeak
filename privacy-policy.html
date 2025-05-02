@@ -362,6 +362,90 @@
                 justify-content: center;
             }
         }
+
+        /* Cookie Banner */
+        .cookie-consent-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #2D3748;
+            color: #F7FAFC;
+            padding: 20px 0;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            transform: translateY(100%);
+            transition: transform 0.4s ease-out;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .cookie-consent-banner.active {
+            transform: translateY(0);
+        }
+
+        .cookie-consent-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .cookie-consent-text {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .cookie-consent-text p {
+            margin: 0;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        .cookie-consent-text a {
+            color: #48BB78;
+            text-decoration: underline;
+        }
+
+        .cookie-consent-buttons {
+            display: flex;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+
+        .cookie-btn {
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 15px;
+        }
+
+        .primary-btn {
+            background: #48BB78;
+            color: white;
+        }
+
+        .primary-btn:hover {
+            background: #38A169;
+            transform: translateY(-2px);
+        }
+
+        .secondary-btn {
+            background: transparent;
+            color: #CBD5E0;
+            border: 1px solid #718096;
+        }
+
+        .secondary-btn:hover {
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+        }
     </style>
 </head>
 
@@ -568,6 +652,23 @@
             <p>&copy; 2024 Step Up Speak. Wszelkie prawa zastrzeżone.</p>
         </div>
     </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-consent-banner" class="cookie-consent-banner">
+        <div class="cookie-consent-container">
+            <div class="cookie-consent-text">
+                <p>Ta strona korzysta z plików cookie, aby zapewnić najlepszą jakość usług. 
+                    <a href="privacy-policy.html" target="_blank">Dowiedz się więcej</a>
+                </p>
+            </div>
+            <div class="cookie-consent-buttons">
+                <button id="reject-cookies" class="cookie-btn secondary-btn">Odrzuć</button>
+                <button id="accept-cookies" class="cookie-btn primary-btn">Akceptuję</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="cookie-consent.js"></script>
 </body>
 
 </html>
