@@ -626,6 +626,69 @@
             background: rgba(255, 255, 255, 0.05);
             color: white;
         }
+        .price-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        
+        .price-details {
+            margin-top: 0.8rem;
+            padding-top: 0.8rem;
+            border-top: 1px dashed #e2e8f0;
+        }
+        
+        .price-per-lesson {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 0.3rem;
+        }
+        
+        .lesson-price {
+            color: #2b6cb0;
+        }
+        
+        .lesson-label {
+            color: #4a5568;
+        }
+        
+        .billing-info {
+            font-size: 0.75rem;
+            color: #718096;
+            font-style: italic;
+        }
+        
+        .value-highlight {
+            background-color: #ebf8ff;
+            color: #2b6cb0;
+            padding: 0.6rem;
+            border-radius: 6px;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        
+        .value-highlight i {
+            margin-right: 0.5rem;
+        }
+        
+        .features-list li i {
+            margin-right: 0.5rem;
+            width: 1.25em;
+            text-align: center;
+        }
+        
+        /* Kolory ikon odpowiadające poziomom */
+        .pricing-card:nth-child(1) .features-list li i { color: #FF6B6B; }
+        .pricing-card:nth-child(2) .features-list li i { color: #4ECDC4; }
+        .pricing-card:nth-child(3) .features-list li i { color: #45B7D1; }
+        .pricing-card:nth-child(4) .features-list li i { color: #A37EBA; }
+        .pricing-card:nth-child(5) .features-list li i { color: #FFA07A; }
+        .pricing-card:nth-child(6) .features-list li i { color: #FFD166; }
+        .pricing-card:nth-child(7) .features-list li i { color: #06D6A0; }
+        .pricing-card:nth-child(8) .features-list li i { color: #696cc0; }
     </style>
 </head>
 
@@ -658,175 +721,277 @@
                 </p>
             </div>
             <div class="pricing-table">
+                <!-- A1 -->
                 <div class="pricing-card">
                     <div class="level-badge" style="background-color: #FF6B6B;">Beginner</div>
                     <h3>Poziom A1</h3>
                     <div class="price-container">
-                        <div class="old-price">1799 zł</div>
-                        <div class="new-price">1499 <span>zł</span></div>
-                        <div class="discount-badge">Oszczędzasz 300 zł</div>
+                        <div class="price-header">
+                            <div class="old-price">399 zł</div>
+                            <div class="discount-badge">Oszczędzasz 100 zł</div>
+                        </div>
+                        <div class="new-price">299 <span>zł</span></div>
+                        <div class="price-details">
+                            <div class="price-per-lesson">
+                                <span class="lesson-price">≈37.38 zł</span>
+                                <span class="lesson-label">/zajęcie</span>
+                            </div>
+                            <div class="billing-info">(8 zajęć × 1.5h miesięcznie)</div>
+                        </div>
                     </div>
                     <ul class="features-list">
-                        <li>60 godzin lekcyjnych</li>
-                        <li>Podstawy gramatyki</li>
-                        <li>Słownictwo codzienne</li>
-                        <li>Proste konwersacje</li>
-                        <li>Wstęp do wymowy</li>
+                        <li><i class="fas fa-chalkboard-teacher"></i> 63 godziny zegarowe</li>
+                        <li><i class="fas fa-layer-group"></i> Podstawy gramatyki</li>
+                        <li><i class="fas fa-comments"></i> Proste konwersacje</li>
+                        <li><i class="fas fa-microphone-alt"></i> Wstęp do wymowy</li>
+                        <li><i class="fas fa-book-open"></i> Słownictwo codzienne</li>
                     </ul>
+                    <div class="value-highlight">
+                        <i class="fas fa-calculator"></i> Tylko <strong>24.92 zł/h</strong> nauki!
+                    </div>
                     <div class="book-included">
                         <i class="fas fa-book"></i> Zestaw podręczników w cenie
                     </div>
                     <a href="enroll.html" class="button">Zapisz się teraz</a>
                 </div>
-
+    
+                <!-- A2 -->
                 <div class="pricing-card">
                     <div class="level-badge" style="background-color: #4ECDC4;">Elementary</div>
                     <h3>Poziom A2</h3>
                     <div class="price-container">
-                        <div class="old-price">1899 zł</div>
-                        <div class="new-price">1599 <span>zł</span></div>
-                        <div class="discount-badge">Oszczędzasz 300 zł</div>
+                        <div class="price-header">
+                            <div class="old-price">419 zł</div>
+                            <div class="discount-badge">Oszczędzasz 100 zł</div>
+                        </div>
+                        <div class="new-price">319 <span>zł</span></div>
+                        <div class="price-details">
+                            <div class="price-per-lesson">
+                                <span class="lesson-price">≈39.88 zł</span>
+                                <span class="lesson-label">/zajęcie</span>
+                            </div>
+                            <div class="billing-info">(8 zajęć × 1.5h miesięcznie)</div>
+                        </div>
                     </div>
                     <ul class="features-list">
-                        <li>60 godzin lekcyjnych</li>
-                        <li>Rozszerzona gramatyka</li>
-                        <li>Słownictwo tematyczne</li>
-                        <li>Konwersacje sytuacyjne</li>
-                        <li>Ćwiczenia wymowy</li>
+                        <li><i class="fas fa-chalkboard-teacher"></i> 63 godziny zegarowe</li>
+                        <li><i class="fas fa-layer-group"></i> Rozszerzona gramatyka</li>
+                        <li><i class="fas fa-comments"></i> Konwersacje sytuacyjne</li>
+                        <li><i class="fas fa-microphone-alt"></i> Ćwiczenia wymowy</li>
+                        <li><i class="fas fa-book-open"></i> Słownictwo tematyczne</li>
                     </ul>
+                    <div class="value-highlight">
+                        <i class="fas fa-calculator"></i> Tylko <strong>26.59 zł/h</strong> nauki!
+                    </div>
                     <div class="book-included">
                         <i class="fas fa-book"></i> Zestaw podręczników w cenie
                     </div>
                     <a href="enroll.html" class="button">Zapisz się teraz</a>
                 </div>
-
+    
+                <!-- A2+ -->
                 <div class="pricing-card">
                     <div class="level-badge" style="background-color: #45B7D1;">Pre-Intermediate</div>
                     <h3>Poziom A2+</h3>
                     <div class="price-container">
-                        <div class="old-price">1999 zł</div>
-                        <div class="new-price">1699 <span>zł</span></div>
-                        <div class="discount-badge">Oszczędzasz 300 zł</div>
+                        <div class="price-header">
+                            <div class="old-price">439 zł</div>
+                            <div class="discount-badge">Oszczędzasz 100 zł</div>
+                        </div>
+                        <div class="new-price">339 <span>zł</span></div>
+                        <div class="price-details">
+                            <div class="price-per-lesson">
+                                <span class="lesson-price">≈42.38 zł</span>
+                                <span class="lesson-label">/zajęcie</span>
+                            </div>
+                            <div class="billing-info">(8 zajęć × 1.5h miesięcznie)</div>
+                        </div>
                     </div>
                     <ul class="features-list">
-                        <li>60 godzin lekcyjnych</li>
-                        <li>Gramatyka średniozaawansowana</li>
-                        <li>Słownictwo specjalistyczne</li>
-                        <li>Dyskusje na różne tematy</li>
-                        <li>Trening wymowy</li>
+                        <li><i class="fas fa-chalkboard-teacher"></i> 63 godziny zegarowe</li>
+                        <li><i class="fas fa-layer-group"></i> Gramatyka średniozaawansowana</li>
+                        <li><i class="fas fa-comments"></i> Dyskusje na różne tematy</li>
+                        <li><i class="fas fa-microphone-alt"></i> Trening wymowy</li>
+                        <li><i class="fas fa-book-open"></i> Słownictwo specjalistyczne</li>
                     </ul>
+                    <div class="value-highlight">
+                        <i class="fas fa-calculator"></i> Tylko <strong>28.25 zł/h</strong> nauki!
+                    </div>
                     <div class="book-included">
                         <i class="fas fa-book"></i> Zestaw podręczników w cenie
                     </div>
                     <a href="enroll.html" class="button">Zapisz się teraz</a>
                 </div>
-
+    
+                <!-- B1 -->
                 <div class="pricing-card">
                     <div class="level-badge" style="background-color: #A37EBA;">Intermediate</div>
                     <h3>Poziom B1</h3>
                     <div class="price-container">
-                        <div class="old-price">2099 zł</div>
-                        <div class="new-price">1799 <span>zł</span></div>
-                        <div class="discount-badge">Oszczędzasz 300 zł</div>
+                        <div class="price-header">
+                            <div class="old-price">459 zł</div>
+                            <div class="discount-badge">Oszczędzasz 100 zł</div>
+                        </div>
+                        <div class="new-price">359 <span>zł</span></div>
+                        <div class="price-details">
+                            <div class="price-per-lesson">
+                                <span class="lesson-price">≈44.88 zł</span>
+                                <span class="lesson-label">/zajęcie</span>
+                            </div>
+                            <div class="billing-info">(8 zajęć × 1.5h miesięcznie)</div>
+                        </div>
                     </div>
                     <ul class="features-list">
-                        <li>60 godzin lekcyjnych</li>
-                        <li>Zaawansowana gramatyka</li>
-                        <li>Słownictwo biznesowe</li>
-                        <li>Debaty i prezentacje</li>
-                        <li>Korekta wymowy</li>
+                        <li><i class="fas fa-chalkboard-teacher"></i> 63 godziny zegarowe</li>
+                        <li><i class="fas fa-layer-group"></i> Zaawansowana gramatyka</li>
+                        <li><i class="fas fa-comments"></i> Debaty i prezentacje</li>
+                        <li><i class="fas fa-microphone-alt"></i> Korekta wymowy</li>
+                        <li><i class="fas fa-book-open"></i> Słownictwo biznesowe</li>
                     </ul>
+                    <div class="value-highlight">
+                        <i class="fas fa-calculator"></i> Tylko <strong>29.92 zł/h</strong> nauki!
+                    </div>
                     <div class="book-included">
                         <i class="fas fa-book"></i> Zestaw podręczników w cenie
                     </div>
                     <a href="enroll.html" class="button">Zapisz się teraz</a>
                 </div>
-
+    
+                <!-- B1+ -->
                 <div class="pricing-card">
                     <div class="level-badge" style="background-color: #FFA07A;">Intermediate Plus</div>
                     <h3>Poziom B1+</h3>
                     <div class="price-container">
-                        <div class="old-price">2199 zł</div>
-                        <div class="new-price">1899 <span>zł</span></div>
-                        <div class="discount-badge">Oszczędzasz 300 zł</div>
+                        <div class="price-header">
+                            <div class="old-price">479 zł</div>
+                            <div class="discount-badge">Oszczędzasz 100 zł</div>
+                        </div>
+                        <div class="new-price">379 <span>zł</span></div>
+                        <div class="price-details">
+                            <div class="price-per-lesson">
+                                <span class="lesson-price">≈47.38 zł</span>
+                                <span class="lesson-label">/zajęcie</span>
+                            </div>
+                            <div class="billing-info">(8 zajęć × 1.5h miesięcznie)</div>
+                        </div>
                     </div>
                     <ul class="features-list">
-                        <li>60 godzin lekcyjnych</li>
-                        <li>Gramatyka zaawansowana</li>
-                        <li>Słownictwo akademickie</li>
-                        <li>Prezentacje i negocjacje</li>
-                        <li>Perfekcyjna wymowa</li>
+                        <li><i class="fas fa-chalkboard-teacher"></i> 63 godziny zegarowe</li>
+                        <li><i class="fas fa-layer-group"></i> Gramatyka zaawansowana</li>
+                        <li><i class="fas fa-comments"></i> Prezentacje i negocjacje</li>
+                        <li><i class="fas fa-microphone-alt"></i> Perfekcyjna wymowa</li>
+                        <li><i class="fas fa-book-open"></i> Słownictwo akademickie</li>
                     </ul>
+                    <div class="value-highlight">
+                        <i class="fas fa-calculator"></i> Tylko <strong>31.59 zł/h</strong> nauki!
+                    </div>
                     <div class="book-included">
                         <i class="fas fa-book"></i> Zestaw podręczników w cenie
                     </div>
                     <a href="enroll.html" class="button">Zapisz się teraz</a>
                 </div>
-
+    
+                <!-- B2 -->
                 <div class="pricing-card">
                     <div class="level-badge" style="background-color: #FFD166;">Upper-Intermediate</div>
                     <h3>Poziom B2</h3>
                     <div class="price-container">
-                        <div class="old-price">2299 zł</div>
-                        <div class="new-price">1999 <span>zł</span></div>
-                        <div class="discount-badge">Oszczędzasz 300 zł</div>
+                        <div class="price-header">
+                            <div class="old-price">499 zł</div>
+                            <div class="discount-badge">Oszczędzasz 100 zł</div>
+                        </div>
+                        <div class="new-price">399 <span>zł</span></div>
+                        <div class="price-details">
+                            <div class="price-per-lesson">
+                                <span class="lesson-price">≈49.88 zł</span>
+                                <span class="lesson-label">/zajęcie</span>
+                            </div>
+                            <div class="billing-info">(8 zajęć × 1.5h miesięcznie)</div>
+                        </div>
                     </div>
                     <ul class="features-list">
-                        <li>60 godzin lekcyjnych</li>
-                        <li>Gramatyka biegła</li>
-                        <li>Słownictwo specjalistyczne</li>
-                        <li>Zaawansowane prezentacje</li>
-                        <li>Akcent i intonacja</li>
+                        <li><i class="fas fa-chalkboard-teacher"></i> 63 godziny zegarowe</li>
+                        <li><i class="fas fa-layer-group"></i> Gramatyka biegła</li>
+                        <li><i class="fas fa-comments"></i> Zaawansowane prezentacje</li>
+                        <li><i class="fas fa-microphone-alt"></i> Akcent i intonacja</li>
+                        <li><i class="fas fa-book-open"></i> Słownictwo specjalistyczne</li>
                     </ul>
+                    <div class="value-highlight">
+                        <i class="fas fa-calculator"></i> Tylko <strong>33.25 zł/h</strong> nauki!
+                    </div>
                     <div class="book-included">
                         <i class="fas fa-book"></i> Zestaw podręczników w cenie
                     </div>
                     <a href="enroll.html" class="button">Zapisz się teraz</a>
                 </div>
-
+    
+                <!-- C1 -->
                 <div class="pricing-card">
                     <div class="level-badge" style="background-color: #06D6A0;">Advanced</div>
                     <h3>Poziom C1</h3>
                     <div class="price-container">
-                        <div class="old-price">2399 zł</div>
-                        <div class="new-price">2099 <span>zł</span></div>
-                        <div class="discount-badge">Oszczędzasz 300 zł</div>
+                        <div class="price-header">
+                            <div class="old-price">519 zł</div>
+                            <div class="discount-badge">Oszczędzasz 100 zł</div>
+                        </div>
+                        <div class="new-price">419 <span>zł</span></div>
+                        <div class="price-details">
+                            <div class="price-per-lesson">
+                                <span class="lesson-price">≈52.38 zł</span>
+                                <span class="lesson-label">/zajęcie</span>
+                            </div>
+                            <div class="billing-info">(8 zajęć × 1.5h miesięcznie)</div>
+                        </div>
                     </div>
                     <ul class="features-list">
-                        <li>60 godzin lekcyjnych</li>
-                        <li>Gramatyka na poziomie native</li>
-                        <li>Słownictwo profesjonalne</li>
-                        <li>Zaawansowane debaty</li>
-                        <li>Perfekcyjna wymowa</li>
+                        <li><i class="fas fa-chalkboard-teacher"></i> 63 godziny zegarowe</li>
+                        <li><i class="fas fa-layer-group"></i> Gramatyka na poziomie native</li>
+                        <li><i class="fas fa-comments"></i> Zaawansowane debaty</li>
+                        <li><i class="fas fa-microphone-alt"></i> Perfekcyjna wymowa</li>
+                        <li><i class="fas fa-book-open"></i> Słownictwo profesjonalne</li>
                     </ul>
+                    <div class="value-highlight">
+                        <i class="fas fa-calculator"></i> Tylko <strong>34.92 zł/h</strong> nauki!
+                    </div>
                     <div class="book-included">
                         <i class="fas fa-book"></i> Zestaw podręczników w cenie
                     </div>
                     <a href="enroll.html" class="button">Zapisz się teraz</a>
                 </div>
-
+    
+                <!-- C1+ -->
                 <div class="pricing-card">
                     <div class="level-badge" style="background-color: #696cc0;">Advanced Plus</div>
                     <h3>Poziom C1+</h3>
                     <div class="price-container">
-                        <div class="old-price">2299 zł</div>
-                        <div class="new-price">2199 <span>zł</span></div>
-                        <div class="discount-badge">Oszczędzasz 100 zł</div>
+                        <div class="price-header">
+                            <div class="old-price">539 zł</div>
+                            <div class="discount-badge">Oszczędzasz 100 zł</div>
+                        </div>
+                        <div class="new-price">439 <span>zł</span></div>
+                        <div class="price-details">
+                            <div class="price-per-lesson">
+                                <span class="lesson-price">≈54.88 zł</span>
+                                <span class="lesson-label">/zajęcie</span>
+                            </div>
+                            <div class="billing-info">(8 zajęć × 1.5h miesięcznie)</div>
+                        </div>
                     </div>
                     <ul class="features-list">
-                        <li>60 godzin lekcyjnych</li>
-                        <li>Precyzyjne struktury językowe</li>
-                        <li>Akademickie i biznesowe słownictwo</li>
-                        <li>Analiza zaawansowanych tekstów</li>
-                        <li>Wystąpienia publiczne i prezentacje</li>
+                        <li><i class="fas fa-chalkboard-teacher"></i> 63 godziny zegarowe</li>
+                        <li><i class="fas fa-layer-group"></i> Precyzyjne struktury językowe</li>
+                        <li><i class="fas fa-comments"></i> Wystąpienia publiczne</li>
+                        <li><i class="fas fa-microphone-alt"></i> Profesjonalna wymowa</li>
+                        <li><i class="fas fa-book-open"></i> Akademickie słownictwo</li>
                     </ul>
+                    <div class="value-highlight">
+                        <i class="fas fa-calculator"></i> Tylko <strong>36.59 zł/h</strong> nauki!
+                    </div>
                     <div class="book-included" id="individual">
                         <i class="fas fa-book"></i> Zestaw podręczników w cenie
                     </div>
                     <a href="enroll.html" class="button">Zapisz się teraz</a>
                 </div>
-
-                
             </div>
             <div class="highlight">
                 <p><i class="fas fa-exclamation-circle"></i> <strong>Informacja:</strong> Jeśli chcesz zapisać się na indywidualne zajęcia, prosimy o pozostawienie swoich danych w formularzu kontaktowym na stronie <a href="contacts.html">Kontakt</a>. Skontaktujemy się z Tobą w ciągu 24 godzin.</p>
