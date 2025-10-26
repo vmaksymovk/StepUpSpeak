@@ -1,36 +1,56 @@
 <!DOCTYPE html>
 <html lang="pl">
-
 <head>
-    <link rel="apple-touch-icon" sizes="57x57" href="FaviconForWebPage/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="FaviconForWebPage/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="FaviconForWebPage/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="FaviconForWebPage/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="FaviconForWebPage/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="FaviconForWebPage/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="FaviconForWebPage/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="FaviconForWebPage/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/FaviconForWebPage/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="192x192"  href="FaviconForWebPage/android-icon-192x192.png">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/FaviconForWebPage/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="FaviconForWebPage/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="FaviconForWebPage/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="FaviconForWebPage/favicon-16x16.png">
-    <link rel="manifest" href="/FaviconForWebPage/site.webmanifest" />
+    <link rel="manifest" href="/FaviconForWebPage/site.webmanifest">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="FaviconForWebPage/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <meta name="apple-mobile-web-app-title" content="StepUpSpeak" />
+    <meta name="apple-mobile-web-app-title" content="StepUpSpeak">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kariera - Step Up Speak | Dołącz do Naszego Zespołu</title>
-    <meta name="description" content="Step Up Speak to platforma oferująca profesjonalne kursy językowe online.">
+    <title>Kariera - Step Up Speak | Dołącz do Naszego Zespołu | +48 576 076 648</title>
+    <meta name="description" content="Dołącz do zespołu Step Up Speak! Sprawdź aktualne oferty pracy dla lektorów języka angielskiego, metodyków i specjalistów e-learningu.">
+    
+    <!-- Preload critical resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Kariera - Step Up Speak | Dołącz do Naszego Zespołu">
+    <meta property="og:description" content="Dołącz do zespołu Step Up Speak! Sprawdź aktualne oferty pracy dla lektorów języka angielskiego i specjalistów e-learningu.">
+    <meta property="og:image" content="https://stepupspeak.com/images/og-careers.jpg">
+    <meta property="og:url" content="https://stepupspeak.com/careers.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Step Up Speak">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kariera - Step Up Speak | Dołącz do Naszego Zespołu">
+    <meta name="twitter:description" content="Dołącz do zespołu Step Up Speak! Sprawdź aktualne oferty pracy dla lektorów języka angielskiego.">
+    <meta name="twitter:image" content="https://stepupspeak.com/images/twitter-careers.jpg">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Kariera - Step Up Speak",
+        "description": "Oferty pracy w Step Up Speak - szkoła językowa online",
+        "url": "https://stepupspeak.com/careers.html",
+        "publisher": {
+            "@type": "EducationalOrganization",
+            "name": "Step Up Speak",
+            "url": "https://stepupspeak.com"
+        }
+    }
+    </script>
+
     <style>
         :root {
             --primary-color: #2E8B57;
@@ -46,13 +66,19 @@
             --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
             --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
             --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
             --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --border-radius: 12px;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -65,67 +91,97 @@
             min-height: 100vh;
         }
 
+        /* Skip to main content for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--primary-color);
+            color: white;
+            padding: 8px;
+            z-index: 10000;
+            text-decoration: none;
+            border-radius: 0 0 4px 4px;
+            transition: top 0.3s;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
         /* Header */
         header {
-            background-color: var(--primary-color);
-            color: var(--white);
-            padding: 1.5rem 2rem;
+            background-color: var(--white);
+            color: var(--text-color);
+            padding: 1rem 2rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
             box-shadow: var(--shadow-md);
-            position: relative;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 0.7rem 2rem;
         }
 
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 1.5rem;
+            gap: 1rem;
         }
 
         header img {
-            width: 100px;
+            width: 80px;
             height: auto;
             transition: var(--transition);
         }
 
-        header img:hover {
-            transform: scale(1.05);
+        header.scrolled img {
+            width: 60px;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
         }
 
         header h1 {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             font-weight: 700;
             margin: 0;
             letter-spacing: -0.5px;
+            color: var(--primary-color);
         }
 
         .tagline {
-            font-size: 1rem;
-            font-weight: 300;
-            opacity: 0.9;
-            margin-top: 0.3rem;
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: var(--text-light);
+            margin-top: 0.2rem;
         }
 
         /* Navigation */
+        .nav-container {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
         nav {
             display: flex;
-            justify-content: center;
-            background-color: var(--text-color);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: var(--shadow-sm);
+            gap: 1.5rem;
         }
 
         nav a {
-            color: var(--white);
+            color: var(--text-color);
             text-decoration: none;
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 500;
-            margin: 0 1rem;
-            padding: 0.7rem 1.5rem;
+            padding: 0.5rem 1rem;
             transition: var(--transition);
             border-radius: 4px;
             display: flex;
@@ -135,67 +191,127 @@
 
         nav a:hover,
         nav a:focus {
-            background-color: var(--primary-color);
-            transform: translateY(-2px);
+            background-color: rgba(46, 139, 87, 0.1);
+            color: var(--primary-color);
         }
 
         nav a i {
+            font-size: 1rem;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+            gap: 0.5rem;
+            white-space: nowrap;
+        }
+
+        .cta-button:hover,
+        .cta-button:focus {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        .cta-button-large {
+            padding: 1.2rem 2.5rem;
             font-size: 1.1rem;
+        }
+
+        .cta-button-secondary {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .cta-button-secondary:hover {
+            background-color: rgba(46, 139, 87, 0.1);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-button {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-color);
+            cursor: pointer;
+            padding: 0.5rem;
         }
 
         /* Main Content */
         .main-content {
             flex: 1;
-            padding-bottom: 4rem;
         }
 
-        /* Careers Hero */
+        /* Careers Hero Section */
         .careers-hero {
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
-            color: var(--white);
+            background: var(--background-gradient);
             padding: 4rem 2rem;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .careers-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.05)" d="M0,0 L100,0 L100,100 L0,100 Z"></path></svg>');
-            background-size: cover;
-            opacity: 0.1;
         }
 
         .careers-hero-content {
             max-width: 800px;
             margin: 0 auto;
-            position: relative;
-            z-index: 2;
         }
 
         .careers-hero h1 {
             font-size: 2.8rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
+            color: var(--primary-dark);
             line-height: 1.2;
         }
 
         .careers-hero p {
             font-size: 1.2rem;
-            opacity: 0.9;
-            margin-bottom: 2rem;
+            color: var(--text-color);
+            margin-bottom: 2.5rem;
             line-height: 1.8;
         }
 
-        /* Job Listings */
-        .jobs-section {
-            padding: 4rem 2rem;
+        .hero-benefits {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-benefit {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-weight: 500;
+        }
+
+        .hero-benefit i {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        /* Careers Section */
+        .careers-section {
+            padding: 5rem 2rem;
             background: var(--white);
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .section-title {
@@ -229,28 +345,201 @@
             margin: 0 auto;
         }
 
+        /* Job Listings */
         .job-listings {
-            max-width: 1000px;
-            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
         }
 
-        .highlight {
-            background-color: rgba(221, 107, 32, 0.1);
-            padding: 1rem;
-            border-left: 3px solid var(--accent-color);
-            margin: 1rem 0;
+        .job-card {
+            background: var(--background-light);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            border-left: 4px solid var(--primary-color);
         }
 
-        .highlight p {
-            margin: 0;
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .job-header {
+            margin-bottom: 1.5rem;
+        }
+
+        .job-header h3 {
+            font-size: 1.6rem;
+            color: var(--primary-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .job-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .job-tag {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .job-description {
+            margin-bottom: 2rem;
+        }
+
+        .job-description p {
+            color: var(--text-color);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .job-requirements {
+            margin-bottom: 2rem;
+        }
+
+        .job-requirements h4 {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .job-requirements ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .job-requirements li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .job-requirements li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .job-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* No Jobs Message */
+        .no-jobs-message {
+            background: var(--background-light);
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 3rem;
+        }
+
+        .no-jobs-message i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .no-jobs-message h3 {
+            font-size: 1.8rem;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+
+        .no-jobs-message p {
+            color: var(--text-color);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        /* Why Join Section */
+        .why-join-section {
+            padding: 5rem 2rem;
+            background: var(--background-gradient);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .benefit-card h4 {
+            font-size: 1.3rem;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card p {
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Sticky CTA */
+        .sticky-cta {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: flex-end;
+        }
+
+        .phone-cta {
             display: flex;
             align-items: center;
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
             gap: 0.5rem;
         }
 
-        .highlight i {
-            color: var(--accent-color);
-            font-size: 1.2rem;
+        .phone-cta:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-xl);
         }
 
         /* Footer */
@@ -258,8 +547,7 @@
             background-color: var(--text-color);
             color: var(--white);
             padding: 3rem 2rem 2rem;
-            text-align: center;
-            margin-top: 3rem;
+            margin-top: auto;
         }
 
         .footer-content {
@@ -341,59 +629,7 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             font-size: 0.9rem;
             color: #A0AEC0;
-        }
-
-        /* Responsive */
-        @media (max-width: 992px) {
-            header {
-                flex-direction: column;
-                text-align: center;
-                gap: 1rem;
-            }
-
-            .logo-container {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            header h1 {
-                font-size: 2rem;
-            }
-
-            .careers-hero h1 {
-                font-size: 2.2rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            nav {
-                flex-wrap: wrap;
-                padding: 0.8rem;
-            }
-
-            nav a {
-                font-size: 0.95rem;
-                padding: 0.5rem 1rem;
-                margin: 0.2rem;
-            }
-
-            .section-title h2 {
-                font-size: 2rem;
-            }
-
-            .section-title p {
-                font-size: 1rem;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .careers-hero h1 {
-                font-size: 1.8rem;
-            }
-
-            .careers-hero p {
-                font-size: 1rem;
-            }
+            text-align: center;
         }
 
         /* Cookie Banner */
@@ -457,6 +693,7 @@
             transition: all 0.3s ease;
             border: none;
             font-size: 15px;
+            min-width: 120px;
         }
 
         .primary-btn {
@@ -479,9 +716,150 @@
             background: rgba(255, 255, 255, 0.05);
             color: white;
         }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .job-listings {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-button {
+                display: block;
+            }
+
+            .nav-container nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: var(--shadow-lg);
+                gap: 0;
+            }
+
+            .nav-container nav.active {
+                display: flex;
+            }
+
+            nav a {
+                padding: 1rem;
+                border-radius: 0;
+                border-bottom: 1px solid #f0f0f0;
+            }
+
+            header {
+                padding: 1rem;
+            }
+
+            header.scrolled {
+                padding: 0.7rem 1rem;
+            }
+
+            .careers-hero {
+                padding: 3rem 1rem;
+            }
+
+            .careers-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .careers-hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .section-title p {
+                font-size: 1rem;
+            }
+
+            .careers-section {
+                padding: 3rem 1rem;
+            }
+
+            .job-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .hero-benefits {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sticky-cta {
+                bottom: 1rem;
+                right: 1rem;
+            }
+
+            .phone-cta span {
+                display: none;
+            }
+
+            .phone-cta {
+                padding: 1rem;
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+                justify-content: center;
+            }
+
+            .cookie-consent-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .cookie-consent-buttons {
+                width: 100%;
+            }
+            
+            .cookie-btn {
+                flex: 1;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .job-actions {
+                flex-direction: column;
+            }
+
+            .job-card {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Focus styles for accessibility */
+        button:focus,
+        a:focus,
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+            .sticky-cta,
+            .cookie-consent-banner {
+                display: none;
+            }
+        }
     </style>
-            <!-- Meta Pixel Code -->
-<script>
+
+    <!-- Meta Pixel Code -->
+    <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -500,68 +878,257 @@
 </head>
 
 <body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Przejdź do treści</a>
+
     <!-- Header -->
-    <header>
+    <header id="header">
         <div class="logo-container">
-            <a href="index.html"><img src="Images/LogoSchool.png" alt="Step Up Speak Logo"></a>
-            <div>
+            <a href="index.html" aria-label="Step Up Speak - Strona główna">
+                <img src="Images/LogoSchool.png" alt="Step Up Speak Logo">
+            </a>
+            <div class="logo-text">
                 <h1>Step Up Speak</h1>
                 <p class="tagline">Profesjonalne kursy językowe online</p>
             </div>
         </div>
+
+        <div class="nav-container">
+            <nav id="main-nav">
+                <a href="index.html"><i class="fas fa-home"></i> Strona Główna</a>
+                <a href="courses.html"><i class="fas fa-book-open"></i> Kursy</a>
+                <a href="contacts.html"><i class="fas fa-envelope"></i> Kontakt</a>
+                <a href="blog.html"><i class="fas fa-blog"></i> Blog</a>
+            </nav>
+            <a href="contacts.html" class="cta-button">
+                <i class="fas fa-paper-plane"></i> Skontaktuj się
+            </a>
+            <button class="mobile-menu-button" id="mobile-menu-button" aria-label="Menu mobilne" aria-expanded="false" aria-controls="main-nav">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
     </header>
 
-    <!-- Navigation -->
-    <nav>
-        <a href="index.html"><i class="fas fa-home"></i> Strona Główna</a>
-        <a href="courses.html"><i class="fas fa-book-open"></i> Kursy</a>
-        <a href="pricing.html"><i class="fas fa-tags"></i> Ceny</a>
-        <a href="contacts.html"><i class="fas fa-envelope"></i> Kontakt</a>
-        <a href="blog.html"><i class="fas fa-blog"></i> Blog</a>
-    </nav>
-
-    <div class="main-content">
-        <!-- Careers Hero -->
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Careers Hero Section -->
         <section class="careers-hero">
             <div class="careers-hero-content">
                 <h1>Dołącz do naszego zespołu</h1>
-                <p>Step Up Speak to dynamicznie rozwijająca się platforma oferująca profesjonalne kursy językowe online.
-                </p>
-            </div>
-        </section>
-
-        <!-- Job Listings -->
-        <section class="jobs-section">
-            <div class="section-title">
-                <h2>Aktualne Oferty Pracy</h2>
-                <p>Sprawdź, czy aktualnie poszukujemy nowych członków zespołu</p>
-            </div>
-
-            <div class="job-listings">
-                <div class="highlight">
-                    <p><i class="fas fa-exclamation-circle"></i> <strong>Informacja:</strong> Aktualnie nie prowadzimy
-                        rekrutacji na żadne stanowiska pracy. Jeśli jesteś zainteresowany współpracą w przyszłości,
-                        śledź naszą stronę lub profile w mediach społecznościowych.</p>
+                <p>Step Up Speak to dynamicznie rozwijająca się platforma oferująca profesjonalne kursy językowe online. Dołącz do nas i wspólnie zmieniajmy sposób nauki języków!</p>
+                
+                <div class="hero-benefits">
+                    <div class="hero-benefit">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Praca zdalna z dowolnego miejsca</span>
+                    </div>
+                    <div class="hero-benefit">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Elastyczny grafik pracy</span>
+                    </div>
+                    <div class="hero-benefit">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Stały rozwój zawodowy</span>
+                    </div>
+                </div>
+                
+                <div class="hero-actions">
+                    <a href="#job-listings" class="cta-button cta-button-large">
+                        <i class="fas fa-briefcase"></i> Sprawdź oferty
+                    </a>
+                    <a href="contacts.html" class="cta-button cta-button-secondary">
+                        <i class="fas fa-paper-plane"></i> Wyślij aplikację
+                    </a>
                 </div>
             </div>
         </section>
+
+        <!-- Careers Section -->
+        <section class="careers-section">
+            <div class="section-container">
+                <div class="section-title">
+                    <h2>Aktualne Oferty Pracy</h2>
+                    <p>Sprawdź nasze aktualne oferty pracy i dołącz do zespołu Step Up Speak</p>
+                </div>
+
+                <div class="job-listings" id="job-listings">
+                    <!-- Job Card 1 -->
+                    <div class="job-card">
+                        <div class="job-header">
+                            <h3>Lektor Języka Angielskiego</h3>
+                            <div class="job-meta">
+                                <span class="job-tag">Praca zdalna</span>
+                                <span class="job-tag">Umowa B2B</span>
+                                <span class="job-tag">Część etatu</span>
+                            </div>
+                        </div>
+                        
+                        <div class="job-description">
+                            <p>Poszukujemy doświadczonego lektora języka angielskiego do prowadzenia zajęć online na różnych poziomach zaawansowania (A1-C1).</p>
+                        </div>
+
+                        <div class="job-requirements">
+                            <h4>Wymagania:</h4>
+                            <ul>
+                                <li>Certyfikat językowy (CELTA, TEFL lub równoważny)</li>
+                                <li>Minimum 2 lata doświadczenia w nauczaniu</li>
+                                <li>Znajomość platform e-learningowych</li>
+                                <li>Doskonałe umiejętności komunikacyjne</li>
+                                <li>Gotowość do pracy w godzinach popołudniowych</li>
+                            </ul>
+                        </div>
+
+                        <div class="job-actions">
+                            <a href="contacts.html" class="cta-button">
+                                <i class="fas fa-paper-plane"></i> Aplikuj
+                            </a>
+                            <a href="#lektor-details" class="cta-button cta-button-secondary">
+                                <i class="fas fa-info-circle"></i> Szczegóły
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Job Card 2 -->
+                    <div class="job-card">
+                        <div class="job-header">
+                            <h3>Metodyk Nauczania Języków</h3>
+                            <div class="job-meta">
+                                <span class="job-tag">Praca zdalna</span>
+                                <span class="job-tag">Umowa o pracę</span>
+                                <span class="job-tag">Pełny etat</span>
+                            </div>
+                        </div>
+                        
+                        <div class="job-description">
+                            <p>Poszukujemy metodyka do opracowywania programów nauczania i materiałów dydaktycznych dla naszych kursów językowych.</p>
+                        </div>
+
+                        <div class="job-requirements">
+                            <h4>Wymagania:</h4>
+                            <ul>
+                                <li>Wykształcenie filologiczne lub pedagogiczne</li>
+                                <li>Doświadczenie w tworzeniu materiałów dydaktycznych</li>
+                                <li>Znajomość nowoczesnych metod nauczania języków</li>
+                                <li>Umiejętność pracy w zespole</li>
+                                <li>Znajomość narzędzi do tworzenia treści e-learningowych</li>
+                            </ul>
+                        </div>
+
+                        <div class="job-actions">
+                            <a href="contacts.html" class="cta-button">
+                                <i class="fas fa-paper-plane"></i> Aplikuj
+                            </a>
+                            <a href="#metodyk-details" class="cta-button cta-button-secondary">
+                                <i class="fas fa-info-circle"></i> Szczegóły
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- No Jobs Message (currently hidden) -->
+                <div class="no-jobs-message" style="display: none;">
+                    <i class="fas fa-search"></i>
+                    <h3>Aktualnie nie prowadzimy rekrutacji</h3>
+                    <p>Obecnie nie mamy aktywnych ofert pracy. Jeśli jesteś zainteresowany współpracą w przyszłości, zachęcamy do śledzenia naszej strony i profili w mediach społecznościowych.</p>
+                    <div class="hero-actions">
+                        <a href="contacts.html" class="cta-button">
+                            <i class="fas fa-envelope"></i> Wyślij CV
+                        </a>
+                        <a href="blog.html" class="cta-button cta-button-secondary">
+                            <i class="fas fa-blog"></i> Odwiedź bloga
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Join Section -->
+        <section class="why-join-section">
+            <div class="section-container">
+                <div class="section-title">
+                    <h2>Dlaczego warto do nas dołączyć?</h2>
+                    <p>Poznaj korzyści z pracy w Step Up Speak</p>
+                </div>
+
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-laptop-house"></i>
+                        </div>
+                        <h4>Praca zdalna</h4>
+                        <p>Pracuj z dowolnego miejsca na świecie, bez konieczności dojazdów do biura.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h4>Elastyczny grafik</h4>
+                        <p>Dopasuj godziny pracy do swojego trybu życia i osobistych preferencji.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Rozwój zawodowy</h4>
+                        <p>Stałe szkolenia, kursy doszkalające i możliwość awansu w strukturze firmy.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Wspierający zespół</h4>
+                        <p>Dołącz do grupy pasjonatów języków, którzy wspierają się nawzajem w rozwoju.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4>Bezpłatne kursy</h4>
+                        <p>Darmowy dostęp do wszystkich naszych kursów językowych dla pracowników.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <h4>Konkurencyjne wynagrodzenie</h4>
+                        <p>Atrakcyjne warunki finansowe dopasowane do doświadczenia i umiejętności.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Sticky CTA -->
+    <div class="sticky-cta">
+        <a href="tel:+48576076648" class="phone-cta" aria-label="Zadzwoń do Step Up Speak">
+            <i class="fas fa-phone-alt"></i>
+            <span>Zadzwoń</span>
+        </a>
     </div>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="footer-column">
                 <h3>Step Up Speak</h3>
-                <p>Profesjonalne kursy językowe online, które pomogą Ci osiągnąć płynność językową i pewność siebie w
-                    komunikacji.</p>
+                <p>Profesjonalne kursy językowe online, które pomogą Ci osiągnąć płynność językową i pewność siebie w komunikacji.</p>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/groups/1007789447828292" target="_blank" rel="noopener"><i
-                            class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/stepupspeak_english/"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/company/stepupspeak" target="_blank" rel="noopener noreferrer"><i
-                            class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.tiktok.com/@stepupspeak" target="_blank" rel="noopener"><i
-                            class="fab fa-tiktok"></i></a>
+                    <a href="https://www.facebook.com/groups/1007789447828292" target="_blank" rel="noopener" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/stepupspeak_english/" target="_blank" rel="noopener" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/stepupspeak" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@stepupspeak" target="_blank" rel="noopener" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
                 </div>
             </div>
 
@@ -577,11 +1144,8 @@
                 <h3>Informacje</h3>
                 <ul>
                     <li><a href="tel:+48576076648"><i class="fas fa-phone-alt"></i> +48 576 076 648</a></li>
-                    <li><a href="mailto:stepupspeakofficial@gmail.com"><i class="fas fa-envelope"></i>
-                            stepupspeakofficial@gmail.com</a></li>
-                    <li><a href="contacts.html"><i class="fas fa-map-marker-alt"></i> Al. Jana Pawła II 20, Warszawa</a>
-                    </li>
-                    <li><a href="contacts.html"><i class="fas fa-clock"></i> Pn-Pt: 8:00-20:00</a></li>
+                    <li><a href="mailto:stepupspeakofficial@gmail.com"><i class="fas fa-envelope"></i> stepupspeakofficial@gmail.com</a></li>
+                    <li><a href="contacts.html"><i class="fas fa-clock"></i> Pn-Pt: 8:00-20:00, Sb: 9:00 - 15:00</a></li>
                 </ul>
             </div>
 
@@ -590,8 +1154,9 @@
                 <ul>
                     <li><a href="terms-of-service.html">Regulamin</a></li>
                     <li><a href="privacy-policy.html">Polityka prywatności</a></li>
-                    <li><a href="blog.html">FAQ</a></li>
-                    <li><a href="courses.html#opinie-studentow">Opinie studentów</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="index.html#testimonials-heading">Opinie studentów</a></li>
                     <li><a href="careers.html">Kariera</a></li>
                 </ul>
             </div>
@@ -617,7 +1182,73 @@
         </div>
     </div>
 
-    <script src="cookie-consent.js"></script>
-</body>
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mainNav = document.getElementById('main-nav');
+            
+            if (mobileMenuButton && mainNav) {
+                mobileMenuButton.addEventListener('click', function() {
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !isExpanded);
+                    mainNav.classList.toggle('active');
+                });
+            }
+            
+            // Header scroll effect
+            const header = document.getElementById('header');
+            if (header) {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 50) {
+                        header.classList.add('scrolled');
+                    } else {
+                        header.classList.remove('scrolled');
+                    }
+                });
+            }
+            
+            // Cookie consent functionality
+            const cookieBanner = document.getElementById('cookie-consent-banner');
+            const acceptCookies = document.getElementById('accept-cookies');
+            const rejectCookies = document.getElementById('reject-cookies');
+            
+            // Check if user has already made a choice
+            if (!localStorage.getItem('cookieConsent')) {
+                // Show banner after a short delay
+                setTimeout(() => {
+                    cookieBanner.classList.add('active');
+                }, 1000);
+            }
+            
+            if (acceptCookies) {
+                acceptCookies.addEventListener('click', function() {
+                    localStorage.setItem('cookieConsent', 'accepted');
+                    cookieBanner.classList.remove('active');
+                });
+            }
+            
+            if (rejectCookies) {
+                rejectCookies.addEventListener('click', function() {
+                    localStorage.setItem('cookieConsent', 'rejected');
+                    cookieBanner.classList.remove('active');
+                });
+            }
 
+            // Track job application clicks
+            const applyButtons = document.querySelectorAll('.job-actions .cta-button');
+            applyButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    if (window.dataLayer) {
+                        window.dataLayer.push({
+                            'event': 'job_application_click',
+                            'job_title': this.closest('.job-card').querySelector('h3').textContent,
+                            'button_location': 'careers_page'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
 </html>

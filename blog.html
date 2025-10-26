@@ -1,37 +1,59 @@
 <!DOCTYPE html>
 <html lang="pl">
-
 <head>
-    <link rel="apple-touch-icon" sizes="57x57" href="FaviconForWebPage/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="FaviconForWebPage/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="FaviconForWebPage/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="FaviconForWebPage/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="FaviconForWebPage/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="FaviconForWebPage/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="FaviconForWebPage/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="FaviconForWebPage/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/FaviconForWebPage/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="192x192"  href="FaviconForWebPage/android-icon-192x192.png">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/FaviconForWebPage/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="FaviconForWebPage/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="FaviconForWebPage/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="FaviconForWebPage/favicon-16x16.png">
-    <link rel="manifest" href="/FaviconForWebPage/site.webmanifest" />
+    <link rel="manifest" href="/FaviconForWebPage/site.webmanifest">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="FaviconForWebPage/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <meta name="apple-mobile-web-app-title" content="StepUpSpeak" />
+    <meta name="apple-mobile-web-app-title" content="StepUpSpeak">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Step Up Speak | Porady i Wskazówki Językowe</title>
-    <meta name="description"
-        content="Odkryj nasz blog z poradami językowymi. Skuteczne metody nauki angielskiego, wskazówki gramatyczne i strategie efektywnej nauki. Zostań mistrzem języka!">
+    <title>Blog - Step Up Speak | Porady i Wskazówki Językowe Online</title>
+    <meta name="description" content="Blog Step Up Speak - skuteczne metody nauki angielskiego, porady gramatyczne, wskazówki wymowy. Zostań mistrzem języka z naszymi eksperckimi artykułami.">
+    
+    <!-- Preload critical resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Blog - Step Up Speak | Porady i Wskazówki Językowe">
+    <meta property="og:description" content="Skuteczne metody nauki angielskiego, porady gramatyczne i wskazówki wymowy. Zostań mistrzem języka z naszym blogiem.">
+    <meta property="og:image" content="https://stepupspeak.com/images/og-blog.jpg">
+    <meta property="og:url" content="https://stepupspeak.com/blog.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Step Up Speak">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog - Step Up Speak | Porady i Wskazówki Językowe">
+    <meta name="twitter:description" content="Skuteczne metody nauki angielskiego, porady gramatyczne i wskazówki wymowy.">
+    <meta name="twitter:image" content="https://stepupspeak.com/images/twitter-blog.jpg">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Blog Step Up Speak",
+        "description": "Porady i wskazówki językowe online",
+        "url": "https://stepupspeak.com/blog.html",
+        "publisher": {
+            "@type": "EducationalOrganization",
+            "name": "Step Up Speak",
+            "url": "https://stepupspeak.com"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://stepupspeak.com/blog.html"
+        }
+    }
+    </script>
 
     <style>
         :root {
@@ -48,13 +70,19 @@
             --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
             --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
             --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
             --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --border-radius: 12px;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -67,67 +95,97 @@
             min-height: 100vh;
         }
 
+        /* Skip to main content for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--primary-color);
+            color: white;
+            padding: 8px;
+            z-index: 10000;
+            text-decoration: none;
+            border-radius: 0 0 4px 4px;
+            transition: top 0.3s;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
         /* Header */
         header {
-            background-color: var(--primary-color);
-            color: var(--white);
-            padding: 1.5rem 2rem;
+            background-color: var(--white);
+            color: var(--text-color);
+            padding: 1rem 2rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
             box-shadow: var(--shadow-md);
-            position: relative;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 0.7rem 2rem;
         }
 
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 1.5rem;
+            gap: 1rem;
         }
 
         header img {
-            width: 100px;
+            width: 80px;
             height: auto;
             transition: var(--transition);
         }
 
-        header img:hover {
-            transform: scale(1.05);
+        header.scrolled img {
+            width: 60px;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
         }
 
         header h1 {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             font-weight: 700;
             margin: 0;
             letter-spacing: -0.5px;
+            color: var(--primary-color);
         }
 
         .tagline {
-            font-size: 1rem;
-            font-weight: 300;
-            opacity: 0.9;
-            margin-top: 0.3rem;
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: var(--text-light);
+            margin-top: 0.2rem;
         }
 
         /* Navigation */
+        .nav-container {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
         nav {
             display: flex;
-            justify-content: center;
-            background-color: var(--text-color);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: var(--shadow-sm);
+            gap: 1.5rem;
         }
 
         nav a {
-            color: var(--white);
+            color: var(--text-color);
             text-decoration: none;
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 500;
-            margin: 0 1rem;
-            padding: 0.7rem 1.5rem;
+            padding: 0.5rem 1rem;
             transition: var(--transition);
             border-radius: 4px;
             display: flex;
@@ -137,88 +195,210 @@
 
         nav a:hover,
         nav a:focus {
-            background-color: var(--primary-color);
-            transform: translateY(-2px);
+            background-color: rgba(46, 139, 87, 0.1);
+            color: var(--primary-color);
         }
 
         nav a i {
+            font-size: 1rem;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+            gap: 0.5rem;
+            white-space: nowrap;
+        }
+
+        .cta-button:hover,
+        .cta-button:focus {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        .cta-button-large {
+            padding: 1.2rem 2.5rem;
             font-size: 1.1rem;
+        }
+
+        .cta-button-secondary {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .cta-button-secondary:hover {
+            background-color: rgba(46, 139, 87, 0.1);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-button {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-color);
+            cursor: pointer;
+            padding: 0.5rem;
         }
 
         /* Main Content */
         .main-content {
             flex: 1;
-            padding-bottom: 4rem;
         }
 
-        /* Blog Hero */
-
-
+        /* Blog Hero Section */
         .blog-hero {
             background: var(--background-gradient);
-
             padding: 4rem 2rem;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .blog-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.05)" d="M0,0 L100,0 L100,100 L0,100 Z"></path></svg>');
-            background-size: cover;
-            opacity: 0.1;
         }
 
         .blog-hero-content {
             max-width: 800px;
             margin: 0 auto;
-            position: relative;
-            z-index: 2;
         }
 
         .blog-hero h1 {
             font-size: 2.8rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
+            color: var(--primary-dark);
             line-height: 1.2;
         }
 
         .blog-hero p {
             font-size: 1.2rem;
-            opacity: 0.9;
-            margin-bottom: 2rem;
+            color: var(--text-color);
+            margin-bottom: 2.5rem;
             line-height: 1.8;
         }
 
-        /* Blog Articles */
-        .blog-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        .article-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
             gap: 2rem;
-            margin-top: 2rem;
+            margin-bottom: 2.5rem;
         }
 
-        @media (max-width: 768px) {
-            .article-list {
-                grid-template-columns: 1fr;
-            }
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--text-light);
+            margin-top: 0.5rem;
+        }
+
+        /* Blog Section */
+        .blog-section {
+            padding: 5rem 2rem;
+            background: var(--white);
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--accent-color);
+            margin: 1rem auto 0;
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Category Filter */
+        .category-filter {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+            background: var(--background-light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .category-btn {
+            padding: 0.8rem 1.5rem;
+            background: var(--white);
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .category-btn:hover,
+        .category-btn.active {
+            background: var(--primary-color);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        /* Article Grid */
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
         }
 
         .article-card {
             background: var(--white);
-            border-radius: 12px;
+            border-radius: var(--border-radius);
             overflow: hidden;
             box-shadow: var(--shadow-md);
             transition: var(--transition);
@@ -231,37 +411,23 @@
         }
 
         .article-header {
-            padding: 1.5rem;
+            padding: 2rem 2rem 1rem;
             cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
         }
 
         .article-header h3 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 600;
             color: var(--primary-dark);
-            margin-right: 1rem;
-        }
-
-
-        .article-arrow {
-            font-size: 1.5rem;
-            color: var(--primary-color);
-            transition: var(--transition);
-            flex-shrink: 0;
-        }
-
-        .article-arrow.open {
-            transform: rotate(180deg);
+            margin-bottom: 1rem;
+            line-height: 1.4;
         }
 
         .article-excerpt {
-            padding: 0 1.5rem 1.5rem;
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: var(--text-light);
             line-height: 1.6;
+            margin-bottom: 1.5rem;
         }
 
         .article-content {
@@ -272,12 +438,13 @@
         }
 
         .article-content-inner {
-            padding: 0 1.5rem 1.5rem;
+            padding: 0 2rem 2rem;
         }
 
         .article-content p {
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
             line-height: 1.8;
+            color: var(--text-color);
         }
 
         .article-content strong {
@@ -285,85 +452,113 @@
             font-weight: 600;
         }
 
-        /* Categories */
-        .category-filter {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem;
-            justify-content: center;
-            margin-bottom: 2rem;
+        .article-content ol,
+        .article-content ul {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
         }
 
-        .category-btn {
-            padding: 0.6rem 1.2rem;
-            background: var(--white);
-            border: 1px solid var(--primary-color);
+        .article-content li {
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 2rem;
+            background: var(--background-light);
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .article-category {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .article-date {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .article-arrow {
+            float: right;
+            font-size: 1.2rem;
             color: var(--primary-color);
-            border-radius: 50px;
-            font-weight: 500;
-            cursor: pointer;
             transition: var(--transition);
         }
 
-        .category-btn:hover,
-        .category-btn.active {
-            background: var(--primary-color);
-            color: var(--white);
+        .article-card.active .article-arrow {
+            transform: rotate(180deg);
         }
 
-        /* Newsletter */
+        .article-card.active .article-content {
+            max-height: 2000px;
+        }
+
+        /* Newsletter Section */
         .newsletter-section {
+            padding: 5rem 2rem;
             background: var(--background-gradient);
-            padding: 3rem 2rem;
-            margin-top: 3rem;
-            text-align: center;
-            border-radius: 12px;
         }
 
         .newsletter-container {
             max-width: 600px;
             margin: 0 auto;
+            text-align: center;
         }
 
         .newsletter-container h3 {
-            font-size: 1.8rem;
+            font-size: 2rem;
             color: var(--primary-dark);
             margin-bottom: 1rem;
         }
 
         .newsletter-container p {
-            color: var(--text-light);
-            margin-bottom: 1.5rem;
+            color: var(--text-color);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
         }
 
         .newsletter-form {
             display: flex;
             gap: 1rem;
-        }
-
-        @media (max-width: 576px) {
-            .newsletter-form {
-                flex-direction: column;
-            }
+            max-width: 400px;
+            margin: 0 auto;
         }
 
         .newsletter-input {
             flex: 1;
-            padding: 0.8rem 1.2rem;
-            border: 1px solid #ddd;
+            padding: 1rem 1.2rem;
+            border: 2px solid #e2e8f0;
             border-radius: 8px;
             font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .newsletter-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.1);
         }
 
         .newsletter-btn {
             background: var(--primary-color);
             color: var(--white);
             border: none;
-            padding: 0.8rem 1.8rem;
+            padding: 1rem 2rem;
             border-radius: 8px;
             font-weight: 600;
             cursor: pointer;
             transition: var(--transition);
+            font-size: 1rem;
         }
 
         .newsletter-btn:hover {
@@ -371,13 +566,44 @@
             transform: translateY(-2px);
         }
 
+        /* Sticky CTA */
+        .sticky-cta {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: flex-end;
+        }
+
+        .phone-cta {
+            display: flex;
+            align-items: center;
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+            gap: 0.5rem;
+        }
+
+        .phone-cta:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-xl);
+        }
+
         /* Footer */
         footer {
             background-color: var(--text-color);
             color: var(--white);
             padding: 3rem 2rem 2rem;
-            text-align: center;
-            margin-top: 3rem;
+            margin-top: auto;
         }
 
         .footer-content {
@@ -459,67 +685,7 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             font-size: 0.9rem;
             color: #A0AEC0;
-        }
-
-        /* Responsive */
-        @media (max-width: 992px) {
-            header {
-                flex-direction: column;
-                text-align: center;
-                gap: 1rem;
-            }
-
-            .logo-container {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            header h1 {
-                font-size: 2rem;
-            }
-
-            .blog-hero h1 {
-                font-size: 2.2rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            nav {
-                flex-wrap: wrap;
-                padding: 0.8rem;
-            }
-
-            nav a {
-                font-size: 0.95rem;
-                padding: 0.5rem 1rem;
-                margin: 0.2rem;
-            }
-
-            .blog-hero {
-                padding: 3rem 1rem;
-            }
-
-            .blog-container {
-                padding: 1rem;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .blog-hero h1 {
-                font-size: 1.8rem;
-            }
-
-            .blog-hero p {
-                font-size: 1rem;
-            }
-
-            .article-header h3 {
-                font-size: 1.3rem;
-            }
-        }
-
-        .article-card {
-            transition: all 0.3s ease;
+            text-align: center;
         }
 
         /* Cookie Banner */
@@ -583,6 +749,7 @@
             transition: all 0.3s ease;
             border: none;
             font-size: 15px;
+            min-width: 120px;
         }
 
         .primary-btn {
@@ -605,9 +772,169 @@
             background: rgba(255, 255, 255, 0.05);
             color: white;
         }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .article-grid {
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-button {
+                display: block;
+            }
+
+            .nav-container nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: var(--shadow-lg);
+                gap: 0;
+            }
+
+            .nav-container nav.active {
+                display: flex;
+            }
+
+            nav a {
+                padding: 1rem;
+                border-radius: 0;
+                border-bottom: 1px solid #f0f0f0;
+            }
+
+            header {
+                padding: 1rem;
+            }
+
+            header.scrolled {
+                padding: 0.7rem 1rem;
+            }
+
+            .blog-hero {
+                padding: 3rem 1rem;
+            }
+
+            .blog-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .blog-hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .section-title p {
+                font-size: 1rem;
+            }
+
+            .blog-section {
+                padding: 3rem 1rem;
+            }
+
+            .article-header {
+                padding: 1.5rem 1.5rem 1rem;
+            }
+
+            .article-header h3 {
+                font-size: 1.3rem;
+            }
+
+            .article-excerpt {
+                padding: 0 1.5rem 1.5rem;
+            }
+
+            .article-content-inner {
+                padding: 0 1.5rem 1.5rem;
+            }
+
+            .hero-stats {
+                gap: 1rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .sticky-cta {
+                bottom: 1rem;
+                right: 1rem;
+            }
+
+            .phone-cta span {
+                display: none;
+            }
+
+            .phone-cta {
+                padding: 1rem;
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+                justify-content: center;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .cookie-consent-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .cookie-consent-buttons {
+                width: 100%;
+            }
+            
+            .cookie-btn {
+                flex: 1;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .article-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .category-filter {
+                padding: 1rem;
+            }
+
+            .category-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Focus styles for accessibility */
+        button:focus,
+        a:focus,
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+            .sticky-cta,
+            .cookie-consent-banner {
+                display: none;
+            }
+        }
     </style>
-        <!-- Meta Pixel Code -->
-<script>
+
+    <!-- Meta Pixel Code -->
+    <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -623,575 +950,280 @@
     src="https://www.facebook.com/tr?id=2092523381239454&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel Code -->
-
 </head>
 
 <body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Przejdź do treści</a>
+
     <!-- Header -->
-    <header>
+    <header id="header">
         <div class="logo-container">
-            <a href="index.html"><img src="Images/LogoSchool.png" alt="Step Up Speak Logo"></a>
-            <div>
+            <a href="index.html" aria-label="Step Up Speak - Strona główna">
+                <img src="Images/LogoSchool.png" alt="Step Up Speak Logo">
+            </a>
+            <div class="logo-text">
                 <h1>Step Up Speak</h1>
                 <p class="tagline">Profesjonalne kursy językowe online</p>
             </div>
         </div>
+
+        <div class="nav-container">
+            <nav id="main-nav">
+                <a href="index.html"><i class="fas fa-home"></i> Strona Główna</a>
+                <a href="courses.html"><i class="fas fa-book-open"></i> Kursy</a>
+                <a href="contacts.html"><i class="fas fa-envelope"></i> Kontakt</a>
+                <a href="blog.html" aria-current="page"><i class="fas fa-blog"></i> Blog</a>
+            </nav>
+            <a href="contacts.html" class="cta-button">
+                <i class="fas fa-calendar-check"></i> Zapisz się
+            </a>
+            <button class="mobile-menu-button" id="mobile-menu-button" aria-label="Menu mobilne" aria-expanded="false" aria-controls="main-nav">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
     </header>
 
-    <!-- Navigation -->
-    <nav>
-        <a href="index.html"><i class="fas fa-home"></i>Strona Główna</a>
-        <a href="courses.html"><i class="fas fa-book-open"></i>Kursy</a>
-        <a href="pricing.html"><i class="fas fa-tags"></i>Ceny</a>
-        <a href="contacts.html"><i class="fas fa-envelope"></i>Kontakt</a>
-        <a href="blog.html"><i class="fas fa-blog"></i>Blog</a>
-    </nav>
-
-    <div class="main-content">
-        <!-- Blog Hero -->
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Blog Hero Section -->
         <section class="blog-hero">
             <div class="blog-hero-content">
                 <h1>Blog Step Up Speak</h1>
-                <p>Odkryj nasze artykuły pełne praktycznych porad językowych, skutecznych metod nauki i inspiracji do
-                    doskonalenia umiejętności językowych. Bądź na bieżąco z najnowszymi trendami w edukacji językowej!
-                </p>
+                <p>Odkryj nasze artykuły pełne praktycznych porad językowych, skutecznych metod nauki i inspiracji do doskonalenia umiejętności językowych. Bądź na bieżąco z najnowszymi trendami w edukacji językowej!</p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Artykułów</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">10k+</div>
+                        <div class="stat-label">Czytelników</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">5</div>
+                        <div class="stat-label">Kategorii</div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Blog Content -->
-        <div class="blog-container">
-            <!-- Category Filter -->
-            <div class="category-filter">
-                <button class="category-btn active">Wszystkie</button>
-                <button class="category-btn">Metody nauki</button>
-                <button class="category-btn">Gramatyka</button>
-                <button class="category-btn">Słownictwo</button>
-                <button class="category-btn">Wymowa</button>
-                <button class="category-btn">Motywacja</button>
+        <!-- Blog Section -->
+        <section class="blog-section">
+            <div class="section-container">
+                <div class="section-title">
+                    <h2>Artykuły i Porady</h2>
+                    <p>Poznaj nasze eksperckie artykuły i wskazówki, które pomogą Ci w nauce języka angielskiego</p>
+                </div>
+
+                <!-- Category Filter -->
+                <div class="category-filter">
+                    <button class="category-btn active">Wszystkie</button>
+                    <button class="category-btn">Metody nauki</button>
+                    <button class="category-btn">Gramatyka</button>
+                    <button class="category-btn">Słownictwo</button>
+                    <button class="category-btn">Wymowa</button>
+                    <button class="category-btn">Motywacja</button>
+                </div>
+
+                <!-- Article Grid -->
+                <div class="article-grid">
+                    <!-- Article 1 -->
+                    <div class="article-card" data-category="Metody nauki">
+                        <div class="article-header" onclick="toggleArticle(this)">
+                            <h3>Jak efektywnie uczyć się angielskiego? <i class="fas fa-chevron-down article-arrow"></i></h3>
+                            <p class="article-excerpt">Dowiedz się, jak poprawić swoje umiejętności językowe, stosując sprawdzone metody nauki.</p>
+                        </div>
+                        <div class="article-content">
+                            <div class="article-content-inner">
+                                <p><strong>Wskazówka 1:</strong> Używaj technik pamięciowych, takich jak mapy myśli czy skojarzenia, aby skutecznie zapamiętywać słówka i zasady gramatyczne.</p>
+                                <p><strong>Wskazówka 2:</strong> Pracuj z native speakerami – nic nie poprawi Twojej wymowy tak skutecznie jak rozmowy z osobami, które posługują się językiem na co dzień.</p>
+                                <p><strong>Wskazówka 3:</strong> Korzystaj z multimediów – oglądaj filmy, słuchaj podcastów i czytaj artykuły w języku angielskim, by przyswajać materiał w kontekście.</p>
+                                <p><strong>Wskazówka 4:</strong> Stwórz plan nauki – systematyczność jest kluczowa w nauce języka. Wyznacz sobie cele i regularnie je realizuj.</p>
+                                <p><strong>Wskazówka 5:</strong> Ćwicz mówienie – nawet jeśli początkowo czujesz się niepewnie, regularne ćwiczenie mówienia przynosi najlepsze efekty.</p>
+                            </div>
+                        </div>
+                        <div class="article-meta">
+                            <span class="article-category">Metody nauki</span>
+                            <span class="article-date">15 marca 2025</span>
+                        </div>
+                    </div>
+
+                    <!-- Article 2 -->
+                    <div class="article-card" data-category="Wymowa">
+                        <div class="article-header" onclick="toggleArticle(this)">
+                            <h3>5 kroków do płynnej wymowy w angielskim <i class="fas fa-chevron-down article-arrow"></i></h3>
+                            <p class="article-excerpt">Poznaj skuteczne techniki, które pomogą Ci poprawić wymowę w języku angielskim.</p>
+                        </div>
+                        <div class="article-content">
+                            <div class="article-content-inner">
+                                <p><strong>Krok 1:</strong> Regularne ćwiczenia wymowy są kluczowe – systematyczne ćwiczenie trudnych dźwięków pomoże Ci poprawić wymowę.</p>
+                                <p><strong>Krok 2:</strong> Praca z native speakerem pozwala wyeliminować błędy w wymowie i intonacji, poprawiając akcent.</p>
+                                <p><strong>Krok 3:</strong> Słuchaj nagrań z native speakerami i powtarzaj usłyszane słowa, aby poprawić akcent i intonację.</p>
+                                <p><strong>Krok 4:</strong> Nagrywaj siebie – słuchanie własnej wymowy pomaga zidentyfikować błędy i śledzić postępy.</p>
+                                <p><strong>Krok 5:</strong> Ucz się fonetyki – zrozumienie symboli fonetycznych pomaga w prawidłowej wymowie nowych słów.</p>
+                            </div>
+                        </div>
+                        <div class="article-meta">
+                            <span class="article-category">Wymowa</span>
+                            <span class="article-date">12 marca 2025</span>
+                        </div>
+                    </div>
+
+                    <!-- Article 3 -->
+                    <div class="article-card" data-category="Gramatyka">
+                        <div class="article-header" onclick="toggleArticle(this)">
+                            <h3>Czasy angielskie - proste wyjaśnienie <i class="fas fa-chevron-down article-arrow"></i></h3>
+                            <p class="article-excerpt">Zrozum różnice między czasami Present Perfect a Past Simple i przestań się w nich gubić.</p>
+                        </div>
+                        <div class="article-content">
+                            <div class="article-content-inner">
+                                <p><strong>Present Perfect</strong> używamy gdy:</p>
+                                <ul>
+                                    <li>Czynność ma związek z teraźniejszością</li>
+                                    <li>Mówimy o doświadczeniach bez podania konkretnego czasu</li>
+                                    <li>Opisujemy skutki przeszłych działań widoczne teraz</li>
+                                </ul>
+                                <p><strong>Past Simple</strong> stosujemy gdy:</p>
+                                <ul>
+                                    <li>Czynność jest zakończona w określonym czasie przeszłym</li>
+                                    <li>Znamy dokładny czas wykonania działania</li>
+                                    <li>Opisujemy sekwencję wydarzeń w przeszłości</li>
+                                </ul>
+                                <p><strong>Przykłady:</strong></p>
+                                <p>"I have lived in London for 5 years." (mieszkam nadal)</p>
+                                <p>"I lived in London in 2015." (już nie mieszkam)</p>
+                            </div>
+                        </div>
+                        <div class="article-meta">
+                            <span class="article-category">Gramatyka</span>
+                            <span class="article-date">10 marca 2025</span>
+                        </div>
+                    </div>
+
+                    <!-- Article 4 -->
+                    <div class="article-card" data-category="Słownictwo">
+                        <div class="article-header" onclick="toggleArticle(this)">
+                            <h3>Jak poszerzać słownictwo skutecznie? <i class="fas fa-chevron-down article-arrow"></i></h3>
+                            <p class="article-excerpt">Odkryj metody szybkiego i trwałego zapamiętywania nowych słówek.</p>
+                        </div>
+                        <div class="article-content">
+                            <div class="article-content-inner">
+                                <p><strong>Metoda 1:</strong> Ucz się słówek w kontekście - zapamiętuj całe zdania zamiast pojedynczych słów.</p>
+                                <p><strong>Metoda 2:</strong> Stosuj fiszki z systemem powtórek spaced repetition.</p>
+                                <p><strong>Metoda 3:</strong> Grupuj słownictwo tematycznie (np. jedzenie, podróże, praca).</p>
+                                <p><strong>Metoda 4:</strong> Używaj nowych słów w rozmowie od razu po ich nauce.</p>
+                                <p><strong>Metoda 5:</strong> Czytaj teksty na różne tematy, by poznawać słownictwo w naturalnym kontekście.</p>
+                                <p><strong>Bonus:</strong> Twórz własne skojarzenia i historie z nowymi słowami - to pomaga w trwałym zapamiętywaniu.</p>
+                            </div>
+                        </div>
+                        <div class="article-meta">
+                            <span class="article-category">Słownictwo</span>
+                            <span class="article-date">8 marca 2025</span>
+                        </div>
+                    </div>
+
+                    <!-- Article 5 -->
+                    <div class="article-card" data-category="Motywacja">
+                        <div class="article-header" onclick="toggleArticle(this)">
+                            <h3>Jak nie stracić motywacji do nauki? <i class="fas fa-chevron-down article-arrow"></i></h3>
+                            <p class="article-excerpt">Poznaj strategie utrzymania wysokiej motywacji przez cały proces nauki języka.</p>
+                        </div>
+                        <div class="article-content">
+                            <div class="article-content-inner">
+                                <p><strong>Strategia 1:</strong> Wyznaczaj małe, osiągalne cele i świętuj każdy sukces.</p>
+                                <p><strong>Strategia 2:</strong> Znajdź partnera do nauki - wzajemna motywacja działa cuda.</p>
+                                <p><strong>Strategia 3:</strong> Łącz naukę z przyjemnością - oglądaj ulubione seriale po angielsku.</p>
+                                <p><strong>Strategia 4:</strong> Śledź swoje postępy - prowadź dziennik nauki.</p>
+                                <p><strong>Strategia 5:</strong> Nie bój się błędów - to naturalna część procesu nauki.</p>
+                                <p><strong>Dodatkowo:</strong> Przypominaj sobie regularnie, dlaczego zaczęłaś/zacząłeś naukę - cel nadaje sens wysiłkowi.</p>
+                            </div>
+                        </div>
+                        <div class="article-meta">
+                            <span class="article-category">Motywacja</span>
+                            <span class="article-date">5 marca 2025</span>
+                        </div>
+                    </div>
+
+                    <!-- Article 6 -->
+                    <div class="article-card" data-category="Gramatyka">
+                        <div class="article-header" onclick="toggleArticle(this)">
+                            <h3>Conditionals - warunki w języku angielskim <i class="fas fa-chevron-down article-arrow"></i></h3>
+                            <p class="article-excerpt">Naucz się poprawnie używać okresów warunkowych w praktyce.</p>
+                        </div>
+                        <div class="article-content">
+                            <div class="article-content-inner">
+                                <p><strong>Zero Conditional:</strong> Fakty naukowe, ogólne prawdy</p>
+                                <p>"If you heat ice, it melts."</p>
+                                
+                                <p><strong>First Conditional:</strong> Realne sytuacje w przyszłości</p>
+                                <p>"If it rains, I will stay at home."</p>
+                                
+                                <p><strong>Second Conditional:</strong> Hipotetyczne sytuacje w teraźniejszości/przyszłości</p>
+                                <p>"If I won the lottery, I would travel the world."</p>
+                                
+                                <p><strong>Third Conditional:</strong> Hipotetyczne sytuacje w przeszłości</p>
+                                <p>"If I had studied harder, I would have passed the exam."</p>
+                                
+                                <p><strong>Tip:</strong> Pamiętaj o odpowiedniej strukturze czasów w każdym warunku!</p>
+                            </div>
+                        </div>
+                        <div class="article-meta">
+                            <span class="article-category">Gramatyka</span>
+                            <span class="article-date">3 marca 2025</span>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <!-- Article List -->
-            <div class="article-list">
-
-                <!-- Article 1 -->
-                <div class="article-card" data-category="Metody nauki">
-                    <div class="article-header" onclick="toggleArticle(this)">
-                        <h3>Jak efektywnie uczyć się angielskiego?</h3>
-                        <div class="article-arrow">&#9660;</div>
-                    </div>
-                    <div class="article-excerpt">
-                        Dowiedz się, jak poprawić swoje umiejętności językowe, stosując sprawdzone metody nauki.
-                    </div>
-                    <div class="article-content">
-                        <div class="article-content-inner">
-                            <p><strong>Wskazówka 1:</strong> Używaj technik pamięciowych, takich jak mapy myśli czy
-                                skojarzenia, aby skutecznie zapamiętywać słówka i zasady gramatyczne.</p>
-                            <p><strong>Wskazówka 2:</strong> Pracuj z native speakerami – nic nie poprawi Twojej wymowy
-                                tak skutecznie jak rozmowy z osobami, które posługują się językiem na co dzień.</p>
-                            <p><strong>Wskazówka 3:</strong> Korzystaj z multimediów – oglądaj filmy, słuchaj podcastów
-                                i czytaj artykuły w języku angielskim, by przyswajać materiał w kontekście.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Article 2 -->
-                <div class="article-card" data-category="Wymowa">
-                    <div class="article-header" onclick="toggleArticle(this)">
-                        <h3>5 kroków do płynnej wymowy w angielskim</h3>
-                        <div class="article-arrow">&#9660;</div>
-                    </div>
-                    <div class="article-excerpt">
-                        Poznaj skuteczne techniki, które pomogą Ci poprawić wymowę w języku angielskim.
-                    </div>
-                    <div class="article-content">
-                        <div class="article-content-inner">
-                            <p><strong>Wskazówka 1:</strong> Regularne ćwiczenia wymowy są kluczowe – systematyczne
-                                ćwiczenie trudnych dźwięków pomoże Ci poprawić wymowę.</p>
-                            <p><strong>Wskazówka 2:</strong> Praca z native speakerem pozwala wyeliminować błędy w
-                                wymowie i intonacji, poprawiając akcent.</p>
-                            <p><strong>Wskazówka 3:</strong> Słuchaj nagrań z native speakerami i powtarzaj usłyszane
-                                słowa, aby poprawić akcent i intonację.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Article 3 -->
-                <div class="article-card" data-category="Wymowa">
-                    <div class="article-header" onclick="toggleArticle(this)">
-                        <h3>Jak ćwiczyć angielski akcent w domu?</h3>
-                        <div class="article-arrow">&#9660;</div>
-                    </div>
-                    <div class="article-excerpt">
-                        Samodzielna nauka akcentu? Tak! Sprawdź sprawdzone techniki bez wychodzenia z domu.
-                    </div>
-                    <div class="article-content">
-                        <div class="article-content-inner">
-                            <p><strong>Wskazówka 1:</strong> Używaj aplikacji z funkcją rozpoznawania mowy, np. Elsa
-                                Speak lub Speechling.</p>
-                            <p><strong>Wskazówka 2:</strong> Oglądaj filmy z napisami i powtarzaj dialogi na głos (tzw.
-                                shadowing).</p>
-                            <p><strong>Wskazówka 3:</strong> Nagraj swój głos i porównuj z oryginałem – to doskonały
-                                sposób na wychwycenie różnic w akcencie.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Article 4 -->
-                <div class="article-card" data-category="Wymowa">
-                    <div class="article-header" onclick="toggleArticle(this)">
-                        <h3>Brytyjski vs Amerykański akcent: który wybrać?</h3>
-                        <div class="article-arrow">&#9660;</div>
-                    </div>
-                    <div class="article-excerpt">
-                        Różnice między najpopularniejszymi akcentami i porady, jak zdecydować, który warto ćwiczyć.
-                    </div>
-                    <div class="article-content">
-                        <div class="article-content-inner">
-                            <p><strong>Wskazówka 1:</strong> Wybierz akcent, który częściej słyszysz – np. w pracy,
-                                filmach czy ulubionych podcastach.</p>
-                            <p><strong>Wskazówka 2:</strong> Skup się na jednym akcencie, aby uniknąć mieszania wymowy i
-                                intonacji.</p>
-                            <p><strong>Wskazówka 3:</strong> Ćwicz konkretne cechy danego akcentu – np. „r” w AmE czy
-                                „t” w BrE.</p>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <!-- Article 2 -->
-                <div class="article-card" data-category="Wymowa">
-                    <div class="article-header" onclick="toggleArticle(this)">
-                        <h3>Najczęstsze błędy wymowy u Polaków</h3>
-                        <div class="article-arrow">&#9660;</div>
-                    </div>
-                    <div class="article-excerpt">
-                        Dowiedz się, które angielskie dźwięki sprawiają najwięcej problemów i jak je poprawnie wymawiać.
-                    </div>
-                    <div class="article-content">
-                        <div class="article-content-inner">
-                            <p><strong>Wskazówka 1:</strong> Ćwicz dźwięki „th” – często mylone z „s” lub „d”. Pomaga
-                                nagrywanie siebie i porównywanie z native speakerami.</p>
-                            <p><strong>Wskazówka 2:</strong> Unikaj końcówek wymawianych po polsku – np. „work” to nie
-                                „worke”.</p>
-                            <p><strong>Wskazówka 3:</strong> Ucz się całych fraz z poprawną intonacją, a nie tylko
-                                pojedynczych słów.</p>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-                <!-- Article 3 -->
-                <div class="article-card" data-category="Słownictwo">
-                    <div class="article-header" onclick="toggleArticle(this)">
-                        <h3>Jak rozwinąć słownictwo w języku obcym?</h3>
-                        <div class="article-arrow">&#9660;</div>
-                    </div>
-                    <div class="article-excerpt">
-                        Poznaj skuteczne sposoby na poszerzanie słownictwa w obcym języku.
-                    </div>
-                    <div class="article-content">
-                        <div class="article-content-inner">
-                            <p><strong>Wskazówka 1:</strong> Używaj fiszek, by regularnie powtarzać nowe słówka i
-                                utrwalać je w pamięci.</p>
-                            <p><strong>Wskazówka 2:</strong> Rozmawiaj z native speakerami – to najlepszy sposób na
-                                naukę słówek w kontekście.</p>
-                            <p><strong>Wskazówka 3:</strong> Czytaj książki, artykuły i oglądaj filmy w języku obcym,
-                                aby poznawać słownictwo w naturalny sposób.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Article 2 -->
-                <div class="article-card" data-category="Słownictwo">
-                    <div class="article-header" onclick="toggleArticle(this)">
-                        <h3>10 słówek dziennie: metoda małych kroków</h3>
-                        <div class="article-arrow">&#9660;</div>
-                    </div>
-                    <div class="article-excerpt">
-                        Regularność to klucz! Dowiedz się, jak codzienne małe dawki słownictwa przynoszą wielkie efekty.
-                    </div>
-                    <div class="article-content">
-                        <div class="article-content-inner">
-                            <p><strong>Wskazówka 1:</strong> Wybieraj codziennie 10 nowych słów i zapisuj je w zeszycie
-                                lub aplikacji.</p>
-                            <p><strong>Wskazówka 2:</strong> Twórz z nimi zdania – dzięki temu łatwiej zapamiętasz ich
-                                znaczenie i użycie.</p>
-                            <p><strong>Wskazówka 3:</strong> Rób powtórki co kilka dni – użyj techniki "spaced
-                                repetition", by utrwalić wiedzę.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Article 3 -->
-                <div class="article-card" data-category="Słownictwo">
-                    <div class="article-header" onclick="toggleArticle(this)">
-                        <h3>Tematyczne grupy słów – ucz się szybciej</h3>
-                        <div class="article-arrow">&#9660;</div>
-                    </div>
-                    <div class="article-excerpt">
-                        Poznawaj słownictwo w grupach tematycznych, by szybciej je przyswajać i lepiej kojarzyć.
-                    </div>
-                    <div class="article-content">
-                        <div class="article-content-inner">
-                            <p><strong>Wskazówka 1:</strong> Wybierz jeden temat tygodniowo, np. jedzenie, podróże,
-                                zdrowie.</p>
-                            <p><strong>Wskazówka 2:</strong> Ucz się słów razem z obrazkami i przykładami w kontekście.
-                            </p>
-                            <p><strong>Wskazówka 3:</strong> Twórz własne mapy myśli lub listy słów podzielone
-                                tematycznie.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Article 4 -->
-                <div class="article-card" data-category="Słownictwo">
-                    <div class="article-header" onclick="toggleArticle(this)">
-                        <h3>Jak nie zapominać nowego słownictwa?</h3>
-                        <div class="article-arrow">&#9660;</div>
-                    </div>
-                    <div class="article-excerpt">
-                        Uczysz się słówek, ale szybko je zapominasz? Oto sposoby na trwałe zapamiętywanie.
-                    </div>
-                    <div class="article-content">
-                        <div class="article-content-inner">
-                            <p><strong>Wskazówka 1:</strong> Powtarzaj słówka na głos – aktywujesz wtedy więcej zmysłów.
-                            </p>
-                            <p><strong>Wskazówka 2:</strong> Zastosuj je od razu – użyj w rozmowie, komentarzu lub
-                                wiadomości.</p>
-                            <p><strong>Wskazówka 3:</strong> Ucz się w różnych kontekstach – to utrwala znaczenie i
-                                zastosowanie.</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Article 4 -->
-                <div class="article-card" data-category="Motywacja">
-                    <div class="article-header" onclick="toggleArticle(this)">
-                        <h3>Jak przezwyciężyć lęk przed mówieniem w języku obcym?</h3>
-                        <div class="article-arrow">&#9660;</div>
-                    </div>
-                    <div class="article-excerpt">
-                        Podpowiedzi, jak zyskać pewność siebie podczas rozmów w obcym języku.
-                    </div>
-                    <div class="article-content">
-                        <div class="article-content-inner">
-                            <p><strong>Wskazówka 1:</strong> Praktyka czyni mistrza – im więcej rozmawiasz, tym bardziej
-                                komfortowo będziesz się czuł.</p>
-                            <p><strong>Wskazówka 2:</strong> Nie bój się popełniać błędów – najważniejsze to komunikować
-                                się i wyrażać swoje myśli.</p>
-                            <p><strong>Wskazówka 3:</strong> Znajdź partnera do nauki, z którym będziesz mógł swobodnie
-                                ćwiczyć mówienie bez presji.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Article 2 -->
-                <div class="article-card" data-category="Motywacja">
-                    <div class="article-header" onclick="toggleArticle(this)">
-                        <h3>Jak utrzymać regularność w nauce języka?</h3>
-                        <div class="article-arrow">&#9660;</div>
-                    </div>
-                    <div class="article-excerpt">
-                        Oto sposoby, które pomogą Ci uczyć się języka systematycznie – nawet gdy brakuje czasu.
-                    </div>
-                    <div class="article-content">
-                        <div class="article-content-inner">
-                            <p><strong>Wskazówka 1:</strong> Ustal konkretny plan – nawet 15 minut dziennie robi
-                                różnicę.</p>
-                            <p><strong>Wskazówka 2:</strong> Wybierz materiały, które Cię interesują – wtedy nauka nie
-                                będzie obowiązkiem, a przyjemnością.</p>
-                            <p><strong>Wskazówka 3:</strong> Śledź swoje postępy – zaznaczaj każdy dzień nauki i
-                                nagradzaj się za wytrwałość.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Article 3 -->
-                <div class="article-card" data-category="Motywacja">
-                    <div class="article-header" onclick="toggleArticle(this)">
-                        <h3>Motywacja wewnętrzna vs zewnętrzna – co działa lepiej?</h3>
-                        <div class="article-arrow">&#9660;</div>
-                    </div>
-                    <div class="article-excerpt">
-                        Dowiedz się, jaki rodzaj motywacji najlepiej sprawdzi się w nauce języka – i jak z niej
-                        korzystać.
-                    </div>
-                    <div class="article-content">
-                        <div class="article-content-inner">
-                            <p><strong>Wskazówka 1:</strong> Określ, dlaczego naprawdę chcesz nauczyć się języka – to
-                                Twoja motywacja wewnętrzna.</p>
-                            <p><strong>Wskazówka 2:</strong> Korzystaj z motywatorów zewnętrznych, takich jak kursy,
-                                certyfikaty czy wyjazdy za granicę.</p>
-                            <p><strong>Wskazówka 3:</strong> Połącz obie formy – ucz się, bo chcesz, ale też miej cel,
-                                który będzie Cię mobilizował.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Article 4 -->
-                <div class="article-card" data-category="Motywacja">
-                    <div class="article-header" onclick="toggleArticle(this)">
-                        <h3>Jak nie stracić motywacji po kilku tygodniach?</h3>
-                        <div class="article-arrow">&#9660;</div>
-                    </div>
-                    <div class="article-excerpt">
-                        Początek jest łatwy – ale jak wytrwać dalej? Poznaj sposoby na długoterminową motywację.
-                    </div>
-                    <div class="article-content">
-                        <div class="article-content-inner">
-                            <p><strong>Wskazówka 1:</strong> Dziel naukę na małe cele – łatwiej je osiągnąć i szybciej
-                                poczujesz satysfakcję.</p>
-                            <p><strong>Wskazówka 2:</strong> Zmieniaj metody nauki – urozmaicenie zapobiega znudzeniu.
-                            </p>
-                            <p><strong>Wskazówka 3:</strong> Otaczaj się językiem – słuchaj muzyki, zmień język
-                                telefonu, rozmawiaj z innymi uczniami.</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Article 5 -->
-                <div class="article-card" data-category="Gramatyka">
-                    <div class="article-header" onclick="toggleArticle(this)">
-                        <h3>Jak nauczyć się gramatyki w języku obcym?</h3>
-                        <div class="article-arrow">&#9660;</div>
-                    </div>
-                    <div class="article-excerpt">
-                        Skuteczne metody nauki gramatyki, które pozwolą Ci opanować trudne zasady.
-                    </div>
-                    <div class="article-content">
-                        <div class="article-content-inner">
-                            <p><strong>Wskazówka 1:</strong> Używaj książek do gramatyki z ćwiczeniami, aby regularnie
-                                trenować trudne zasady.</p>
-                            <p><strong>Wskazówka 2:</strong> Rozwiązuj testy gramatyczne online, które pozwolą Ci
-                                sprawdzić postępy.</p>
-                            <p><strong>Wskazówka 3:</strong> Ucz się gramatyki w kontekście – zamiast reguł, ucz się jej
-                                na podstawie przykładów z życia codziennego.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Article 6.1 -->
-                <div class="article-card" data-category="Gramatyka">
-                    <div class="article-header" onclick="toggleArticle(this)">
-                        <h3>Czasowniki nieregularne: jak je opanować?</h3>
-                        <div class="article-arrow">&#9660;</div>
-                    </div>
-                    <div class="article-excerpt">
-                        Proste strategie, które pomogą Ci zapamiętać nieregularne formy czasowników w języku angielskim.
-                    </div>
-                    <div class="article-content">
-                        <div class="article-content-inner">
-                            <p><strong>Wskazówka 1:</strong> Grupuj czasowniki według podobieństw w odmianie (np.
-                                „go-went-gone”, „see-saw-seen”).</p>
-                            <p><strong>Wskazówka 2:</strong> Twórz własne fiszki lub korzystaj z aplikacji typu Anki lub
-                                Quizlet.</p>
-                            <p><strong>Wskazówka 3:</strong> Wplataj czasowniki nieregularne w krótkie zdania – praktyka
-                                w kontekście ułatwia zapamiętywanie.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Article 6.2 -->
-                <div class="article-card" data-category="Gramatyka">
-                    <div class="article-header" onclick="toggleArticle(this)">
-                        <h3>Present Perfect vs Past Simple: kiedy używać?</h3>
-                        <div class="article-arrow">&#9660;</div>
-                    </div>
-                    <div class="article-excerpt">
-                        Często mylone czasy – naucz się prostych zasad, które pomogą Ci wybrać właściwy.
-                    </div>
-                    <div class="article-content">
-                        <div class="article-content-inner">
-                            <p><strong>Wskazówka 1:</strong> Używaj <em>Past Simple</em> dla zakończonych wydarzeń w
-                                określonym czasie: „I went to London last year.”</p>
-                            <p><strong>Wskazówka 2:</strong> Wybieraj <em>Present Perfect</em> dla doświadczeń życiowych
-                                lub skutków widocznych teraz: „I have been to London.”</p>
-                            <p><strong>Wskazówka 3:</strong> Zwracaj uwagę na słowa-klucze: „just”, „yet”, „already”,
-                                „ever”, „never” → często towarzyszą Present Perfect.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Article 6.3 -->
-                <div class="article-card" data-category="Gramatyka">
-                    <div class="article-header" onclick="toggleArticle(this)">
-                        <h3>Artykuły a, an, the – czyli jak nie zwariować?</h3>
-                        <div class="article-arrow">&#9660;</div>
-                    </div>
-                    <div class="article-excerpt">
-                        Poznaj zasady stosowania angielskich rodzajników i uniknij typowych błędów.
-                    </div>
-                    <div class="article-content">
-                        <div class="article-content-inner">
-                            <p><strong>Wskazówka 1:</strong> „a” i „an” stosuj tylko przy rzeczownikach policzalnych w
-                                liczbie pojedynczej – „a dog”, „an apple”.</p>
-                            <p><strong>Wskazówka 2:</strong> „the” używamy, gdy mówimy o czymś konkretnym lub wcześniej
-                                wspomnianym – „the book on the table”.</p>
-                            <p><strong>Wskazówka 3:</strong> Pomijaj rodzajnik, gdy mówisz o czymś ogólnym w liczbie
-                                mnogiej lub niepoliczalnym – „I like coffee.”</p>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-                <!-- Article 6 -->
-                <div class="article-card" data-category="Metody nauki">
-                    <div class="article-header" onclick="toggleArticle(this)">
-                        <h3>Jak poprawić swoje umiejętności mówienia po angielsku?</h3>
-                        <div class="article-arrow">&#9660;</div>
-                    </div>
-                    <div class="article-excerpt">
-                        Praktyczne porady na temat poprawy płynności i pewności siebie podczas mówienia w języku
-                        angielskim.
-                    </div>
-                    <div class="article-content">
-                        <div class="article-content-inner">
-                            <p><strong>Wskazówka 1:</strong> Regularnie rozmawiaj z native speakerami, aby osłuchać się
-                                z naturalnym rytmem i akcentem.</p>
-                            <p><strong>Wskazówka 2:</strong> Używaj aplikacji do rozmów online, takich jak Tandem czy
-                                HelloTalk, aby znaleźć partnerów do nauki.</p>
-                            <p><strong>Wskazówka 3:</strong> Nagrywaj swoje wypowiedzi i odsłuchuj je, aby poprawić
-                                wymowę i identyfikować błędy.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="article-card" data-category="Metody nauki">
-                    <div class="article-header" onclick="toggleArticle(this)">
-                        <h3>Metoda Pomodoro w nauce angielskiego: Jak uczyć się skutecznie w 25-minutowych blokach</h3>
-                        <div class="article-arrow">&#9660;</div>
-                    </div>
-                    <div class="article-excerpt">
-                        Zwiększ produktywność dzięki technice Pomodoro, potwierdzonej badaniami z Uniwersytetu w
-                        Illinois.
-                    </div>
-                    <div class="article-content">
-                        <div class="article-content-inner">
-                            <p><strong>Jak działa?</strong> Nauka w 25-minutowych sesjach z 5-minutowymi przerwami (4
-                                cykle = długa przerwa).</p>
-                            <p><strong>Dlaczego działa?</strong> Badania wykazują, że krótkie sesje poprawiają
-                                koncentrację o 40% (Journal of Applied Psychology, 2018).</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="article-card" data-category="Metody nauki">
-                    <div class="article-header" onclick="toggleArticle(this)">
-                        <h3>Mapy myśli w nauce słownictwa: Jak zapamiętywać 50 słów dziennie</h3>
-                        <div class="article-arrow">&#9660;</div>
-                    </div>
-                    <div class="article-excerpt">
-                        Wizualna metoda nauki, która aktywuje obie półkule mózgu (badania NASA, 2020).
-                    </div>
-                    <div class="article-content">
-                        <div class="article-content-inner">
-                            <p><strong>Krok 1:</strong> Wybierz temat (np. "Podróże").</p>
-                            <p><strong>Krok 2:</strong> Narysuj centralny obrazek (np. samolot).</p>
-                            <p><strong>Krok 3:</strong> Dodaj gałęzie z kategoriami: <em>Verbs</em> (fly, book),
-                                <em>Nouns</em> (passport, luggage).
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="article-card" data-category="Metody nauki">
-                    <div class="article-header" onclick="toggleArticle(this)">
-                        <h3>Immersja językowa w domu: Jak stworzyć środowisko anglojęzyczne bez wyjazdu</h3>
-                        <div class="article-arrow">&#9660;</div>
-                    </div>
-                    <div class="article-excerpt">
-                        Metoda stosowana przez poliglotów (np. Benny Lewis), która przyspiesza naukę 3-krotnie.
-                    </div>
-                    <div class="article-content">
-                        <div class="article-content-inner">
-                            <p><strong>4 zmiany w codziennych nawykach:</strong></p>
-                            <ol>
-                                <li><strong>Telefon:</strong> Zmień język systemu na angielski.</li>
-                                <li><strong>Muzyka:</strong> Słuchaj podcastów.</li>
-                                <li><strong>TV:</strong> Oglądaj Netflix z angielskimi napisami.</li>
-                                <li><strong>Czytanie:</strong> Codziennie 1 artykuł.</li>
-                            </ol>
-
-                        </div>
-                    </div>
-                </div>
-
-
-
-            </div>
-
-            <!-- Newsletter -->
-            <section class="newsletter-section">
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <div class="section-container">
                 <div class="newsletter-container">
                     <h3>Zapisz się do naszego newslettera</h3>
-                    <p>Otrzymuj najnowsze artykuły i porady językowe prosto na swoją skrzynkę mailową!</p>
+                    <p>Otrzymuj najnowsze artykuły i porady językowe prosto na swoją skrzynkę mailową! Bądź na bieżąco z nowymi metodami nauki i wskazówkami od naszych ekspertów.</p>
 
-                    <form class="newsletter-form" action="https://formspree.io/f/mrbpjvpb" method="POST"
-                        id="newsletterForm">
-                        <input type="email" name="email" class="newsletter-input" placeholder="Twój adres email"
-                            required>
+                    <form class="newsletter-form" action="https://formspree.io/f/mrbpjvpb" method="POST" id="newsletterForm">
+                        <input type="email" name="email" class="newsletter-input" placeholder="Twój adres email" required aria-label="Adres email">
                         <button type="submit" class="newsletter-btn">Zapisz się</button>
                     </form>
 
-                    <div id="newsletterSuccess"
-                        style="display: none; margin-top: 20px; color: green; font-weight: bold;">
-                        Dziękujemy za zapisanie się do naszego newslettera! ✉️
+                    <div id="newsletterSuccess" style="display: none; margin-top: 20px; color: var(--primary-color); font-weight: bold; text-align: center;">
+                        <i class="fas fa-check-circle"></i> Dziękujemy za zapisanie się do naszego newslettera!
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
+    </main>
 
-            <script>
-                const form = document.getElementById('newsletterForm');
-                const successMessage = document.getElementById('newsletterSuccess');
-
-                form.addEventListener('submit', async function (e) {
-                    e.preventDefault();
-
-                    const formData = new FormData(form);
-                    const response = await fetch(form.action, {
-                        method: 'POST',
-                        body: formData,
-                        headers: {
-                            'Accept': 'application/json'
-                        }
-                    });
-
-                    if (response.ok) {
-                        form.reset();
-                        successMessage.style.display = 'block';
-                        successMessage.scrollIntoView({ behavior: 'smooth' });
-                    } else {
-                        alert("Coś poszło nie tak. Spróbuj ponownie później.");
-                    }
-                });
-            </script>
-
-
-        </div>
+    <!-- Sticky CTA -->
+    <div class="sticky-cta">
+        <a href="tel:+48576076648" class="phone-cta" aria-label="Zadzwoń do Step Up Speak">
+            <i class="fas fa-phone-alt"></i>
+            <span>Zadzwoń</span>
+        </a>
     </div>
 
     <footer>
         <div class="footer-content">
             <div class="footer-column">
                 <h3>Step Up Speak</h3>
-                <p>Profesjonalne kursy językowe online, które pomogą Ci osiągnąć płynność językową i pewność siebie w
-                    komunikacji.</p>
+                <p>Profesjonalne kursy językowe online, które pomogą Ci osiągnąć płynność językową i pewność siebie w komunikacji.</p>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/groups/1007789447828292" target="_blank" rel="noopener"><i
-                            class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/stepupspeak_english/"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/company/stepupspeak" target="_blank" rel="noopener noreferrer"><i
-                            class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.tiktok.com/@stepupspeak" target="_blank" rel="noopener"><i
-                            class="fab fa-tiktok"></i></a>
-
+                    <a href="https://www.facebook.com/groups/1007789447828292" target="_blank" rel="noopener" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/stepupspeak_english/" target="_blank" rel="noopener" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/stepupspeak" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@stepupspeak" target="_blank" rel="noopener" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
                 </div>
             </div>
 
@@ -1199,7 +1231,7 @@
                 <h3>Kursy</h3>
                 <ul>
                     <li><a href="courses.html">Angielski ogólny (A1–C1+)</a></li>
-                    <li><a href="pricing.html#individual">Zajęcia indywidualne</a></li> <!-- Jeśli są dostępne -->
+                    <li><a href="pricing.html#individual">Zajęcia indywidualne</a></li>
                 </ul>
             </div>
 
@@ -1207,11 +1239,8 @@
                 <h3>Informacje</h3>
                 <ul>
                     <li><a href="tel:+48576076648"><i class="fas fa-phone-alt"></i> +48 576 076 648</a></li>
-                    <li><a href="mailto:stepupspeakofficial@gmail.com"><i class="fas fa-envelope"></i>
-                            stepupspeakofficial@gmail.com</a></li>
-                    <li><a href="contacts.html"><i class="fas fa-map-marker-alt"></i> Al. Jana Pawła II 20, Warszawa</a>
-                    </li>
-                    <li><a href="contacts.html"><i class="fas fa-clock"></i> Pn-Pt: 8:00-20:00</a></li>
+                    <li><a href="mailto:stepupspeakofficial@gmail.com"><i class="fas fa-envelope"></i> stepupspeakofficial@gmail.com</a></li>
+                    <li><a href="contacts.html"><i class="fas fa-clock"></i> Pn-Pt: 8:00-20:00, Sb: 9:00 - 15:00</a></li>
                 </ul>
             </div>
 
@@ -1220,8 +1249,9 @@
                 <ul>
                     <li><a href="terms-of-service.html">Regulamin</a></li>
                     <li><a href="privacy-policy.html">Polityka prywatności</a></li>
-                    <li><a href="blog.html">FAQ</a></li>
-                    <li><a href="courses.html#opinie-studentow">Opinie studentów</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="index.html#testimonials-heading">Opinie studentów</a></li>
                     <li><a href="careers.html">Kariera</a></li>
                 </ul>
             </div>
@@ -1231,60 +1261,6 @@
             <p>&copy; 2025 Step Up Speak. Wszelkie prawa zastrzeżone.</p>
         </div>
     </footer>
-
-    <script>
-        // Toggle article content
-        function toggleArticle(header) {
-            const article = header.parentElement;
-            const content = article.querySelector('.article-content');
-            const arrow = article.querySelector('.article-arrow');
-
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-                arrow.classList.remove('open');
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-                arrow.classList.add('open');
-            }
-        }
-
-        // Initialize - close all articles
-        document.addEventListener('DOMContentLoaded', function () {
-            const articles = document.querySelectorAll('.article-content');
-            articles.forEach(article => {
-                article.style.maxHeight = null;
-            });
-        });
-
-        // Category filter functionality
-        const categoryBtns = document.querySelectorAll('.category-btn');
-        const articleCards = document.querySelectorAll('.article-card');
-
-        categoryBtns.forEach(btn => {
-            btn.addEventListener('click', function () {
-                // Удаляем активный класс у всех кнопок
-                categoryBtns.forEach(b => b.classList.remove('active'));
-                // Добавляем активный класс к текущей кнопке
-                this.classList.add('active');
-
-                const selectedCategory = this.textContent.trim();
-
-                // Фильтруем статьи
-                articleCards.forEach(card => {
-                    if (selectedCategory === 'Wszystkie') {
-                        card.style.display = 'block';
-                    } else {
-                        const cardCategory = card.getAttribute('data-category');
-                        if (cardCategory === selectedCategory) {
-                            card.style.display = 'block';
-                        } else {
-                            card.style.display = 'none';
-                        }
-                    }
-                });
-            });
-        });
-    </script>
 
     <!-- Cookie Consent Banner -->
     <div id="cookie-consent-banner" class="cookie-consent-banner">
@@ -1301,7 +1277,144 @@
         </div>
     </div>
 
-    <script src="cookie-consent.js"></script>
-</body>
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mainNav = document.getElementById('main-nav');
+            
+            if (mobileMenuButton && mainNav) {
+                mobileMenuButton.addEventListener('click', function() {
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !isExpanded);
+                    mainNav.classList.toggle('active');
+                });
+            }
+            
+            // Header scroll effect
+            const header = document.getElementById('header');
+            if (header) {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 50) {
+                        header.classList.add('scrolled');
+                    } else {
+                        header.classList.remove('scrolled');
+                    }
+                });
+            }
 
+            // Category filter functionality
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            const articleCards = document.querySelectorAll('.article-card');
+
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    categoryBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to current button
+                    this.classList.add('active');
+
+                    const selectedCategory = this.textContent.trim();
+
+                    // Filter articles
+                    articleCards.forEach(card => {
+                        if (selectedCategory === 'Wszystkie') {
+                            card.style.display = 'block';
+                        } else {
+                            const cardCategory = card.getAttribute('data-category');
+                            if (cardCategory === selectedCategory) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+
+            // Newsletter form functionality
+            const form = document.getElementById('newsletterForm');
+            const successMessage = document.getElementById('newsletterSuccess');
+
+            if (form) {
+                form.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+
+                    const formData = new FormData(form);
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+
+                    if (response.ok) {
+                        form.reset();
+                        successMessage.style.display = 'block';
+                        successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        
+                        // Track newsletter signup in dataLayer for analytics
+                        if (window.dataLayer) {
+                            window.dataLayer.push({
+                                'event': 'newsletter_signup',
+                                'form_type': 'newsletter'
+                            });
+                        }
+                    } else {
+                        alert("Coś poszło nie tak. Spróbuj ponownie później.");
+                    }
+                });
+            }
+            
+            // Track CTA clicks for analytics
+            const ctaButtons = document.querySelectorAll('.cta-button, .phone-cta, .newsletter-btn');
+            ctaButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    if (window.dataLayer) {
+                        window.dataLayer.push({
+                            'event': 'cta_click',
+                            'cta_type': this.classList.contains('phone-cta') ? 'phone' : 'button',
+                            'cta_text': this.textContent.trim(),
+                            'cta_location': 'blog_page'
+                        });
+                    }
+                });
+            });
+            
+            // Cookie consent functionality
+            const cookieBanner = document.getElementById('cookie-consent-banner');
+            const acceptCookies = document.getElementById('accept-cookies');
+            const rejectCookies = document.getElementById('reject-cookies');
+            
+            // Check if user has already made a choice
+            if (!localStorage.getItem('cookieConsent')) {
+                // Show banner after a short delay
+                setTimeout(() => {
+                    cookieBanner.classList.add('active');
+                }, 1000);
+            }
+            
+            if (acceptCookies) {
+                acceptCookies.addEventListener('click', function() {
+                    localStorage.setItem('cookieConsent', 'accepted');
+                    cookieBanner.classList.remove('active');
+                });
+            }
+            
+            if (rejectCookies) {
+                rejectCookies.addEventListener('click', function() {
+                    localStorage.setItem('cookieConsent', 'rejected');
+                    cookieBanner.classList.remove('active');
+                });
+            }
+        });
+
+        // Article toggle function
+        function toggleArticle(element) {
+            const articleCard = element.closest('.article-card');
+            articleCard.classList.toggle('active');
+        }
+    </script>
+</body>
 </html>

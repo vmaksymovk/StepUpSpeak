@@ -1,37 +1,90 @@
 <!DOCTYPE html>
 <html lang="pl">
-
 <head>
-    <link rel="apple-touch-icon" sizes="57x57" href="FaviconForWebPage/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="FaviconForWebPage/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="FaviconForWebPage/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="FaviconForWebPage/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="FaviconForWebPage/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="FaviconForWebPage/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="FaviconForWebPage/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="FaviconForWebPage/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/FaviconForWebPage/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="192x192"  href="FaviconForWebPage/android-icon-192x192.png">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/FaviconForWebPage/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="FaviconForWebPage/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="FaviconForWebPage/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="FaviconForWebPage/favicon-16x16.png">
-    <link rel="manifest" href="/FaviconForWebPage/site.webmanifest" />
+    <link rel="manifest" href="/FaviconForWebPage/site.webmanifest">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="FaviconForWebPage/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <meta name="apple-mobile-web-app-title" content="StepUpSpeak" />
+    <meta name="apple-mobile-web-app-title" content="StepUpSpeak">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kursy - Step Up Speak | Premium Językowe Online</title>
-    <meta name="description"
-        content="Odkryj nasze premium kursy językowe dla dzieci i młodzieży. Angielski i polski z najlepszymi nauczycielami. Rozpocznij naukę już dziś!">
+    <title>Step Up Speak - Ceny Kursów Językowych Online | A1-C1+</title>
+    <meta name="description" content="Profesjonalne kursy angielskiego online na wszystkich poziomach (A1-C1+). Darmowa lekcja próbna. Sprawdź ceny i zapisz się!">
+    
+    <!-- Preload critical resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Step Up Speak - Ceny Kursów Językowych Online">
+    <meta property="og:description" content="Profesjonalne kursy angielskiego online na wszystkich poziomach. Darmowa lekcja próbna.">
+    <meta property="og:image" content="https://stepupspeak.com/images/og-pricing.jpg">
+    <meta property="og:url" content="https://stepupspeak.com/pricing.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Step Up Speak">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Step Up Speak - Ceny Kursów Językowych Online">
+    <meta name="twitter:description" content="Profesjonalne kursy angielskiego online na wszystkich poziomach.">
+    <meta name="twitter:image" content="https://stepupspeak.com/images/twitter-pricing.jpg">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Kursy Języka Angielskiego Online",
+        "description": "Profesjonalne kursy angielskiego online na wszystkich poziomach zaawansowania",
+        "url": "https://stepupspeak.com/pricing.html",
+        "numberOfItems": 8,
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@type": "Course",
+                    "name": "Kurs Angielskiego Poziom A1",
+                    "description": "Kurs języka angielskiego na poziomie początkującym A1",
+                    "provider": {
+                        "@type": "EducationalOrganization",
+                        "name": "Step Up Speak"
+                    },
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "299",
+                        "priceCurrency": "PLN"
+                    }
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@type": "Course",
+                    "name": "Kurs Angielskiego Poziom A2",
+                    "description": "Kurs języka angielskiego na poziomie podstawowym A2",
+                    "provider": {
+                        "@type": "EducationalOrganization",
+                        "name": "Step Up Speak"
+                    },
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "319",
+                        "priceCurrency": "PLN"
+                    }
+                }
+            }
+        ]
+    }
+    </script>
+
     <style>
         :root {
             --primary-color: #2E8B57;
@@ -47,13 +100,19 @@
             --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
             --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
             --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
             --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --border-radius: 12px;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -66,67 +125,97 @@
             min-height: 100vh;
         }
 
+        /* Skip to main content for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--primary-color);
+            color: white;
+            padding: 8px;
+            z-index: 10000;
+            text-decoration: none;
+            border-radius: 0 0 4px 4px;
+            transition: top 0.3s;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
         /* Header */
         header {
-            background-color: var(--primary-color);
-            color: var(--white);
-            padding: 1.5rem 2rem;
+            background-color: var(--white);
+            color: var(--text-color);
+            padding: 1rem 2rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
             box-shadow: var(--shadow-md);
-            position: relative;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 0.7rem 2rem;
         }
 
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 1.5rem;
+            gap: 1rem;
         }
 
         header img {
-            width: 100px;
+            width: 80px;
             height: auto;
             transition: var(--transition);
         }
 
-        header img:hover {
-            transform: scale(1.05);
+        header.scrolled img {
+            width: 60px;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
         }
 
         header h1 {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             font-weight: 700;
             margin: 0;
             letter-spacing: -0.5px;
+            color: var(--primary-color);
         }
 
         .tagline {
-            font-size: 1rem;
-            font-weight: 300;
-            opacity: 0.9;
-            margin-top: 0.3rem;
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: var(--text-light);
+            margin-top: 0.2rem;
         }
 
         /* Navigation */
+        .nav-container {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
         nav {
             display: flex;
-            justify-content: center;
-            background-color: var(--text-color);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: var(--shadow-sm);
+            gap: 1.5rem;
         }
 
         nav a {
-            color: var(--white);
+            color: var(--text-color);
             text-decoration: none;
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 500;
-            margin: 0 1rem;
-            padding: 0.7rem 1.5rem;
+            padding: 0.5rem 1rem;
             transition: var(--transition);
             border-radius: 4px;
             display: flex;
@@ -136,54 +225,73 @@
 
         nav a:hover,
         nav a:focus {
-            background-color: var(--primary-color);
-            transform: translateY(-2px);
+            background-color: rgba(46, 139, 87, 0.1);
+            color: var(--primary-color);
         }
 
         nav a i {
+            font-size: 1rem;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+            gap: 0.5rem;
+            white-space: nowrap;
+        }
+
+        .cta-button:hover,
+        .cta-button:focus {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        .cta-button-large {
+            padding: 1.2rem 2.5rem;
             font-size: 1.1rem;
         }
 
-        /* Main Content */
+        .cta-button-secondary {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .cta-button-secondary:hover {
+            background-color: rgba(46, 139, 87, 0.1);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-button {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-color);
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        /* Main content */
         .main-content {
             flex: 1;
         }
 
-        /* Hero Section */
-        .hero-courses {
-            background: var(--background-gradient);
-            padding: 5rem 2rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-content {
-            max-width: 900px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-courses h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            color: var(--primary-dark);
-            line-height: 1.2;
-        }
-
-        .hero-courses p {
-            font-size: 1.2rem;
-            color: var(--text-color);
-            margin-bottom: 2rem;
-            line-height: 1.8;
-        }
-
-        /* Benefits Section */
-        .benefits-section {
-            padding: 5rem 2rem;
-            background-color: var(--white);
+        section {
+            padding: 4rem 2rem;
         }
 
         .section-title {
@@ -217,7 +325,59 @@
             margin: 0 auto;
         }
 
-        .benefits-grid {
+        /* Hero Section for Pricing Page */
+        .pricing-hero {
+            background: var(--background-gradient);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .pricing-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .pricing-hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--primary-dark);
+            line-height: 1.2;
+        }
+
+        .pricing-hero p {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+        }
+
+        .hero-benefits {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-benefit {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-weight: 500;
+        }
+
+        .hero-benefit i {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        /* Pricing section */
+        #pricing {
+            background: var(--white);
+        }
+
+        .pricing-table {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
@@ -225,18 +385,211 @@
             margin: 0 auto;
         }
 
-        .benefit-card {
+        .pricing-card {
             background-color: var(--white);
-            border-radius: 12px;
+            border-radius: var(--border-radius);
             padding: 2.5rem;
             text-align: center;
             box-shadow: var(--shadow-md);
             transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .pricing-card h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .level-badge {
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            color: white;
+            padding: 0.3rem 2rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transform: rotate(45deg);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            border-radius: 0;
+            z-index: 2;
+            width: 170px;
+            text-align: center;
+            background-color: #45B7D1;
+            clip-path: polygon(0 0, 100% 0, 85% 50%, 100% 100%, 0 100%, 15% 50%);
+        }
+
+        .price-container {
+            margin: 1.5rem 0;
+        }
+
+        .price-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .old-price {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            text-decoration: line-through;
+        }
+
+        .new-price {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 0.5rem 0;
+        }
+
+        .new-price span {
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+
+        .discount-badge {
+            display: inline-block;
+            background-color: #FEEBC8;
+            color: var(--accent-color);
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .price-details {
+            margin-top: 0.8rem;
+            padding-top: 0.8rem;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        .price-per-lesson {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 0.3rem;
+        }
+
+        .lesson-price {
+            color: #2b6cb0;
+        }
+
+        .lesson-label {
+            color: #4a5568;
+        }
+
+        .billing-info {
+            font-size: 0.75rem;
+            color: #718096;
+            font-style: italic;
+        }
+
+        .features-list {
+            text-align: left;
+            margin: 2rem 0;
+            padding: 0;
+            list-style: none;
+            flex-grow: 1;
+        }
+
+        .features-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.8rem;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .features-list li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+
+        .value-highlight {
+            background-color: #ebf8ff;
+            color: #2b6cb0;
+            padding: 0.6rem;
+            border-radius: 6px;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .value-highlight i {
+            margin-right: 0.5rem;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 0.9rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: var(--transition);
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .button:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        .highlight {
+            background-color: rgba(221, 107, 32, 0.1);
+            padding: 1rem;
+            border-left: 3px solid var(--accent-color);
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        /* Benefits section */
+        .benefits {
+            background-color: var(--background-light);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .benefit-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            text-align: center;
             border-top: 4px solid var(--primary-color);
         }
 
         .benefit-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
             box-shadow: var(--shadow-lg);
         }
 
@@ -247,7 +600,7 @@
         }
 
         .benefit-card h3 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             margin-bottom: 1rem;
             color: var(--text-color);
         }
@@ -257,215 +610,36 @@
             font-size: 1rem;
         }
 
-        /* Testimonials Section */
-        .testimonials-section {
-            padding: 5rem 2rem;
-            background: var(--background-gradient);
-        }
-
-        .testimonials-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .testimonial-card {
-            background-color: var(--white);
-            border-radius: 12px;
-            padding: 2.5rem;
-            box-shadow: var(--shadow-md);
-            position: relative;
-            transition: var(--transition);
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .testimonial-card::before {
-            content: '"';
-            position: absolute;
-            top: 1.5rem;
-            left: 1.5rem;
-            font-size: 5rem;
-            color: var(--primary-color);
-            opacity: 0.1;
-            font-family: Georgia, serif;
-            line-height: 1;
-        }
-
-        .testimonial-content {
-            position: relative;
-            z-index: 1;
-            height: 100%;
+        /* Sticky CTA */
+        .sticky-cta {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 999;
             display: flex;
             flex-direction: column;
+            gap: 1rem;
+            align-items: flex-end;
         }
 
-        .testimonial-text {
-            font-style: italic;
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-            color: var(--text-color);
-            flex-grow: 1;
-        }
-
-        .testimonial-author {
+        .phone-cta {
             display: flex;
             align-items: center;
-            margin-top: auto;
-        }
-
-        .testimonial-author img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-right: 1rem;
-            border: 3px solid var(--primary-color);
-        }
-
-        .author-info h4 {
-            margin: 0;
-            color: var(--primary-color);
-            font-size: 1.2rem;
-            text-align: left;
-        }
-
-        .author-info p {
-            margin: 0.3rem 0 0;
-            color: var(--text-light);
-            font-size: 0.9rem;
-            text-align: left;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background-color: var(--primary-color);
-            color: var(--white);
-            padding: 5rem 2rem;
-            text-align: center;
-        }
-
-        .cta-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .cta-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-        }
-
-        .cta-text {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            line-height: 1.8;
-            opacity: 0.9;
-        }
-
-        /* Button */
-        .button {
-            display: inline-block;
-            background-color: var(--white);
-            color: var(--primary-color);
-            padding: 1rem 2.5rem;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem 1.5rem;
             border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: var(--shadow-lg);
             transition: var(--transition);
-            border: 2px solid var(--white);
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+            gap: 0.5rem;
         }
 
-        .button:hover {
-            background-color: transparent;
-            color: var(--white);
+        .phone-cta:hover {
+            background: var(--primary-dark);
             transform: translateY(-3px);
-            box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
-        }
-
-        .button-large {
-            padding: 1.2rem 3rem;
-            font-size: 1.2rem;
-        }
-
-
-
-        /* Responsive */
-        @media (max-width: 992px) {
-            header {
-                flex-direction: column;
-                text-align: center;
-                gap: 1rem;
-            }
-
-            .logo-container {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            header h1 {
-                font-size: 2rem;
-            }
-
-            .hero-courses h1 {
-                font-size: 2.5rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            nav {
-                flex-wrap: wrap;
-                padding: 0.8rem;
-            }
-
-            nav a {
-                font-size: 0.95rem;
-                padding: 0.5rem 1rem;
-                margin: 0.2rem;
-            }
-
-            .section-title h2 {
-                font-size: 2rem;
-            }
-
-            .section-title p {
-                font-size: 1rem;
-            }
-
-            .hero-courses {
-                padding: 3rem 1rem;
-            }
-
-            .hero-courses h1 {
-                font-size: 2rem;
-            }
-
-            .hero-courses p {
-                font-size: 1rem;
-            }
-
-            .cta-title {
-                font-size: 2rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .button {
-                width: 100%;
-            }
-
-            .testimonials-container {
-                grid-template-columns: 1fr;
-            }
+            box-shadow: var(--shadow-xl);
         }
 
         /* Footer */
@@ -473,8 +647,7 @@
             background-color: var(--text-color);
             color: var(--white);
             padding: 3rem 2rem 2rem;
-            text-align: center;
-            margin-top: 3rem;
+            margin-top: auto;
         }
 
         .footer-content {
@@ -556,6 +729,7 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             font-size: 0.9rem;
             color: #A0AEC0;
+            text-align: center;
         }
 
         /* Cookie Banner */
@@ -619,6 +793,7 @@
             transition: all 0.3s ease;
             border: none;
             font-size: 15px;
+            min-width: 120px;
         }
 
         .primary-btn {
@@ -641,10 +816,200 @@
             background: rgba(255, 255, 255, 0.05);
             color: white;
         }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .pricing-table {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-button {
+                display: block;
+            }
+
+            .nav-container nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: var(--shadow-lg);
+                gap: 0;
+            }
+
+            .nav-container nav.active {
+                display: flex;
+            }
+
+            nav a {
+                padding: 1rem;
+                border-radius: 0;
+                border-bottom: 1px solid #f0f0f0;
+            }
+
+            header {
+                padding: 1rem;
+            }
+
+            header.scrolled {
+                padding: 0.7rem 1rem;
+            }
+
+            .pricing-hero {
+                padding: 3rem 1rem;
+            }
+
+            .pricing-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .pricing-hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .section-title p {
+                font-size: 1rem;
+            }
+
+            .pricing-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .hero-benefits {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .sticky-cta {
+                bottom: 1rem;
+                right: 1rem;
+            }
+
+            .phone-cta span {
+                display: none;
+            }
+
+            .phone-cta {
+                padding: 1rem;
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+                justify-content: center;
+            }
+
+            .cookie-consent-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .cookie-consent-buttons {
+                width: 100%;
+            }
+            
+            .cookie-btn {
+                flex: 1;
+            }
+        }
+
+        @media (max-width: 480px) {
+            section {
+                padding: 3rem 1rem;
+            }
+
+            .pricing-table {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-column h3::after {
+                margin: 0.5rem auto;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+        }
+
+        /* Focus styles for accessibility */
+        button:focus,
+        a:focus,
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+            .sticky-cta,
+            .cookie-consent-banner {
+                display: none;
+            }
+        }
+
+        .level-badge {
+    position: absolute;
+    top: 20px;
+    right: -35px;
+    color: white;
+    padding: 0.5rem 2.5rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    transform: rotate(45deg);
+    box-shadow: var(--shadow-md);
+    border-radius: 0;
+    z-index: 10;
+    width: 199px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    background-color: #45B7D1;
+    clip-path: polygon(0 0, 100% 0, 85% 50%, 100% 100%, 0 100%, 15% 50%);
+}
+
+.pricing-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    position: relative;
+    overflow: visible; /* Changed from hidden to visible */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Kolory ikon odpowiadające poziomom */
+.pricing-card:nth-child(1) .level-badge { background-color: #FF6B6B; }
+.pricing-card:nth-child(2) .level-badge { background-color: #4ECDC4; }
+.pricing-card:nth-child(3) .level-badge { background-color: #45B7D1; }
+.pricing-card:nth-child(4) .level-badge { background-color: #A37EBA; }
+.pricing-card:nth-child(5) .level-badge { background-color: #FFA07A; }
+.pricing-card:nth-child(6) .level-badge { background-color: #FFD166; }
+.pricing-card:nth-child(7) .level-badge { background-color: #06D6A0; }
+.pricing-card:nth-child(8) .level-badge { background-color: #696cc0; }
     </style>
 
-            <!-- Meta Pixel Code -->
-<script>
+    <!-- Meta Pixel Code -->
+    <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -663,216 +1028,456 @@
 </head>
 
 <body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Przejdź do treści</a>
+
     <!-- Header -->
-    <header>
+    <header id="header">
         <div class="logo-container">
-            <a href="index.html"><img src="Images/LogoSchool.png" alt="Step Up Speak Logo"></a>
-            <div>
+            <a href="index.html" aria-label="Step Up Speak - Strona główna">
+                <img src="Images/LogoSchool.png" alt="Step Up Speak Logo">
+            </a>
+            <div class="logo-text">
                 <h1>Step Up Speak</h1>
                 <p class="tagline">Profesjonalne kursy językowe online</p>
             </div>
         </div>
+
+        <div class="nav-container">
+            <nav id="main-nav">
+                <a href="index.html"><i class="fas fa-home"></i> Strona Główna</a>
+                <a href="courses.html"><i class="fas fa-book-open"></i> Kursy</a>
+                <a href="contacts.html"><i class="fas fa-envelope"></i> Kontakt</a>
+                <a href="blog.html"><i class="fas fa-blog"></i> Blog</a>
+            </nav>
+            <a href="contacts.html" class="cta-button">
+                <i class="fas fa-calendar-check"></i> Zapisz się
+            </a>
+            <button class="mobile-menu-button" id="mobile-menu-button" aria-label="Menu mobilne" aria-expanded="false" aria-controls="main-nav">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
     </header>
 
-    <!-- Navigation -->
-    <nav>
-        <a href="index.html"><i class="fas fa-home"></i> Strona Główna</a>
-        <a href="courses.html"><i class="fas fa-book-open"></i> Kursy</a>
-        <a href="pricing.html"><i class="fas fa-tags"></i> Ceny</a>
-        <a href="contacts.html"><i class="fas fa-envelope"></i> Kontakt</a>
-        <a href="blog.html"><i class="fas fa-blog"></i> Blog</a>
-    </nav>
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section for Pricing Page -->
+        <section class="pricing-hero">
+            <div class="pricing-hero-content">
+                <h1>Odkryj Nasze Kursy Językowe Online</h1>
+                <p>Profesjonalne kursy angielskiego na wszystkich poziomach zaawansowania. Każdy kurs obejmuje <strong>darmową lekcję próbną</strong></p>
+                
+                <div class="hero-benefits">
+                    <div class="hero-benefit">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Darmowa lekcja próbna</span>
+                    </div>
+                    <div class="hero-benefit">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Doświadczeni native speakerzy</span>
+                    </div>
+                    <div class="hero-benefit">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Małe grupy (4-6 osób)</span>
+                    </div>
+                </div>
+                
+                <div class="hero-actions">
+                    <a href="#pricing" class="cta-button cta-button-large">
+                        <i class="fas fa-eye"></i> Zobacz ceny kursów
+                    </a>
+                    <a href="contacts.html" class="cta-button cta-button-secondary">
+                        <i class="fas fa-question-circle"></i> Masz pytania?
+                    </a>
+                </div>
+            </div>
+        </section>
 
-    <div class="main-content">
+       <!-- Pricing Section -->
+<section id="pricing">
+    <div class="section-title">
+        <h2>Odkryj Świat Języka na Każdym Poziomie</h2>
+        <p>Do każdego kursu dołączamy <strong>bezpłatną konsultację</strong> z naszym ekspertem. Zacznij swoją językową przygodę już dziś!</p>
+    </div>
+    <div class="pricing-table">
+        <!-- A1 -->
+        <div class="pricing-card">
+            <div class="level-badge">Beginner</div>
+            <h3>Poziom A1</h3>
+            <div class="price-container">
+                <div class="price-header">
+                    <div class="old-price">399 zł</div>
+                    <div class="discount-badge">Promocja -100 zł</div>
+                </div>
+                <div class="new-price">299 <span>zł</span></div>
+                <div class="price-details">
+                    <div class="price-per-lesson">
+                        <span class="lesson-price">≈37,38 zł</span>
+                        <span class="lesson-label">za spotkanie</span>
+                    </div>
+                    <div class="billing-info">(8 spotkań × 1,5h miesięcznie)</div>
+                </div>
+            </div>
+            <ul class="features-list">
+                <li><i class="fas fa-chalkboard-teacher"></i> 63 godziny praktycznej nauki</li>
+                <li><i class="fas fa-layer-group"></i> Fundamenty gramatyki</li>
+                <li><i class="fas fa-comments"></i> Podstawy komunikacji</li>
+                <li><i class="fas fa-microphone-alt"></i> Nauka poprawnej wymowy</li>
+                <li><i class="fas fa-book-open"></i> Słownictwo na co dzień</li>
+            </ul>
+            <div class="value-highlight">
+                <i class="fas fa-calculator"></i> Zaledwie <strong>24,92 zł/godzinę</strong>!
+            </div>
+            <a href="contacts.html" class="button">Zapisz się teraz</a>
+        </div>
 
+        <!-- A2 -->
+        <div class="pricing-card">
+            <div class="level-badge">Elementary</div>
+            <h3>Poziom A2</h3>
+            <div class="price-container">
+                <div class="price-header">
+                    <div class="old-price">419 zł</div>
+                    <div class="discount-badge">Promocja -100 zł</div>
+                </div>
+                <div class="new-price">319 <span>zł</span></div>
+                <div class="price-details">
+                    <div class="price-per-lesson">
+                        <span class="lesson-price">≈39,88 zł</span>
+                        <span class="lesson-label">za spotkanie</span>
+                    </div>
+                    <div class="billing-info">(8 spotkań × 1,5h miesięcznie)</div>
+                </div>
+            </div>
+            <ul class="features-list">
+                <li><i class="fas fa-chalkboard-teacher"></i> 63 godziny intensywnej nauki</li>
+                <li><i class="fas fa-layer-group"></i> Rozbudowa struktur gramatycznych</li>
+                <li><i class="fas fa-comments"></i> Konwersacje w typowych sytuacjach</li>
+                <li><i class="fas fa-microphone-alt"></i> Udoskonalanie wymowy</li>
+                <li><i class="fas fa-book-open"></i> Bogatsze słownictwo</li>
+            </ul>
+            <div class="value-highlight">
+                <i class="fas fa-calculator"></i> Tylko <strong>26,59 zł/godzinę</strong>!
+            </div>
+            <a href="contacts.html" class="button">Zapisz się teraz</a>
+        </div>
+
+        <!-- A2+ -->
+        <div class="pricing-card">
+            <div class="level-badge">Pre-Intermediate</div>
+            <h3>Poziom A2+</h3>
+            <div class="price-container">
+                <div class="price-header">
+                    <div class="old-price">439 zł</div>
+                    <div class="discount-badge">Promocja -100 zł</div>
+                </div>
+                <div class="new-price">339 <span>zł</span></div>
+                <div class="price-details">
+                    <div class="price-per-lesson">
+                        <span class="lesson-price">≈42,38 zł</span>
+                        <span class="lesson-label">za spotkanie</span>
+                    </div>
+                    <div class="billing-info">(8 spotkań × 1,5h miesięcznie)</div>
+                </div>
+            </div>
+            <ul class="features-list">
+                <li><i class="fas fa-chalkboard-teacher"></i> 63 godziny efektywnej nauki</li>
+                <li><i class="fas fa-layer-group"></i> Skomplikowane konstrukcje gramatyczne</li>
+                <li><i class="fas fa-comments"></i> Swobodne dyskusje</li>
+                <li><i class="fas fa-microphone-alt"></i> Praca nad płynnością wymowy</li>
+                <li><i class="fas fa-book-open"></i> Słownictwo specjalistyczne</li>
+            </ul>
+            <div class="value-highlight">
+                <i class="fas fa-calculator"></i> Jedynie <strong>28,25 zł/godzinę</strong>!
+            </div>
+            <a href="contacts.html" class="button">Zapisz się teraz</a>
+        </div>
+
+        <!-- B1 -->
+        <div class="pricing-card">
+            <div class="level-badge">Intermediate</div>
+            <h3>Poziom B1</h3>
+            <div class="price-container">
+                <div class="price-header">
+                    <div class="old-price">459 zł</div>
+                    <div class="discount-badge">Promocja -100 zł</div>
+                </div>
+                <div class="new-price">359 <span>zł</span></div>
+                <div class="price-details">
+                    <div class="price-per-lesson">
+                        <span class="lesson-price">≈44,88 zł</span>
+                        <span class="lesson-label">za spotkanie</span>
+                    </div>
+                    <div class="billing-info">(8 spotkań × 1,5h miesięcznie)</div>
+                </div>
+            </div>
+            <ul class="features-list">
+                <li><i class="fas fa-chalkboard-teacher"></i> 63 godziny zaawansowanej nauki</li>
+                <li><i class="fas fa-layer-group"></i> Zaawansowane zagadnienia gramatyczne</li>
+                <li><i class="fas fa-comments"></i> Debaty i wystąpienia</li>
+                <li><i class="fas fa-microphone-alt"></i> Korygowanie wymowy</li>
+                <li><i class="fas fa-book-open"></i> Język biznesowy</li>
+            </ul>
+            <div class="value-highlight">
+                <i class="fas fa-calculator"></i> Tylko <strong>29,92 zł/godzinę</strong>!
+            </div>
+            <a href="contacts.html" class="button">Zapisz się teraz</a>
+        </div>
+
+        <!-- B1+ -->
+        <div class="pricing-card">
+            <div class="level-badge">Intermediate Plus</div>
+            <h3>Poziom B1+</h3>
+            <div class="price-container">
+                <div class="price-header">
+                    <div class="old-price">479 zł</div>
+                    <div class="discount-badge">Promocja -100 zł</div>
+                </div>
+                <div class="new-price">379 <span>zł</span></div>
+                <div class="price-details">
+                    <div class="price-per-lesson">
+                        <span class="lesson-price">≈47,38 zł</span>
+                        <span class="lesson-label">za spotkanie</span>
+                    </div>
+                    <div class="billing-info">(8 spotkań × 1,5h miesięcznie)</div>
+                </div>
+            </div>
+            <ul class="features-list">
+                <li><i class="fas fa-chalkboard-teacher"></i> 63 godziny specjalistycznej nauki</li>
+                <li><i class="fas fa-layer-group"></i> Mistrzostwo gramatyczne</li>
+                <li><i class="fas fa-comments"></i> Prezentacje i negocjacje</li>
+                <li><i class="fas fa-microphone-alt"></i> Dążenie do perfekcji w wymowie</li>
+                <li><i class="fas fa-book-open"></i> Słownictwo akademickie</li>
+            </ul>
+            <div class="value-highlight">
+                <i class="fas fa-calculator"></i> Zaledwie <strong>31,59 zł/godzinę</strong>!
+            </div>
+            <a href="contacts.html" class="button">Zapisz się teraz</a>
+        </div>
+
+        <!-- B2 -->
+        <div class="pricing-card">
+            <div class="level-badge">Upper-Intermediate</div>
+            <h3>Poziom B2</h3>
+            <div class="price-container">
+                <div class="price-header">
+                    <div class="old-price">499 zł</div>
+                    <div class="discount-badge">Promocja -100 zł</div>
+                </div>
+                <div class="new-price">399 <span>zł</span></div>
+                <div class="price-details">
+                    <div class="price-per-lesson">
+                        <span class="lesson-price">≈49,88 zł</span>
+                        <span class="lesson-label">za spotkanie</span>
+                    </div>
+                    <div class="billing-info">(8 spotkań × 1,5h miesięcznie)</div>
+                </div>
+            </div>
+            <ul class="features-list">
+                <li><i class="fas fa-chalkboard-teacher"></i> 63 godziny profesjonalnej nauki</li>
+                <li><i class="fas fa-layer-group"></i> Biegłość gramatyczna</li>
+                <li><i class="fas fa-comments"></i> Zaawansowane wystąpienia</li>
+                <li><i class="fas fa-microphone-alt"></i> Akcent i intonacja</li>
+                <li><i class="fas fa-book-open"></i> Specjalistyczne słownictwo</li>
+            </ul>
+            <div class="value-highlight">
+                <i class="fas fa-calculator"></i> Tylko <strong>33,25 zł/godzinę</strong>!
+            </div>
+            <a href="contacts.html" class="button">Zapisz się teraz</a>
+        </div>
+
+        <!-- C1 -->
+        <div class="pricing-card">
+            <div class="level-badge">Advanced</div>
+            <h3>Poziom C1</h3>
+            <div class="price-container">
+                <div class="price-header">
+                    <div class="old-price">519 zł</div>
+                    <div class="discount-badge">Promocja -100 zł</div>
+                </div>
+                <div class="new-price">419 <span>zł</span></div>
+                <div class="price-details">
+                    <div class="price-per-lesson">
+                        <span class="lesson-price">≈52,38 zł</span>
+                        <span class="lesson-label">za spotkanie</span>
+                    </div>
+                    <div class="billing-info">(8 spotkań × 1,5h miesięcznie)</div>
+                </div>
+            </div>
+            <ul class="features-list">
+                <li><i class="fas fa-chalkboard-teacher"></i> 63 godziny mistrzowskiej nauki</li>
+                <li><i class="fas fa-layer-group"></i> Gramatyka na poziomie native speakera</li>
+                <li><i class="fas fa-comments"></i> Zaawansowane debaty</li>
+                <li><i class="fas fa-microphone-alt"></i> Doskonalenie wymowy</li>
+                <li><i class="fas fa-book-open"></i> Profesjonalne słownictwo</li>
+            </ul>
+            <div class="value-highlight">
+                <i class="fas fa-calculator"></i> Zaledwie <strong>34,92 zł/godzinę</strong>!
+            </div>
+            <a href="contacts.html" class="button">Zapisz się teraz</a>
+        </div>
+
+        <!-- C1+ -->
+        <div class="pricing-card">
+            <div class="level-badge">Advanced Plus</div>
+            <h3>Poziom C1+</h3>
+            <div class="price-container">
+                <div class="price-header">
+                    <div class="old-price">539 zł</div>
+                    <div class="discount-badge">Promocja -100 zł</div>
+                </div>
+                <div class="new-price">439 <span>zł</span></div>
+                <div class="price-details">
+                    <div class="price-per-lesson">
+                        <span class="lesson-price">≈54,88 zł</span>
+                        <span class="lesson-label">za spotkanie</span>
+                    </div>
+                    <div class="billing-info">(8 spotkań × 1,5h miesięcznie)</div>
+                </div>
+            </div>
+            <ul class="features-list">
+                <li><i class="fas fa-chalkboard-teacher"></i> 63 godziny na poziomie eksperckim</li>
+                <li><i class="fas fa-layer-group"></i> Precyzyjne struktury językowe</li>
+                <li><i class="fas fa-comments"></i> Wystąpienia publiczne</li>
+                <li><i class="fas fa-microphone-alt"></i> Wymowa profesjonalna</li>
+                <li><i class="fas fa-book-open"></i> Zaawansowane słownictwo akademickie</li>
+            </ul>
+            <div class="value-highlight">
+                <i class="fas fa-calculator"></i> Tylko <strong>36,59 zł/godzinę</strong>!
+            </div>
+            <a href="contacts.html" class="button">Zapisz się teraz</a>
+        </div>
+    </div>
+    <div class="highlight">
+        <p><i class="fas fa-exclamation-circle"></i> <strong>Zajęcia indywidualne:</strong> Chcesz uczyć się we własnym tempie? Skontaktuj się z nami przez <a href="contacts.html">formularz kontaktowy</a>. Odpowiemy w ciągu 24 godzin!</p>
+    </div>
+</section>
 
         <!-- Benefits Section -->
-        <section class="benefits-section">
+        <section class="benefits">
             <div class="section-title">
-                <h2>Dlaczego Nasze Kursy Są Wyjątkowe?</h2>
-                <p>Oferujemy unikalne podejście do nauki języków, które przynosi wymierne rezultaty w krótkim czasie</p>
+                <h2>Dlaczego warto wybrać nasze kursy?</h2>
+                <p>Oferujemy kompleksowe rozwiązania edukacyjne dostosowane do Twoich potrzeb</p>
             </div>
-
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <div class="benefit-icon">
-                        <i class="fas fa-comments"></i>
+                        <i class="fas fa-user-tie"></i>
                     </div>
-                    <h3>Nacisk na Mówienie</h3>
-                    <p>70% każdej lekcji to praktyczna konwersacja - szybko przełamiesz barierę językową i nabierzesz
-                        pewności siebie.</p>
+                    <h3>Doświadczeni nauczyciele</h3>
+                    <p>Nasi lektorzy to certyfikowani specjaliści z wieloletnim doświadczeniem w nauczaniu języków obcych.
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+    <div class="benefit-icon">
+        <i class="fas fa-briefcase"></i>
+    </div>
+    <h3>Praktyczne umiejętności</h3>
+    <p>Nauczysz się języka, który od razu wykorzystasz w pracy i codziennych sytuacjach.</p>
+</div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Elastyczny harmonogram</h3>
+                    <p>Dostosowujemy godziny zajęć do Twoich możliwości, oferując różne pory dnia i tryby nauki.</p>
                 </div>
 
                 <div class="benefit-card">
                     <div class="benefit-icon">
-                        <i class="fas fa-university"></i>
+                        <i class="fas fa-certificate"></i>
                     </div>
-                    <h3>Program Oxford</h3>
-                    <p>Korzystamy z najlepszych materiałów edukacyjnych uznanych na całym świecie, gwarantujących
-                        skuteczną naukę.</p>
+                    <h3>Certyfikat ukończenia</h3>
+                    <p>Po zakończeniu kursu otrzymujesz certyfikat potwierdzający osiągnięty poziom językowy.</p>
                 </div>
 
                 <div class="benefit-card">
                     <div class="benefit-icon">
-                        <i class="fas fa-user-friends"></i>
+                        <i class="fas fa-headset"></i>
                     </div>
-                    <h3>Kameralne Grupy</h3>
-                    <p>Maksymalnie 6 osób w grupie - każdy uczeń otrzymuje indywidualną uwagę i możliwość aktywnego
-                        uczestnictwa.</p>
+                    <h3>Wsparcie mentorskie</h3>
+                    <p>Otrzymujesz stałe wsparcie od nauczyciela prowadzącego i możliwość konsultacji w trakcie kursu.</p>
                 </div>
 
                 <div class="benefit-card">
                     <div class="benefit-icon">
-                        <i class="fas fa-mobile-alt"></i>
+                        <i class="fas fa-users"></i>
                     </div>
-                    <h3>Nowoczesne Technologie</h3>
-                    <p>Interaktywne ćwiczenia, aplikacje edukacyjne i materiały wideo urozmaicają proces nauki.</p>
-                </div>
-
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-globe-americas"></i>
-                    </div>
-                    <h3>Native Speakerzy</h3>
-                    <p>Regularne konwersacje z native speakerami z różnych krajów anglojęzycznych dla autentycznego
-                        doświadczenia językowego.</p>
+                    <h3>Małe grupy</h3>
+                    <p>Kameralne grupy (4-6 osób) zapewniają indywidualne podejście i aktywny udział w zajęciach.</p>
                 </div>
 
                 <div class="benefit-card">
                     <div class="benefit-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3>Monitorowanie Postępów</h3>
-                    <p>Regularne raporty postępów i indywidualne konsultacje z lektorem zapewniają ciągły rozwój
-                        umiejętności.</p>
+                    <h3>Monitorowanie postępów</h3>
+                    <p>Regularne testy i raporty pozwalają śledzić Twoje postępy i dostosowywać program nauki.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3>Kursy dopasowane do poziomu</h3>
+                    <p>Nasze kursy są dostosowane do Twojego aktualnego poziomu zaawansowania, abyś mógł uczyć się we właściwym tempie.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>100% kursy online</h3>
+                    <p>Nasze kursy odbywają się w pełni online, co pozwala Ci uczyć się z dowolnego miejsca na świecie, w dogodnym czasie.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Testimonials Section -->
-        <section class="testimonials-section" id="opinie-studentow">
+        <!-- Contact CTA Section -->
+        <section id="contact" style="background: var(--background-gradient); text-align: center; padding: 4rem 2rem;">
             <div class="section-title">
-                <h2>Opinie Naszych Uczniów</h2>
-                <p>Poznaj doświadczenia osób, które już odkryły skuteczność naszych metod nauczania</p>
+                <h2>Masz pytania dotyczące kursów?</h2>
+                <p>Skontaktuj się z nami, a chętnie pomożemy wybrać odpowiedni kurs dla Ciebie</p>
             </div>
-
-            <div class="testimonials-container">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p class="testimonial-text">Po 3 miesiącach nauki w Step Up Speak mogę swobodnie prowadzić
-                            rozmowy po angielsku w pracy. Lektorzy są nie tylko kompetentni, ale też potrafią stworzyć
-                            świetną atmosferę!</p>
-                        <div class="testimonial-author">
-                            <img src="Images/user2.jpeg" alt="Anna">
-                            <div class="author-info">
-                                <h4>Anna K.</h4>
-                                <p>Kurs A2 → B1</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p class="testimonial-text">Zaczynałem od zera, a teraz przygotowuję się do egzaminu B2. Metody
-                            nauczania w Step Up Speak są naprawdę skuteczne - w końcu znalazłem szkołę, która uczy
-                            mówić, a nie tylko wkuwać gramatykę.</p>
-                        <div class="testimonial-author">
-                            <img src="Images/user1.jpeg" alt="Kamil">
-                            <div class="author-info">
-                                <h4>Kamil W.</h4>
-                                <p>Kurs A1 → B2</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p class="testimonial-text">Dzięki zajęciom w Step Up Speak dostałam awans w międzynarodowej
-                            firmie. Polecam każdemu, kto chce szybko zobaczyć realne efekty nauki języka.</p>
-                        <div class="testimonial-author">
-                            <img src="Images/user4.jpeg" alt="Marta">
-                            <div class="author-info">
-                                <h4>Marta S.</h4>
-                                <p>Kurs B2 → C1</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p class="testimonial-text">W końcu przestałem się bać mówić! Zajęcia pełne aktualnych tematów
-                            (np. dyskusje o technologii czy podróżach), zero sztywnego wkuwania. Po roku nauki
-                            wygłosiłem prezentację na międzynarodowej konferencji!</p>
-                        <div class="testimonial-author">
-                            <img src="Images/user3.jpeg" alt="Tomasz">
-                            <div class="author-info">
-                                <h4>Tomasz P.</h4>
-                                <p>Kurs A1 → B1</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p class="testimonial-text">3 miesiące kursu intensywnego dały mi więcej niż 3 lata w
-                            poprzedniej szkole. Codzienne konwersacje, nagrania do analizy wymowy. Warto było!</p>
-                        <div class="testimonial-author">
-                            <img src="Images/user5.jpeg" alt="Barbara">
-                            <div class="author-info">
-                                <h4>Barbara M.</h4>
-                                <p>Kurs C1 → C1 Advanced</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p class="testimonial-text">Nigdy nie myślałam, że w moim wieku nauczę się angielskiego. Dzięki
-                            cierpliwości i profesjonalizmowi nauczycieli z Step Up Speak komunikuję się już bez problemu
-                            za granicą.</p>
-                        <div class="testimonial-author">
-                            <img src="Images/user6.jpeg" alt="Agnieszka">
-                            <div class="author-info">
-                                <h4>Agnieszka L.</h4>
-                                <p>Kurs B2 → C1</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 2rem;">
+                <a href="tel:+48576076648" class="cta-button cta-button-large">
+                    <i class="fas fa-phone-alt"></i> Zadzwoń +48 576 076 648
+                </a>
+                <a href="contacts.html" class="cta-button cta-button-secondary">
+                    <i class="fas fa-edit"></i> Wypełnij formularz
+                </a>
             </div>
         </section>
+    </main>
 
-        <!-- CTA Section -->
-        <section class="cta-section">
-            <div class="cta-container">
-                <h2 class="cta-title">Gotowy na Językową Przemianę?</h2>
-                <p class="cta-text">Zapisz się na kurs już dziś i odbierz darmową lekcję próbną z naszym metodykiem!</p>
-                <a href="pricing.html" class="button button-large">Wybierz Kurs</a>
-            </div>
-        </section>
+    <!-- Sticky CTA -->
+    <div class="sticky-cta">
+        <a href="contacts.html" class="phone-cta" aria-label="Zapisz się na kurs">
+            <i class="fas fa-edit"></i>
+            <span>Zapisz się</span>
+        </a>
     </div>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="footer-column">
                 <h3>Step Up Speak</h3>
-                <p>Profesjonalne kursy językowe online, które pomogą Ci osiągnąć płynność językową i pewność siebie w
-                    komunikacji.</p>
+                <p>Profesjonalne kursy językowe online, które pomogą Ci osiągnąć płynność językową i pewność siebie w komunikacji.</p>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/groups/1007789447828292" target="_blank" rel="noopener"><i
-                            class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/stepupspeak_english/"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/company/stepupspeak" target="_blank" rel="noopener noreferrer"><i
-                            class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.tiktok.com/@stepupspeak" target="_blank" rel="noopener"><i
-                            class="fab fa-tiktok"></i></a>
-
+                    <a href="https://www.facebook.com/groups/1007789447828292" target="_blank" rel="noopener" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/stepupspeak_english/" target="_blank" rel="noopener" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/stepupspeak" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@stepupspeak" target="_blank" rel="noopener" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
                 </div>
             </div>
 
@@ -887,12 +1492,9 @@
             <div class="footer-column">
                 <h3>Informacje</h3>
                 <ul>
-                    <li><a href="tel:+48576076648"><i class="fas fa-phone-alt"></i> +48 576 076 648</a></li>
-                    <li><a href="mailto:stepupspeakofficial@gmail.com"><i class="fas fa-envelope"></i>
-                            stepupspeakofficial@gmail.com</a></li>
-                    <li><a href="contacts.html"><i class="fas fa-map-marker-alt"></i> Al. Jana Pawła II 20, Warszawa</a>
-                    </li>
-                    <li><a href="contacts.html"><i class="fas fa-clock"></i> Pn-Pt: 8:00-20:00</a></li>
+                    <li><a href="tel:+48 576 076 648"><i class="fas fa-phone-alt"></i> +48 576 076 648</a></li>
+                    <li><a href="mailto:stepupspeakofficial@gmail.com"><i class="fas fa-envelope"></i> stepupspeakofficial@gmail.com</a></li>
+                    <li><a href="contacts.html"><i class="fas fa-clock"></i> Pn-Pt: 8:00-20:00, Sb: 9:00 - 15:00</a></li>
                 </ul>
             </div>
 
@@ -901,8 +1503,9 @@
                 <ul>
                     <li><a href="terms-of-service.html">Regulamin</a></li>
                     <li><a href="privacy-policy.html">Polityka prywatności</a></li>
-                    <li><a href="blog.html">FAQ</a></li>
-                    <li><a href="courses.html#opinie-studentow">Opinie studentów</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="index.html#testimonials-heading">Opinie studentów</a></li>
                     <li><a href="careers.html">Kariera</a></li>
                 </ul>
             </div>
@@ -928,7 +1531,74 @@
         </div>
     </div>
 
-    <script src="cookie-consent.js"></script>
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mainNav = document.getElementById('main-nav');
+            
+            if (mobileMenuButton && mainNav) {
+                mobileMenuButton.addEventListener('click', function() {
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !isExpanded);
+                    mainNav.classList.toggle('active');
+                });
+            }
+            
+            // Header scroll effect
+            const header = document.getElementById('header');
+            if (header) {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 50) {
+                        header.classList.add('scrolled');
+                    } else {
+                        header.classList.remove('scrolled');
+                    }
+                });
+            }
+            
+            // Track CTA clicks for analytics
+            const ctaButtons = document.querySelectorAll('.cta-button, .phone-cta, .button');
+            ctaButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    if (window.dataLayer) {
+                        window.dataLayer.push({
+                            'event': 'cta_click',
+                            'cta_type': this.classList.contains('phone-cta') ? 'phone' : 'button',
+                            'cta_text': this.textContent.trim(),
+                            'cta_location': 'pricing_page'
+                        });
+                    }
+                });
+            });
+            
+            // Cookie consent functionality
+            const cookieBanner = document.getElementById('cookie-consent-banner');
+            const acceptCookies = document.getElementById('accept-cookies');
+            const rejectCookies = document.getElementById('reject-cookies');
+            
+            // Check if user has already made a choice
+            if (!localStorage.getItem('cookieConsent')) {
+                // Show banner after a short delay
+                setTimeout(() => {
+                    cookieBanner.classList.add('active');
+                }, 1000);
+            }
+            
+            if (acceptCookies) {
+                acceptCookies.addEventListener('click', function() {
+                    localStorage.setItem('cookieConsent', 'accepted');
+                    cookieBanner.classList.remove('active');
+                });
+            }
+            
+            if (rejectCookies) {
+                rejectCookies.addEventListener('click', function() {
+                    localStorage.setItem('cookieConsent', 'rejected');
+                    cookieBanner.classList.remove('active');
+                });
+            }
+        });
+    </script>
 </body>
-
 </html>
