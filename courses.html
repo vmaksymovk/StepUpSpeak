@@ -1,90 +1,24 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
-    <!-- Favicons -->
+    <link rel="stylesheet" href="Cookies/cookie-banner.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/FaviconForWebPage/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="FaviconForWebPage/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="FaviconForWebPage/favicon-16x16.png">
     <link rel="manifest" href="/FaviconForWebPage/site.webmanifest">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
-    <meta name="apple-mobile-web-app-title" content="StepUpSpeak">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Step Up Speak - Ceny Kursów Językowych Online | A1-C1+</title>
-    <meta name="description" content="Profesjonalne kursy angielskiego online na wszystkich poziomach (A1-C1+). Darmowa lekcja próbna. Sprawdź ceny i zapisz się!">
-    
-    <!-- Preload critical resources -->
+    <title>Step Up Speak - Szkoła Języka Angielskiego Online | Kursy A1-C2</title>
+    <meta name="description"
+        content="Odkryj nasze kursy angielskiego online: English Start, English Boost, English Pro. Wszystkie materiały online. Darmowa lekcja próbna i test poziomujący.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="Step Up Speak - Ceny Kursów Językowych Online">
-    <meta property="og:description" content="Profesjonalne kursy angielskiego online na wszystkich poziomach. Darmowa lekcja próbna.">
-    <meta property="og:image" content="https://stepupspeak.com/images/og-pricing.jpg">
-    <meta property="og:url" content="https://stepupspeak.com/pricing.html">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Step Up Speak">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Step Up Speak - Ceny Kursów Językowych Online">
-    <meta name="twitter:description" content="Profesjonalne kursy angielskiego online na wszystkich poziomach.">
-    <meta name="twitter:image" content="https://stepupspeak.com/images/twitter-pricing.jpg">
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ItemList",
-        "name": "Kursy Języka Angielskiego Online",
-        "description": "Profesjonalne kursy angielskiego online na wszystkich poziomach zaawansowania",
-        "url": "https://stepupspeak.com/pricing.html",
-        "numberOfItems": 8,
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "item": {
-                    "@type": "Course",
-                    "name": "Kurs Angielskiego Poziom A1",
-                    "description": "Kurs języka angielskiego na poziomie początkującym A1",
-                    "provider": {
-                        "@type": "EducationalOrganization",
-                        "name": "Step Up Speak"
-                    },
-                    "offers": {
-                        "@type": "Offer",
-                        "price": "299",
-                        "priceCurrency": "PLN"
-                    }
-                }
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "item": {
-                    "@type": "Course",
-                    "name": "Kurs Angielskiego Poziom A2",
-                    "description": "Kurs języka angielskiego na poziomie podstawowym A2",
-                    "provider": {
-                        "@type": "EducationalOrganization",
-                        "name": "Step Up Speak"
-                    },
-                    "offers": {
-                        "@type": "Offer",
-                        "price": "319",
-                        "priceCurrency": "PLN"
-                    }
-                }
-            }
-        ]
-    }
-    </script>
-
     <style>
         :root {
             --primary-color: #2E8B57;
@@ -103,6 +37,11 @@
             --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
             --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
             --border-radius: 12px;
+            --course-start: #2E8B57;
+            --course-boost: #3182CE;
+            --course-pro: #805AD5;
+            --individual: #3B82F6;
+            --speakclub: #22C55E;
         }
 
         * {
@@ -123,9 +62,10 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            overflow-x: hidden;
+            max-width: 100%;
         }
 
-        /* Skip to main content for accessibility */
         .skip-link {
             position: absolute;
             top: -40px;
@@ -143,7 +83,6 @@
             top: 0;
         }
 
-        /* Header */
         header {
             background-color: var(--white);
             color: var(--text-color);
@@ -198,7 +137,6 @@
             margin-top: 0.2rem;
         }
 
-        /* Navigation */
         .nav-container {
             display: flex;
             align-items: center;
@@ -221,6 +159,7 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            min-height: 44px;
         }
 
         nav a:hover,
@@ -229,11 +168,6 @@
             color: var(--primary-color);
         }
 
-        nav a i {
-            font-size: 1rem;
-        }
-
-        /* CTA Button */
         .cta-button {
             display: inline-flex;
             align-items: center;
@@ -250,6 +184,7 @@
             box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
             gap: 0.5rem;
             white-space: nowrap;
+            min-height: 44px;
         }
 
         .cta-button:hover,
@@ -274,7 +209,46 @@
             background-color: rgba(46, 139, 87, 0.1);
         }
 
-        /* Mobile Menu */
+        .cta-button-start {
+            background-color: var(--course-start);
+        }
+
+        .cta-button-start:hover {
+            background-color: #26724d;
+        }
+
+        .cta-button-boost {
+            background-color: var(--course-boost);
+        }
+
+        .cta-button-boost:hover {
+            background-color: #2c74b8;
+        }
+
+        .cta-button-pro {
+            background-color: var(--course-pro);
+        }
+
+        .cta-button-pro:hover {
+            background-color: #6f4dbf;
+        }
+
+        .cta-button-individual {
+            background-color: var(--individual);
+        }
+
+        .cta-button-individual:hover {
+            background-color: #007BFF;
+        }
+
+        .cta-button-speakclub {
+            background-color: var(--speakclub);
+        }
+
+        .cta-button-speakclub:hover {
+            background-color: #28A745;
+        }
+
         .mobile-menu-button {
             display: none;
             background: none;
@@ -283,9 +257,10 @@
             color: var(--text-color);
             cursor: pointer;
             padding: 0.5rem;
+            min-width: 44px;
+            min-height: 44px;
         }
 
-        /* Main content */
         .main-content {
             flex: 1;
         }
@@ -325,7 +300,6 @@
             margin: 0 auto;
         }
 
-        /* Hero Section for Pricing Page */
         .pricing-hero {
             background: var(--background-gradient);
             padding: 4rem 2rem;
@@ -372,7 +346,13 @@
             font-size: 1.2rem;
         }
 
-        /* Pricing section */
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
         #pricing {
             background: var(--white);
         }
@@ -393,7 +373,7 @@
             box-shadow: var(--shadow-md);
             transition: var(--transition);
             position: relative;
-            overflow: hidden;
+            overflow: visible;
             border: 1px solid rgba(0, 0, 0, 0.05);
             display: flex;
             flex-direction: column;
@@ -401,8 +381,18 @@
         }
 
         .pricing-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
             box-shadow: var(--shadow-lg);
+        }
+
+        .pricing-card.featured {
+            transform: scale(1.05);
+            border: 2px solid var(--accent-color);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-5px);
         }
 
         .pricing-card h3 {
@@ -412,39 +402,68 @@
             font-weight: 600;
         }
 
+        .course-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .course-start .course-icon {
+            color: var(--course-start);
+        }
+
+        .course-boost .course-icon {
+            color: var(--course-boost);
+        }
+
+        .course-pro .course-icon {
+            color: var(--course-pro);
+        }
+
+        .course-start {
+            border-top: 4px solid var(--course-start);
+        }
+
+        .course-boost {
+            border-top: 4px solid var(--course-boost);
+        }
+
+        .course-pro {
+            border-top: 4px solid var(--course-pro);
+        }
+
         .level-badge {
             position: absolute;
             top: 20px;
-            right: -30px;
+            right: -35px;
             color: white;
-            padding: 0.3rem 2rem;
-            font-size: 0.9rem;
-            font-weight: 600;
+            padding: 0.5rem 2.5rem;
+            font-size: 0.85rem;
+            font-weight: 700;
             transform: rotate(45deg);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: var(--shadow-md);
             border-radius: 0;
-            z-index: 2;
-            width: 170px;
+            z-index: 10;
+            width: 199px;
             text-align: center;
-            background-color: #45B7D1;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
             clip-path: polygon(0 0, 100% 0, 85% 50%, 100% 100%, 0 100%, 15% 50%);
+        }
+
+        .course-start .level-badge {
+            background-color: var(--course-start);
+        }
+
+        .course-boost .level-badge {
+            background-color: var(--course-boost);
+        }
+
+        .course-pro .level-badge {
+            background-color: var(--course-pro);
         }
 
         .price-container {
             margin: 1.5rem 0;
-        }
-
-        .price-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 0.5rem;
-        }
-
-        .old-price {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            text-decoration: line-through;
         }
 
         .new-price {
@@ -459,14 +478,16 @@
             font-weight: 400;
         }
 
-        .discount-badge {
-            display: inline-block;
-            background-color: #FEEBC8;
-            color: var(--accent-color);
-            padding: 0.3rem 1rem;
-            border-radius: 50px;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
+        .course-start .new-price {
+            color: var(--course-start);
+        }
+
+        .course-boost .new-price {
+            color: var(--course-boost);
+        }
+
+        .course-pro .new-price {
+            color: var(--course-pro);
         }
 
         .price-details {
@@ -484,10 +505,6 @@
 
         .lesson-price {
             color: #2b6cb0;
-        }
-
-        .lesson-label {
-            color: #4a5568;
         }
 
         .billing-info {
@@ -520,20 +537,6 @@
             color: var(--primary-color);
         }
 
-        .value-highlight {
-            background-color: #ebf8ff;
-            color: #2b6cb0;
-            padding: 0.6rem;
-            border-radius: 6px;
-            margin: 1rem 0;
-            font-size: 0.9rem;
-            text-align: center;
-        }
-
-        .value-highlight i {
-            margin-right: 0.5rem;
-        }
-
         .button {
             display: inline-block;
             background-color: var(--primary-color);
@@ -557,15 +560,6 @@
             box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
         }
 
-        .highlight {
-            background-color: rgba(221, 107, 32, 0.1);
-            padding: 1rem;
-            border-left: 3px solid var(--accent-color);
-            margin: 1rem 0;
-            border-radius: 4px;
-        }
-
-        /* Benefits section */
         .benefits {
             background-color: var(--background-light);
         }
@@ -610,7 +604,6 @@
             font-size: 1rem;
         }
 
-        /* Sticky CTA */
         .sticky-cta {
             position: fixed;
             bottom: 2rem;
@@ -634,6 +627,7 @@
             box-shadow: var(--shadow-lg);
             transition: var(--transition);
             gap: 0.5rem;
+            min-height: 44px;
         }
 
         .phone-cta:hover {
@@ -642,7 +636,6 @@
             box-shadow: var(--shadow-xl);
         }
 
-        /* Footer */
         footer {
             background-color: var(--text-color);
             color: var(--white);
@@ -697,11 +690,6 @@
             color: var(--primary-light);
         }
 
-        .footer-column a i {
-            width: 20px;
-            text-align: center;
-        }
-
         .social-links {
             display: flex;
             gap: 1rem;
@@ -732,94 +720,241 @@
             text-align: center;
         }
 
-        /* Cookie Banner */
-        .cookie-consent-banner {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: #2D3748;
-            color: #F7FAFC;
-            padding: 20px 0;
-            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
-            z-index: 1000;
-            transform: translateY(100%);
-            transition: transform 0.4s ease-out;
-            font-family: 'Poppins', sans-serif;
+        .urgency-badge {
+            background: #F56565;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: inline-block;
+            animation: pulse 2s infinite;
         }
 
-        .cookie-consent-banner.active {
-            transform: translateY(0);
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
         }
 
-        .cookie-consent-container {
+        .value-proposition {
+            background: #EBF8FF;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            text-align: center;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .value-proposition h4 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .additional-options {
+            background: var(--background-light);
+            padding: 4rem 2rem;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+        }
+
+        .option-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+            overflow: visible;
             display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
+            flex-direction: column;
+            height: 100%;
         }
 
-        .cookie-consent-text {
-            flex: 1;
-            min-width: 250px;
+        .option-card.speakclub {
+            border-top: 4px solid var(--speakclub);
         }
 
-        .cookie-consent-text p {
+        .option-card.individual {
+            border-top: 4px solid var(--individual);
+        }
+
+        .option-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .option-card .level-badge {
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            color: white;
+            padding: 0.5rem 2.5rem;
+            font-size: 0.85rem;
+            font-weight: 700;
+            transform: rotate(45deg);
+            box-shadow: var(--shadow-md);
+            border-radius: 0;
+            z-index: 10;
+            width: 199px;
+            text-align: center;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            clip-path: polygon(0 0, 100% 0, 85% 50%, 100% 100%, 0 100%, 15% 50%);
+        }
+
+        .option-card.speakclub .level-badge {
+            background-color: var(--speakclub);
+        }
+
+        .option-card.individual .level-badge {
+            background-color: var(--individual);
+        }
+
+        .option-card .course-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .option-card.speakclub .course-icon {
+            color: var(--speakclub);
+        }
+
+        .option-card.individual .course-icon {
+            color: var(--individual);
+        }
+
+        .option-card h3 {
+            font-size: 1.8rem;
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .option-card .price-container {
+            margin: 1.5rem 0;
+        }
+
+        .option-card .new-price {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin: 0.5rem 0;
+        }
+
+        .option-card.speakclub .new-price {
+            color: var(--speakclub);
+        }
+
+        .option-card.individual .new-price {
+            color: var(--individual);
+        }
+
+        .option-card .price-details {
+            margin-top: 0.8rem;
+            padding-top: 0.8rem;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        .option-card .price-per-lesson {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 0.3rem;
+        }
+
+        .savings-badge {
+            background: #FEF5E7;
+            color: var(--accent-color);
+            padding: 0.8rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 1rem 0;
+            display: inline-block;
+            border: 1px solid #FBD38D;
+        }
+
+        .option-card .features-list {
+            text-align: left;
+            margin: 1.5rem 0;
+            padding: 0;
+            list-style: none;
+            flex-grow: 1;
+        }
+
+        .option-card .features-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.8rem;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .option-card.speakclub .features-list li::before {
+            color: var(--speakclub);
+        }
+
+        .option-card.individual .features-list li::before {
+            color: var(--individual);
+        }
+
+        .option-card .value-proposition {
+            background: #EBF8FF;
+            border-radius: 10px;
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            text-align: center;
+            border-left: 4px solid var(--individual);
+        }
+
+        .option-card .value-proposition h4 {
+            color: var(--individual);
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .option-card .value-proposition p {
+            font-size: 0.95rem;
+            font-weight: 600;
             margin: 0;
-            line-height: 1.6;
-            font-size: 15px;
         }
 
-        .cookie-consent-text a {
-            color: #48BB78;
-            text-decoration: underline;
+        .option-card .button {
+            margin-top: auto;
         }
 
-        .cookie-consent-buttons {
-            display: flex;
-            gap: 12px;
-            flex-shrink: 0;
+        button:focus,
+        a:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
         }
 
-        .cookie-btn {
-            padding: 10px 20px;
-            border-radius: 6px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: none;
-            font-size: 15px;
-            min-width: 120px;
-        }
-
-        .primary-btn {
-            background: #48BB78;
-            color: white;
-        }
-
-        .primary-btn:hover {
-            background: #38A169;
-            transform: translateY(-2px);
-        }
-
-        .secondary-btn {
-            background: transparent;
-            color: #CBD5E0;
-            border: 1px solid #718096;
-        }
-
-        .secondary-btn:hover {
-            background: rgba(255, 255, 255, 0.05);
-            color: white;
-        }
-
-        /* Responsive */
         @media (max-width: 1024px) {
             .pricing-table {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+
+            .pricing-card.featured {
+                transform: none;
+            }
+
+            .options-grid {
                 grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             }
         }
@@ -890,6 +1025,10 @@
                 gap: 1rem;
             }
 
+            .hero-actions .cta-button {
+                margin: 5px 0;
+            }
+
             .sticky-cta {
                 bottom: 1rem;
                 right: 1rem;
@@ -907,29 +1046,6 @@
                 justify-content: center;
             }
 
-            .cookie-consent-container {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .cookie-consent-buttons {
-                width: 100%;
-            }
-            
-            .cookie-btn {
-                flex: 1;
-            }
-        }
-
-        @media (max-width: 480px) {
-            section {
-                padding: 3rem 1rem;
-            }
-
-            .pricing-table {
-                grid-template-columns: 1fr;
-            }
-
             .footer-content {
                 grid-template-columns: 1fr;
                 text-align: center;
@@ -942,79 +1058,9 @@
             .social-links {
                 justify-content: center;
             }
-        }
 
-        /* Focus styles for accessibility */
-        button:focus,
-        a:focus,
-        input:focus,
-        select:focus,
-        textarea:focus {
-            outline: 2px solid var(--primary-color);
-            outline-offset: 2px;
-        }
-
-        /* Print styles */
-        @media print {
-            .sticky-cta,
-            .cookie-consent-banner {
+            .logo-text {
                 display: none;
-            }
-        }
-
-        .level-badge {
-    position: absolute;
-    top: 20px;
-    right: -35px;
-    color: white;
-    padding: 0.5rem 2.5rem;
-    font-size: 0.85rem;
-    font-weight: 700;
-    transform: rotate(45deg);
-    box-shadow: var(--shadow-md);
-    border-radius: 0;
-    z-index: 10;
-    width: 199px;
-    text-align: center;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    background-color: #45B7D1;
-    clip-path: polygon(0 0, 100% 0, 85% 50%, 100% 100%, 0 100%, 15% 50%);
-}
-
-.pricing-card {
-    background-color: var(--white);
-    border-radius: var(--border-radius);
-    padding: 2.5rem;
-    text-align: center;
-    box-shadow: var(--shadow-md);
-    transition: var(--transition);
-    position: relative;
-    overflow: visible; /* Changed from hidden to visible */
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-/* Kolory ikon odpowiadające poziomom */
-.pricing-card:nth-child(1) .level-badge { background-color: #FF6B6B; }
-.pricing-card:nth-child(2) .level-badge { background-color: #4ECDC4; }
-.pricing-card:nth-child(3) .level-badge { background-color: #45B7D1; }
-.pricing-card:nth-child(4) .level-badge { background-color: #A37EBA; }
-.pricing-card:nth-child(5) .level-badge { background-color: #FFA07A; }
-.pricing-card:nth-child(6) .level-badge { background-color: #FFD166; }
-.pricing-card:nth-child(7) .level-badge { background-color: #06D6A0; }
-.pricing-card:nth-child(8) .level-badge { background-color: #696cc0; }
-/* Poprawki dla nagłówka na mobile */
-        @media (max-width: 768px) {
-            header {
-                padding: 0.8rem 1rem;
-            }
-
-            .logo-container {
-                flex: 1;
-                min-width: 200px;
             }
 
             header h1 {
@@ -1038,134 +1084,6 @@
                 font-size: 0.9rem;
                 white-space: nowrap;
             }
-        }
-
-        @media (max-width: 480px) {
-            .logo-text {
-                display: none; /* Ukrywamy tekst logo na bardzo małych ekranach */
-            }
-
-            header h1 {
-                font-size: 1.2rem;
-            }
-        }
-
-        /* Poprawki dla sekcji hero na mobile */
-        @media (max-width: 768px) {
-            .hero {
-                padding: 2rem 1rem;
-            }
-
-            .hero h1 {
-                font-size: 1.8rem;
-                line-height: 1.3;
-                margin-bottom: 1rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-                margin-bottom: 1.5rem;
-            }
-
-            .hero-benefits {
-                gap: 0.8rem;
-                margin-bottom: 1.5rem;
-            }
-
-            .hero-benefit {
-                font-size: 0.9rem;
-            }
-
-            .hero-actions {
-                flex-direction: column;
-                gap: 0.8rem;
-            }
-
-            .cta-button-large {
-                padding: 1rem 1.5rem;
-                font-size: 1rem;
-            }
-        }
-
-        /* Poprawki dla trust indicators na mobile */
-        @media (max-width: 768px) {
-            .trust-indicators {
-                padding: 1.5rem 1rem;
-                gap: 1.5rem;
-            }
-
-            .trust-item {
-                flex: 0 0 calc(50% - 1rem);
-            }
-
-            .trust-icon {
-                font-size: 1.5rem;
-            }
-
-            .trust-text {
-                font-size: 0.8rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .trust-item {
-                flex: 0 0 100%;
-            }
-        }
-
-        /* Poprawki dla sekcji features na mobile */
-        @media (max-width: 768px) {
-            .features {
-                padding: 3rem 1rem;
-            }
-
-            .section-header {
-                margin-bottom: 2rem;
-            }
-
-            .section-header h2 {
-                font-size: 1.8rem;
-            }
-
-            .section-header p {
-                font-size: 1rem;
-            }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .feature {
-                padding: 1.5rem;
-            }
-
-            .feature-icon {
-                width: 60px;
-                height: 60px;
-                font-size: 1.8rem;
-            }
-        }
-
-        /* Poprawki dla pricing section na mobile */
-        @media (max-width: 768px) {
-            .pricing {
-                padding: 3rem 1rem;
-            }
-
-            .pricing-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .pricing-card.featured {
-                transform: none;
-                order: -1; /* Polecany kurs na górze */
-            }
-
-            .pricing-card {
-                padding: 1.5rem;
-            }
 
             .level-badge {
                 position: relative;
@@ -1179,197 +1097,55 @@
                 padding: 0.5rem 1rem;
             }
 
-            .price-header {
-                flex-direction: column;
-                gap: 0.5rem;
-                align-items: center;
+            .option-card {
+                padding: 2rem 1.5rem;
             }
 
-            .pricing-price {
-                font-size: 2rem;
-            }
-        }
-
-        /* Poprawki dla testimonials na mobile */
-        @media (max-width: 768px) {
-            .testimonials {
-                padding: 3rem 1rem;
-            }
-
-            .testimonials-grid {
+            .options-grid {
                 grid-template-columns: 1fr;
-                gap: 1.5rem;
+                gap: 2rem;
             }
 
-            .testimonial {
-                padding: 1.5rem;
-            }
-        }
-
-        /* Poprawki dla FAQ na mobile */
-        @media (max-width: 768px) {
-            .faq-section {
-                padding: 3rem 1rem;
-            }
-
-            .faq-question {
-                padding: 1.25rem 1rem;
-                font-size: 1rem;
-            }
-
-            .faq-number {
-                min-width: 25px;
-                margin-right: 0.75rem;
-            }
-
-            .faq-answer-content {
-                padding: 0 1rem 1.5rem;
-            }
-
-            .payment-methods {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .faq-cta {
-                padding: 2rem 1rem;
-            }
-
-            .faq-cta-buttons {
-                flex-direction: column;
+            .option-card .level-badge {
+                position: relative;
+                top: auto;
+                right: auto;
+                transform: none;
+                width: auto;
+                margin-bottom: 1rem;
+                clip-path: none;
+                border-radius: 6px;
+                padding: 0.5rem 1rem;
             }
         }
 
         @media (max-width: 480px) {
-            .payment-methods {
-                grid-template-columns: 1fr;
+            section {
+                padding: 3rem 1rem;
             }
-        }
 
-        /* Poprawki dla stopki na mobile */
-        @media (max-width: 768px) {
-            footer {
-                padding: 2rem 1rem 1rem;
+            .pricing-table {
+                grid-template-columns: 1fr;
             }
 
             .footer-content {
                 grid-template-columns: 1fr;
-                gap: 2rem;
-                text-align: center;
             }
 
-            .footer-column h3::after {
-                margin: 0.5rem auto;
+            header h1 {
+                font-size: 1.2rem;
             }
 
-            .social-links {
-                justify-content: center;
+            .options-grid {
+                grid-template-columns: 1fr;
             }
         }
-
-        /* Poprawki dla sticky CTA na mobile */
-        @media (max-width: 768px) {
-            .sticky-cta {
-                bottom: 1rem;
-                right: 1rem;
-            }
-
-            .phone-cta {
-                padding: 0.8rem;
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-            }
-
-            .phone-cta span {
-                display: none;
-            }
-        }
-
-        /* Zapobieganie poziomemu przewijaniu */
-        body {
-            overflow-x: hidden;
-            max-width: 100%;
-        }
-
-        /* Lepsze zarządzanie przestrzenią na bardzo małych ekranach */
-        @media (max-width: 360px) {
-            .hero h1 {
-                font-size: 1.5rem;
-            }
-
-            .feature {
-                padding: 1rem;
-            }
-
-            .pricing-card {
-                padding: 1rem;
-            }
-        }
-
-        /* Poprawki czytelności tekstu na mobile */
-        @media (max-width: 768px) {
-            body {
-                font-size: 14px;
-            }
-
-            h1, h2, h3 {
-                word-wrap: break-word;
-            }
-
-            .hero-text, .section-header, .feature, .pricing-card {
-                text-align: center;
-            }
-        }
-
-        /* Lepsze odstępy dla elementów dotykowych */
-        @media (max-width: 768px) {
-            nav a, .cta-button, .faq-question {
-                min-height: 44px; /* Minimalny rozmiar dotykowy */
-                display: flex;
-                align-items: center;
-            }
-
-            .mobile-menu-button {
-                min-width: 44px;
-                min-height: 44px;
-            }
-        }
-.hero-actions .cta-button {
-    margin: 0 10px; /* 5px space on left and right */
-}
-
-/* Or for vertical stacking on mobile */
-@media (max-width: 768px) {
-    .hero-actions .cta-button {
-        margin: 10px 0; /* 5px space on top and bottom */
-    }
-}
     </style>
-
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '2092523381239454');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=2092523381239454&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
 </head>
 
 <body>
-    <!-- Skip to main content link for accessibility -->
     <a href="#main-content" class="skip-link">Przejdź do treści</a>
 
-    <!-- Header -->
     <header id="header">
         <div class="logo-container">
             <a href="index.html" aria-label="Step Up Speak - Strona główna">
@@ -1391,20 +1167,23 @@
             <a href="contacts.html" class="cta-button">
                 <i class="fas fa-calendar-check"></i> Zapisz się
             </a>
-            <button class="mobile-menu-button" id="mobile-menu-button" aria-label="Menu mobilne" aria-expanded="false" aria-controls="main-nav">
+            <button class="mobile-menu-button" id="mobile-menu-button" aria-label="Menu mobilne" aria-expanded="false"
+                aria-controls="main-nav">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
     </header>
 
-    <!-- Main Content -->
     <main id="main-content">
-        <!-- Hero Section for Pricing Page -->
         <section class="pricing-hero">
             <div class="pricing-hero-content">
-                <h1>Odkryj Nasze Kursy Językowe Online</h1>
-                <p>Profesjonalne kursy angielskiego na wszystkich poziomach zaawansowania. Każdy kurs obejmuje <strong>darmową lekcję próbną</strong></p>
-                
+                <div class="urgency-badge">
+                    <i class="fas fa-bolt"></i> Oferta specjalna - Miejsca ograniczone!
+                </div>
+                <h1>Zacznij mówić po angielsku już za 279 zł miesięcznie</h1>
+                <p>Profesjonalne kursy angielskiego online dostosowane do Twoich celów. <strong>Wszystkie materiały
+                        online</strong>. Każdy kurs obejmuje <strong>darmową lekcję próbną</strong></p>
+
                 <div class="hero-benefits">
                     <div class="hero-benefit">
                         <i class="fas fa-check-circle"></i>
@@ -1419,282 +1198,206 @@
                         <span>Małe grupy (4-6 osób)</span>
                     </div>
                 </div>
-                
+
                 <div class="hero-actions">
                     <a href="#pricing" class="cta-button cta-button-large">
-                        <i class="fas fa-eye"></i> Zobacz ceny kursów
+                        <i class="fas fa-eye"></i> Wybierz kurs
                     </a>
-                    <a href="contacts.html" class="cta-button cta-button-secondary">
-                        <i class="fas fa-question-circle"></i> Masz pytania?
+                    <a href="https://forms.gle/Q32ZmCQFd7716wYBA" target="_blank"
+                        class="cta-button cta-button-secondary cta-button-large">
+                        <i class="fas fa-clipboard-check"></i> Sprawdź swój poziom
                     </a>
                 </div>
             </div>
         </section>
 
-       <!-- Pricing Section -->
-<section id="pricing">
-    <div class="section-title">
-        <h2>Odkryj Świat Języka na Każdym Poziomie</h2>
-        <p>Do każdego kursu dołączamy <strong>bezpłatną konsultację</strong> z naszym ekspertem. Zacznij swoją językową przygodę już dziś!</p>
-    </div>
-    <div class="pricing-table">
-        <!-- A1 -->
-        <div class="pricing-card">
-            <div class="level-badge">Beginner</div>
-            <h3>Poziom A1</h3>
-            <div class="price-container">
-                <div class="price-header">
-                    <div class="old-price">399 zł</div>
-                    <div class="discount-badge">Promocja -100 zł</div>
-                </div>
-                <div class="new-price">299 <span>zł</span></div>
-                <div class="price-details">
-                    <div class="price-per-lesson">
-                        <span class="lesson-price">≈37,38 zł</span>
-                        <span class="lesson-label">za spotkanie</span>
-                    </div>
-                    <div class="billing-info">(8 spotkań × 1,5h miesięcznie)</div>
-                </div>
+        <section id="pricing">
+            <div class="section-title">
+                <h2>Wybierz Idealny Kurs Dla Siebie</h2>
+                <p>Każdy kurs zawiera 8 zajęć miesięcznie z native speakerami</p>
             </div>
-            <ul class="features-list">
-                <li><i class="fas fa-chalkboard-teacher"></i> 63 godziny praktycznej nauki</li>
-                <li><i class="fas fa-layer-group"></i> Fundamenty gramatyki</li>
-                <li><i class="fas fa-comments"></i> Podstawy komunikacji</li>
-                <li><i class="fas fa-microphone-alt"></i> Nauka poprawnej wymowy</li>
-                <li><i class="fas fa-book-open"></i> Słownictwo na co dzień</li>
-            </ul>
-            <div class="value-highlight">
-                <i class="fas fa-calculator"></i> Zaledwie <strong>24,92 zł/godzinę</strong>!
-            </div>
-            <a href="contacts.html" class="button">Zapisz się teraz</a>
-        </div>
 
-        <!-- A2 -->
-        <div class="pricing-card">
-            <div class="level-badge">Elementary</div>
-            <h3>Poziom A2</h3>
-            <div class="price-container">
-                <div class="price-header">
-                    <div class="old-price">419 zł</div>
-                    <div class="discount-badge">Promocja -100 zł</div>
-                </div>
-                <div class="new-price">319 <span>zł</span></div>
-                <div class="price-details">
-                    <div class="price-per-lesson">
-                        <span class="lesson-price">≈39,88 zł</span>
-                        <span class="lesson-label">za spotkanie</span>
+            <div class="pricing-table">
+                <div class="pricing-card course-start" itemscope itemtype="https://schema.org/EducationalCourse">
+                    <div class="level-badge">Start</div>
+                    <div class="course-icon">
+                        <i class="fas fa-seedling"></i>
                     </div>
-                    <div class="billing-info">(8 spotkań × 1,5h miesięcznie)</div>
-                </div>
-            </div>
-            <ul class="features-list">
-                <li><i class="fas fa-chalkboard-teacher"></i> 63 godziny intensywnej nauki</li>
-                <li><i class="fas fa-layer-group"></i> Rozbudowa struktur gramatycznych</li>
-                <li><i class="fas fa-comments"></i> Konwersacje w typowych sytuacjach</li>
-                <li><i class="fas fa-microphone-alt"></i> Udoskonalanie wymowy</li>
-                <li><i class="fas fa-book-open"></i> Bogatsze słownictwo</li>
-            </ul>
-            <div class="value-highlight">
-                <i class="fas fa-calculator"></i> Tylko <strong>26,59 zł/godzinę</strong>!
-            </div>
-            <a href="contacts.html" class="button">Zapisz się teraz</a>
-        </div>
-
-        <!-- A2+ -->
-        <div class="pricing-card">
-            <div class="level-badge">Pre-Intermediate</div>
-            <h3>Poziom A2+</h3>
-            <div class="price-container">
-                <div class="price-header">
-                    <div class="old-price">439 zł</div>
-                    <div class="discount-badge">Promocja -100 zł</div>
-                </div>
-                <div class="new-price">339 <span>zł</span></div>
-                <div class="price-details">
-                    <div class="price-per-lesson">
-                        <span class="lesson-price">≈42,38 zł</span>
-                        <span class="lesson-label">za spotkanie</span>
+                    <h3 itemprop="name">English Start</h3>
+                    <div class="price-container" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <div class="new-price" itemprop="price" content="279">279 <span itemprop="priceCurrency"
+                                content="PLN">zł</span></div>
+                        <div class="price-details">
+                            <div class="price-per-lesson">
+                                <span class="lesson-price">8 zajęć × 60 min</span>
+                            </div>
+                            <div class="billing-info">2 razy w tygodniu</div>
+                        </div>
                     </div>
-                    <div class="billing-info">(8 spotkań × 1,5h miesięcznie)</div>
-                </div>
-            </div>
-            <ul class="features-list">
-                <li><i class="fas fa-chalkboard-teacher"></i> 63 godziny efektywnej nauki</li>
-                <li><i class="fas fa-layer-group"></i> Skomplikowane konstrukcje gramatyczne</li>
-                <li><i class="fas fa-comments"></i> Swobodne dyskusje</li>
-                <li><i class="fas fa-microphone-alt"></i> Praca nad płynnością wymowy</li>
-                <li><i class="fas fa-book-open"></i> Słownictwo specjalistyczne</li>
-            </ul>
-            <div class="value-highlight">
-                <i class="fas fa-calculator"></i> Jedynie <strong>28,25 zł/godzinę</strong>!
-            </div>
-            <a href="contacts.html" class="button">Zapisz się teraz</a>
-        </div>
-
-        <!-- B1 -->
-        <div class="pricing-card">
-            <div class="level-badge">Intermediate</div>
-            <h3>Poziom B1</h3>
-            <div class="price-container">
-                <div class="price-header">
-                    <div class="old-price">459 zł</div>
-                    <div class="discount-badge">Promocja -100 zł</div>
-                </div>
-                <div class="new-price">359 <span>zł</span></div>
-                <div class="price-details">
-                    <div class="price-per-lesson">
-                        <span class="lesson-price">≈44,88 zł</span>
-                        <span class="lesson-label">za spotkanie</span>
+                    <div class="value-proposition">
+                        <h4><i class="fas fa-bolt"></i> Idealny dla początkujących</h4>
+                        <p>Zbuduj solidne podstawy językowe</p>
                     </div>
-                    <div class="billing-info">(8 spotkań × 1,5h miesięcznie)</div>
+                    <ul class="features-list">
+                        <li>Poziomy: <strong>A1-A2</strong></li>
+                        <li>60 minut każde zajęcia</li>
+                        <li>8 zajęć miesięcznie</li>
+                        <li>Małe grupy 4-6 osób</li>
+                        <li>Wszystkie materiały online</li>
+                    </ul>
+                    <a href="contacts.html" class="button cta-button-start" itemprop="url">
+                        <i class="fas fa-calendar-check"></i> Zapisz się teraz
+                    </a>
                 </div>
-            </div>
-            <ul class="features-list">
-                <li><i class="fas fa-chalkboard-teacher"></i> 63 godziny zaawansowanej nauki</li>
-                <li><i class="fas fa-layer-group"></i> Zaawansowane zagadnienia gramatyczne</li>
-                <li><i class="fas fa-comments"></i> Debaty i wystąpienia</li>
-                <li><i class="fas fa-microphone-alt"></i> Korygowanie wymowy</li>
-                <li><i class="fas fa-book-open"></i> Język biznesowy</li>
-            </ul>
-            <div class="value-highlight">
-                <i class="fas fa-calculator"></i> Tylko <strong>29,92 zł/godzinę</strong>!
-            </div>
-            <a href="contacts.html" class="button">Zapisz się teraz</a>
-        </div>
 
-        <!-- B1+ -->
-        <div class="pricing-card">
-            <div class="level-badge">Intermediate Plus</div>
-            <h3>Poziom B1+</h3>
-            <div class="price-container">
-                <div class="price-header">
-                    <div class="old-price">479 zł</div>
-                    <div class="discount-badge">Promocja -100 zł</div>
-                </div>
-                <div class="new-price">379 <span>zł</span></div>
-                <div class="price-details">
-                    <div class="price-per-lesson">
-                        <span class="lesson-price">≈47,38 zł</span>
-                        <span class="lesson-label">za spotkanie</span>
+                <div class="pricing-card course-boost featured" itemscope
+                    itemtype="https://schema.org/EducationalCourse">
+                    <div class="level-badge">Boost</div>
+                    <div class="course-icon">
+                        <i class="fas fa-rocket"></i>
                     </div>
-                    <div class="billing-info">(8 spotkań × 1,5h miesięcznie)</div>
-                </div>
-            </div>
-            <ul class="features-list">
-                <li><i class="fas fa-chalkboard-teacher"></i> 63 godziny specjalistycznej nauki</li>
-                <li><i class="fas fa-layer-group"></i> Mistrzostwo gramatyczne</li>
-                <li><i class="fas fa-comments"></i> Prezentacje i negocjacje</li>
-                <li><i class="fas fa-microphone-alt"></i> Dążenie do perfekcji w wymowie</li>
-                <li><i class="fas fa-book-open"></i> Słownictwo akademickie</li>
-            </ul>
-            <div class="value-highlight">
-                <i class="fas fa-calculator"></i> Zaledwie <strong>31,59 zł/godzinę</strong>!
-            </div>
-            <a href="contacts.html" class="button">Zapisz się teraz</a>
-        </div>
-
-        <!-- B2 -->
-        <div class="pricing-card">
-            <div class="level-badge">Upper-Intermediate</div>
-            <h3>Poziom B2</h3>
-            <div class="price-container">
-                <div class="price-header">
-                    <div class="old-price">499 zł</div>
-                    <div class="discount-badge">Promocja -100 zł</div>
-                </div>
-                <div class="new-price">399 <span>zł</span></div>
-                <div class="price-details">
-                    <div class="price-per-lesson">
-                        <span class="lesson-price">≈49,88 zł</span>
-                        <span class="lesson-label">za spotkanie</span>
+                    <h3 itemprop="name">English Boost</h3>
+                    <div class="price-container" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <div class="new-price" itemprop="price" content="329">329 <span itemprop="priceCurrency"
+                                content="PLN">zł</span></div>
+                        <div class="price-details">
+                            <div class="price-per-lesson">
+                                <span class="lesson-price">8 zajęć × 75 min</span>
+                            </div>
+                            <div class="billing-info">2 razy w tygodniu</div>
+                        </div>
                     </div>
-                    <div class="billing-info">(8 spotkań × 1,5h miesięcznie)</div>
-                </div>
-            </div>
-            <ul class="features-list">
-                <li><i class="fas fa-chalkboard-teacher"></i> 63 godziny profesjonalnej nauki</li>
-                <li><i class="fas fa-layer-group"></i> Biegłość gramatyczna</li>
-                <li><i class="fas fa-comments"></i> Zaawansowane wystąpienia</li>
-                <li><i class="fas fa-microphone-alt"></i> Akcent i intonacja</li>
-                <li><i class="fas fa-book-open"></i> Specjalistyczne słownictwo</li>
-            </ul>
-            <div class="value-highlight">
-                <i class="fas fa-calculator"></i> Tylko <strong>33,25 zł/godzinę</strong>!
-            </div>
-            <a href="contacts.html" class="button">Zapisz się teraz</a>
-        </div>
-
-        <!-- C1 -->
-        <div class="pricing-card">
-            <div class="level-badge">Advanced</div>
-            <h3>Poziom C1</h3>
-            <div class="price-container">
-                <div class="price-header">
-                    <div class="old-price">519 zł</div>
-                    <div class="discount-badge">Promocja -100 zł</div>
-                </div>
-                <div class="new-price">419 <span>zł</span></div>
-                <div class="price-details">
-                    <div class="price-per-lesson">
-                        <span class="lesson-price">≈52,38 zł</span>
-                        <span class="lesson-label">za spotkanie</span>
+                    <div class="value-proposition">
+                        <h4><i class="fas fa-star"></i> NAJPOPULARNIEJSZY</h4>
+                        <p>Szybki postęp w mówieniu</p>
                     </div>
-                    <div class="billing-info">(8 spotkań × 1,5h miesięcznie)</div>
+                    <ul class="features-list">
+                        <li>Poziomy: <strong>B1-B2</strong></li>
+                        <li>75 minut każde zajęcia</li>
+                        <li>8 zajęć miesięcznie</li>
+                        <li>Małe grupy 4-6 osób</li>
+                        <li>Wszystkie materiały online</li>
+                    </ul>
+                    <a href="contacts.html" class="button cta-button-boost" itemprop="url">
+                        <i class="fas fa-calendar-check"></i> Wybierz ten kurs
+                    </a>
                 </div>
-            </div>
-            <ul class="features-list">
-                <li><i class="fas fa-chalkboard-teacher"></i> 63 godziny mistrzowskiej nauki</li>
-                <li><i class="fas fa-layer-group"></i> Gramatyka na poziomie native speakera</li>
-                <li><i class="fas fa-comments"></i> Zaawansowane debaty</li>
-                <li><i class="fas fa-microphone-alt"></i> Doskonalenie wymowy</li>
-                <li><i class="fas fa-book-open"></i> Profesjonalne słownictwo</li>
-            </ul>
-            <div class="value-highlight">
-                <i class="fas fa-calculator"></i> Zaledwie <strong>34,92 zł/godzinę</strong>!
-            </div>
-            <a href="contacts.html" class="button">Zapisz się teraz</a>
-        </div>
 
-        <!-- C1+ -->
-        <div class="pricing-card">
-            <div class="level-badge">Advanced Plus</div>
-            <h3>Poziom C1+</h3>
-            <div class="price-container">
-                <div class="price-header">
-                    <div class="old-price">539 zł</div>
-                    <div class="discount-badge">Promocja -100 zł</div>
-                </div>
-                <div class="new-price">439 <span>zł</span></div>
-                <div class="price-details">
-                    <div class="price-per-lesson">
-                        <span class="lesson-price">≈54,88 zł</span>
-                        <span class="lesson-label">za spotkanie</span>
+                <div class="pricing-card course-pro" itemscope itemtype="https://schema.org/EducationalCourse">
+                    <div class="level-badge">Pro</div>
+                    <div class="course-icon">
+                        <i class="fas fa-crown"></i>
                     </div>
-                    <div class="billing-info">(8 spotkań × 1,5h miesięcznie)</div>
+                    <h3 itemprop="name">English Pro</h3>
+                    <div class="price-container" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <div class="new-price" itemprop="price" content="429">379 <span itemprop="priceCurrency"
+                                content="PLN">zł</span></div>
+                        <div class="price-details">
+                            <div class="price-per-lesson">
+                                <span class="lesson-price">8 zajęć × 90 min</span>
+                            </div>
+                            <div class="billing-info">2 razy w tygodniu</div>
+                        </div>
+                    </div>
+                    <div class="value-proposition">
+                        <h4><i class="fas fa-gem"></i> Dla zaawansowanych</h4>
+                        <p>Osiągnij biegłość językową</p>
+                    </div>
+                    <ul class="features-list">
+                        <li>Poziomy: <strong>C1-C2</strong></li>
+                        <li>90 minut każde zajęcia</li>
+                        <li>8 zajęć miesięcznie</li>
+                        <li>Małe grupy 4-6 osób</li>
+                        <li>Wszystkie materiały online</li>
+                    </ul>
+                    <a href="contacts.html" class="button cta-button-pro" itemprop="url">
+                        <i class="fas fa-calendar-check"></i> Zapisz się teraz
+                    </a>
                 </div>
             </div>
-            <ul class="features-list">
-                <li><i class="fas fa-chalkboard-teacher"></i> 63 godziny na poziomie eksperckim</li>
-                <li><i class="fas fa-layer-group"></i> Precyzyjne struktury językowe</li>
-                <li><i class="fas fa-comments"></i> Wystąpienia publiczne</li>
-                <li><i class="fas fa-microphone-alt"></i> Wymowa profesjonalna</li>
-                <li><i class="fas fa-book-open"></i> Zaawansowane słownictwo akademickie</li>
-            </ul>
-            <div class="value-highlight">
-                <i class="fas fa-calculator"></i> Tylko <strong>36,59 zł/godzinę</strong>!
-            </div>
-            <a href="contacts.html" class="button">Zapisz się teraz</a>
-        </div>
-    </div>
-    <div class="highlight">
-        <p><i class="fas fa-exclamation-circle"></i> <strong>Zajęcia indywidualne:</strong> Chcesz uczyć się we własnym tempie? Skontaktuj się z nami przez <a href="contacts.html">formularz kontaktowy</a>. Odpowiemy w ciągu 24 godzin!</p>
-    </div>
-</section>
+        </section>
 
-        <!-- Benefits Section -->
+        <section class="additional-options">
+            <div class="section-title">
+                <h2>Dodatkowe Opcje Nauki</h2>
+                <p>Dopasuj naukę do swoich indywidualnych potrzeb</p>
+            </div>
+
+            <div class="options-grid">
+                <div id="speakclub" class="option-card speakclub" itemscope itemtype="https://schema.org/EducationalCourse">
+                    <div class="level-badge">Speaking Club</div>
+                    <div class="course-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 itemprop="name">English Speaking Club</h3>
+                    <div class="price-container" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <div class="new-price">199 <span>zł</span></div>
+                        <div class="price-details">
+                            <div class="price-per-lesson">
+                                <span class="lesson-price">4 spotkania × 90 min</span>
+                            </div>
+                            <div class="billing-info">miesięcznie</div>
+                        </div>
+                    </div>
+
+                    <div class="savings-badge">
+                        <i class="fas fa-piggy-bank"></i> Oszczędzasz 100 zł w porównaniu do pojedynczych wejść!
+                    </div>
+
+                    <ul class="features-list">
+                        <li>4 spotkania w miesiącu po 90 minut</li>
+                        <li>8-12 uczestników w grupie</li>
+                        <li>Tylko konwersacje - żadnej gramatyki!</li>
+                        <li>Różne tematy spotkań każdy tydzień</li>
+                        <li>Native speaker prowadzący</li>
+                        <li>Możliwość jednorazowego wejścia za 69 zł</li>
+                    </ul>
+
+                    <a href="contacts.html" class="button cta-button-speakclub" itemprop="url">
+                        <i class="fas fa-users"></i> Dołącz do klubu
+                    </a>
+                </div>
+
+                <div id="individual" class="option-card individual" itemscope itemtype="https://schema.org/EducationalCourse">
+                    <div class="level-badge">Indywidualne</div>
+                    <div class="course-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3 itemprop="name">Zajęcia Indywidualne</h3>
+                    <div class="price-container" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <div class="new-price">99 <span>zł</span></div>
+                        <div class="price-details">
+                            <div class="price-per-lesson">
+                                <span class="lesson-price">1 zajęcie × 60 min</span>
+                            </div>
+                            <div class="billing-info">za 60 minut</div>
+                        </div>
+                    </div>
+
+                    <div class="value-proposition">
+                        <h4><i class="fas fa-star"></i> PAKIET 10 ZAJĘĆ</h4>
+                        <p>Tylko 699 zł (69,9 zł/zajęcie)</p>
+                    </div>
+
+                    <ul class="features-list">
+                        <li>Elastyczny grafik dostosowany do Ciebie</li>
+                        <li>Program nauki skrojony na miarę</li>
+                        <li>60 minut intensywnej nauki 1:1</li>
+                        <li>Szybsze postępy niż w grupie</li>
+                        <li>Materiały online w cenie zajęć</li>
+                        <li>Pełna personalizacja tempa nauki</li>
+                    </ul>
+
+                    <a href="contacts.html" class="button cta-button-individual" itemprop="url">
+                        <i class="fas fa-calendar-check"></i> Umów konsultację
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <section class="benefits">
             <div class="section-title">
-                <h2>Dlaczego warto wybrać nasze kursy?</h2>
+                <h2>Dlaczego Step Up Speak?</h2>
                 <p>Oferujemy kompleksowe rozwiązania edukacyjne dostosowane do Twoich potrzeb</p>
             </div>
             <div class="benefits-grid">
@@ -1703,17 +1406,17 @@
                         <i class="fas fa-user-tie"></i>
                     </div>
                     <h3>Doświadczeni nauczyciele</h3>
-                    <p>Nasi lektorzy to certyfikowani specjaliści z wieloletnim doświadczeniem w nauczaniu języków obcych.
-                    </p>
+                    <p>Nasi lektorzy to certyfikowani specjaliści z wieloletnim doświadczeniem w nauczaniu języków
+                        obcych.</p>
                 </div>
 
                 <div class="benefit-card">
-    <div class="benefit-icon">
-        <i class="fas fa-briefcase"></i>
-    </div>
-    <h3>Praktyczne umiejętności</h3>
-    <p>Nauczysz się języka, który od razu wykorzystasz w pracy i codziennych sytuacjach.</p>
-</div>
+                    <div class="benefit-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Praktyczne umiejętności</h3>
+                    <p>Nauczysz się języka, który od razu wykorzystasz w pracy i codziennych sytuacjach.</p>
+                </div>
 
                 <div class="benefit-card">
                     <div class="benefit-icon">
@@ -1736,7 +1439,8 @@
                         <i class="fas fa-headset"></i>
                     </div>
                     <h3>Wsparcie mentorskie</h3>
-                    <p>Otrzymujesz stałe wsparcie od nauczyciela prowadzącego i możliwość konsultacji w trakcie kursu.</p>
+                    <p>Otrzymujesz stałe wsparcie od nauczyciela prowadzącego i możliwość konsultacji w trakcie kursu.
+                    </p>
                 </div>
 
                 <div class="benefit-card">
@@ -1746,55 +1450,33 @@
                     <h3>Małe grupy</h3>
                     <p>Kameralne grupy (4-6 osób) zapewniają indywidualne podejście i aktywny udział w zajęciach.</p>
                 </div>
-
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Monitorowanie postępów</h3>
-                    <p>Regularne testy i raporty pozwalają śledzić Twoje postępy i dostosowywać program nauki.</p>
-                </div>
-
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-puzzle-piece"></i>
-                    </div>
-                    <h3>Kursy dopasowane do poziomu</h3>
-                    <p>Nasze kursy są dostosowane do Twojego aktualnego poziomu zaawansowania, abyś mógł uczyć się we właściwym tempie.</p>
-                </div>
-
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-laptop"></i>
-                    </div>
-                    <h3>100% kursy online</h3>
-                    <p>Nasze kursy odbywają się w pełni online, co pozwala Ci uczyć się z dowolnego miejsca na świecie, w dogodnym czasie.</p>
-                </div>
             </div>
         </section>
 
-        <!-- Contact CTA Section -->
         <section id="contact" style="background: var(--background-gradient); text-align: center; padding: 4rem 2rem;">
             <div class="section-title">
-                <h2>Masz pytania dotyczące kursów?</h2>
-                <p>Skontaktuj się z nami, a chętnie pomożemy wybrać odpowiedni kurs dla Ciebie</p>
+                <h2>Zacznij Swoją Przygodę z Angielskim</h2>
+                <p>Skontaktuj się z nami, a pomożemy wybrać idealny kurs dla Ciebie</p>
             </div>
             <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 2rem;">
                 <a href="tel:+48576076648" class="cta-button cta-button-large">
                     <i class="fas fa-phone-alt"></i> Zadzwoń +48 576 076 648
                 </a>
-                <a href="contacts.html" class="cta-button cta-button-secondary">
-                    <i class="fas fa-edit"></i> Wypełnij formularz
+                <a href="contacts.html" class="cta-button cta-button-secondary cta-button-large">
+                    <i class="fas fa-calendar-check"></i> Umów darmową lekcję
+                </a>
+                <a href="https://forms.gle/Q32ZmCQFd7716wYBA" target="_blank"
+                    class="cta-button cta-button-secondary cta-button-large">
+                    <i class="fas fa-clipboard-check"></i> Darmowy test poziomujący
                 </a>
             </div>
         </section>
     </main>
 
-    <!-- Sticky CTA -->
     <div class="sticky-cta">
-        <a href="contacts.html" class="phone-cta" aria-label="Zapisz się na kurs">
-            <i class="fas fa-edit"></i>
-            <span>Zapisz się</span>
+        <a href="tel:+48576076648" class="phone-cta" aria-label="Zadzwoń do Step Up Speak">
+            <i class="fas fa-phone-alt"></i>
+            <span>Zadzwoń</span>
         </a>
     </div>
 
@@ -1802,15 +1484,19 @@
         <div class="footer-content">
             <div class="footer-column">
                 <h3>Step Up Speak</h3>
-                <p>Profesjonalne kursy językowe online, które pomogą Ci osiągnąć płynność językową i pewność siebie w komunikacji.</p>
+                <p>Profesjonalne kursy językowe online, które pomogą Ci osiągnąć płynność językową i pewność siebie w
+                    komunikacji.</p>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/groups/1007789447828292" target="_blank" rel="noopener" aria-label="Facebook">
+                    <a href="https://www.facebook.com/groups/1007789447828292" target="_blank" rel="noopener"
+                        aria-label="Facebook">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="https://www.instagram.com/stepupspeak_english/" target="_blank" rel="noopener" aria-label="Instagram">
+                    <a href="https://www.instagram.com/stepupspeak_english/" target="_blank" rel="noopener"
+                        aria-label="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://www.linkedin.com/company/stepupspeak" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/company/stepupspeak" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                     <a href="https://www.tiktok.com/@stepupspeak" target="_blank" rel="noopener" aria-label="TikTok">
@@ -1822,17 +1508,22 @@
             <div class="footer-column">
                 <h3>Kursy</h3>
                 <ul>
-                    <li><a href="courses.html">Angielski ogólny (A1–C1+)</a></li>
-                    <li><a href="pricing.html#individual">Zajęcia indywidualne</a></li>
+                    <li><a href="courses.html#pricing">English Start (A1-A2)</a></li>
+                    <li><a href="courses.html#pricing">English Boost (B1-B2)</a></li>
+                    <li><a href="courses.html#pricing">English Pro (C1-C2)</a></li>
+                    <li><a href="courses.html#individual">Zajęcia indywidualne</a></li>
+                    <li><a href="courses.html#speakclub">English Speaking Club</a></li>
                 </ul>
             </div>
 
             <div class="footer-column">
                 <h3>Informacje</h3>
                 <ul>
-                    <li><a href="tel:+48 576 076 648"><i class="fas fa-phone-alt"></i> +48 576 076 648</a></li>
-                    <li><a href="mailto:stepupspeakofficial@gmail.com"><i class="fas fa-envelope"></i> stepupspeakofficial@gmail.com</a></li>
-                    <li><a href="contacts.html"><i class="fas fa-clock"></i> Pn-Pt: 8:00-20:00, Sb: 9:00 - 15:00</a></li>
+                    <li><a href="tel:+48576076648"><i class="fas fa-phone-alt"></i> +48 576 076 648</a></li>
+                    <li><a href="mailto:stepupspeakofficial@gmail.com"><i class="fas fa-envelope"></i>
+                            stepupspeakofficial@gmail.com</a></li>
+                    <li><a href="contacts.html"><i class="fas fa-clock"></i> Pn-Pt: 8:00-20:00, Sb: 9:00 - 15:00</a>
+                    </li>
                 </ul>
             </div>
 
@@ -1842,7 +1533,7 @@
                     <li><a href="terms-of-service.html">Regulamin</a></li>
                     <li><a href="privacy-policy.html">Polityka prywatności</a></li>
                     <li><a href="blog.html">Blog</a></li>
-                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
                     <li><a href="index.html#testimonials-heading">Opinie studentów</a></li>
                     <li><a href="careers.html">Kariera</a></li>
                 </ul>
@@ -1854,39 +1545,22 @@
         </div>
     </footer>
 
-    <!-- Cookie Consent Banner -->
-    <div id="cookie-consent-banner" class="cookie-consent-banner">
-        <div class="cookie-consent-container">
-            <div class="cookie-consent-text">
-                <p>Ta strona korzysta z plików cookie, aby zapewnić najlepszą jakość usług. 
-                    <a href="privacy-policy.html" target="_blank">Dowiedz się więcej</a>
-                </p>
-            </div>
-            <div class="cookie-consent-buttons">
-                <button id="reject-cookies" class="cookie-btn secondary-btn">Odrzuć</button>
-                <button id="accept-cookies" class="cookie-btn primary-btn">Akceptuję</button>
-            </div>
-        </div>
-    </div>
-
     <script>
-        // Mobile menu functionality
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mainNav = document.getElementById('main-nav');
-            
+
             if (mobileMenuButton && mainNav) {
-                mobileMenuButton.addEventListener('click', function() {
+                mobileMenuButton.addEventListener('click', function () {
                     const isExpanded = this.getAttribute('aria-expanded') === 'true';
                     this.setAttribute('aria-expanded', !isExpanded);
                     mainNav.classList.toggle('active');
                 });
             }
-            
-            // Header scroll effect
+
             const header = document.getElementById('header');
             if (header) {
-                window.addEventListener('scroll', function() {
+                window.addEventListener('scroll', function () {
                     if (window.scrollY > 50) {
                         header.classList.add('scrolled');
                     } else {
@@ -1894,11 +1568,10 @@
                     }
                 });
             }
-            
-            // Track CTA clicks for analytics
+
             const ctaButtons = document.querySelectorAll('.cta-button, .phone-cta, .button');
             ctaButtons.forEach(button => {
-                button.addEventListener('click', function() {
+                button.addEventListener('click', function () {
                     if (window.dataLayer) {
                         window.dataLayer.push({
                             'event': 'cta_click',
@@ -1909,34 +1582,9 @@
                     }
                 });
             });
-            
-            // Cookie consent functionality
-            const cookieBanner = document.getElementById('cookie-consent-banner');
-            const acceptCookies = document.getElementById('accept-cookies');
-            const rejectCookies = document.getElementById('reject-cookies');
-            
-            // Check if user has already made a choice
-            if (!localStorage.getItem('cookieConsent')) {
-                // Show banner after a short delay
-                setTimeout(() => {
-                    cookieBanner.classList.add('active');
-                }, 1000);
-            }
-            
-            if (acceptCookies) {
-                acceptCookies.addEventListener('click', function() {
-                    localStorage.setItem('cookieConsent', 'accepted');
-                    cookieBanner.classList.remove('active');
-                });
-            }
-            
-            if (rejectCookies) {
-                rejectCookies.addEventListener('click', function() {
-                    localStorage.setItem('cookieConsent', 'rejected');
-                    cookieBanner.classList.remove('active');
-                });
-            }
         });
     </script>
+    <script src="Cookies/cookie-banner.js"></script>
 </body>
+
 </html>

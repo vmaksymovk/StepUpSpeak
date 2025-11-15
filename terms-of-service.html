@@ -1,39 +1,19 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/FaviconForWebPage/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="FaviconForWebPage/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="FaviconForWebPage/favicon-16x16.png">
-    <link rel="manifest" href="/FaviconForWebPage/site.webmanifest">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="theme-color" content="#ffffff">
-    <meta name="apple-mobile-web-app-title" content="StepUpSpeak">
 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Regulamin - Step Up Speak | Szkoła Językowa Online | +48 576 076 648</title>
-    <meta name="description" content="Regulamin świadczenia usług przez Step Up Speak. Zasady korzystania z kursów językowych online, płatności i warunki uczestnictwa.">
-    
-    <!-- Preload critical resources -->
+    <title>Regulamin - Step Up Speak | Szkoła Językowa Online</title>
+    <meta name="description"
+        content="Regulamin świadczenia usług przez Step Up Speak. Zasady korzystania z kursów językowych online, płatności i warunki uczestnictwa.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="Regulamin - Step Up Speak | Szkoła Językowa Online">
-    <meta property="og:description" content="Regulamin świadczenia usług przez Step Up Speak. Zasady korzystania z kursów językowych online.">
-    <meta property="og:image" content="https://stepupspeak.com/images/og-terms.jpg">
-    <meta property="og:url" content="https://stepupspeak.com/terms-of-service.html">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Step Up Speak">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Regulamin - Step Up Speak | Szkoła Językowa Online">
-    <meta name="twitter:description" content="Regulamin świadczenia usług przez Step Up Speak. Zasady korzystania z kursów językowych online.">
-    <meta name="twitter:image" content="https://stepupspeak.com/images/twitter-terms.jpg">
 
     <style>
         :root {
@@ -73,9 +53,10 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            overflow-x: hidden;
+            max-width: 100%;
         }
 
-        /* Skip to main content for accessibility */
         .skip-link {
             position: absolute;
             top: -40px;
@@ -93,7 +74,6 @@
             top: 0;
         }
 
-        /* Header */
         header {
             background-color: var(--white);
             color: var(--text-color);
@@ -148,7 +128,6 @@
             margin-top: 0.2rem;
         }
 
-        /* Navigation */
         .nav-container {
             display: flex;
             align-items: center;
@@ -179,11 +158,6 @@
             color: var(--primary-color);
         }
 
-        nav a i {
-            font-size: 1rem;
-        }
-
-        /* CTA Button */
         .cta-button {
             display: inline-flex;
             align-items: center;
@@ -209,7 +183,6 @@
             box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
         }
 
-        /* Mobile Menu */
         .mobile-menu-button {
             display: none;
             background: none;
@@ -220,12 +193,10 @@
             padding: 0.5rem;
         }
 
-        /* Main Content */
         .main-content {
             flex: 1;
         }
 
-        /* Legal Hero Section */
         .legal-hero {
             background: var(--background-gradient);
             padding: 4rem 2rem;
@@ -252,7 +223,6 @@
             line-height: 1.8;
         }
 
-        /* Legal Section */
         .legal-section {
             padding: 5rem 2rem;
             background: var(--white);
@@ -263,38 +233,6 @@
             margin: 0 auto;
         }
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-            position: relative;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            display: inline-block;
-        }
-
-        .section-title h2::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: var(--accent-color);
-            margin: 1rem auto 0;
-            border-radius: 2px;
-        }
-
-        .section-title p {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* Legal Content */
         .legal-container {
             background: var(--white);
             padding: 3rem;
@@ -305,10 +243,45 @@
         .legal-content {
             max-width: 900px;
             margin: 0 auto;
+            counter-reset: section;
         }
 
-        .legal-item {
+        .legal-section-numbered {
+            counter-increment: section;
             margin-bottom: 2.5rem;
+        }
+
+        .legal-section-numbered h2::before {
+            content: counter(section) ". ";
+        }
+
+        .legal-point {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .legal-highlight-box {
+            background: rgba(46, 139, 87, 0.05);
+            border: 1px solid var(--primary-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .legal-warning-box {
+            background: rgba(221, 107, 32, 0.05);
+            border: 1px solid var(--accent-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .contact-info-legal {
+            background: var(--background-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
         }
 
         .legal-item h2 {
@@ -349,19 +322,6 @@
             margin-left: -1em;
         }
 
-        .highlight {
-            background-color: rgba(221, 107, 32, 0.1);
-            padding: 1.5rem;
-            border-left: 4px solid var(--accent-color);
-            margin: 1.5rem 0;
-            border-radius: 8px;
-        }
-
-        .highlight i {
-            color: var(--accent-color);
-            margin-right: 0.5rem;
-        }
-
         .update-date {
             text-align: right;
             font-style: italic;
@@ -371,7 +331,6 @@
             border-top: 1px solid #e2e8f0;
         }
 
-        /* Footer */
         footer {
             background-color: var(--text-color);
             color: var(--white);
@@ -426,11 +385,6 @@
             color: var(--primary-light);
         }
 
-        .footer-column a i {
-            width: 20px;
-            text-align: center;
-        }
-
         .social-links {
             display: flex;
             gap: 1rem;
@@ -461,92 +415,6 @@
             text-align: center;
         }
 
-        /* Cookie Banner */
-        .cookie-consent-banner {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: #2D3748;
-            color: #F7FAFC;
-            padding: 20px 0;
-            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
-            z-index: 1000;
-            transform: translateY(100%);
-            transition: transform 0.4s ease-out;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .cookie-consent-banner.active {
-            transform: translateY(0);
-        }
-
-        .cookie-consent-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        .cookie-consent-text {
-            flex: 1;
-            min-width: 250px;
-        }
-
-        .cookie-consent-text p {
-            margin: 0;
-            line-height: 1.6;
-            font-size: 15px;
-        }
-
-        .cookie-consent-text a {
-            color: #48BB78;
-            text-decoration: underline;
-        }
-
-        .cookie-consent-buttons {
-            display: flex;
-            gap: 12px;
-            flex-shrink: 0;
-        }
-
-        .cookie-btn {
-            padding: 10px 20px;
-            border-radius: 6px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: none;
-            font-size: 15px;
-            min-width: 120px;
-        }
-
-        .primary-btn {
-            background: #48BB78;
-            color: white;
-        }
-
-        .primary-btn:hover {
-            background: #38A169;
-            transform: translateY(-2px);
-        }
-
-        .secondary-btn {
-            background: transparent;
-            color: #CBD5E0;
-            border: 1px solid #718096;
-        }
-
-        .secondary-btn:hover {
-            background: rgba(255, 255, 255, 0.05);
-            color: white;
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
             .mobile-menu-button {
                 display: block;
@@ -573,6 +441,8 @@
                 padding: 1rem;
                 border-radius: 0;
                 border-bottom: 1px solid #f0f0f0;
+                min-height: 44px;
+                align-items: center;
             }
 
             header {
@@ -595,14 +465,6 @@
                 font-size: 1.1rem;
             }
 
-            .section-title h2 {
-                font-size: 2rem;
-            }
-
-            .section-title p {
-                font-size: 1rem;
-            }
-
             .legal-section {
                 padding: 3rem 1rem;
             }
@@ -611,17 +473,13 @@
                 padding: 2rem 1.5rem;
             }
 
-            .cookie-consent-container {
-                flex-direction: column;
-                text-align: center;
+            .logo-text {
+                display: none;
             }
-            
-            .cookie-consent-buttons {
-                width: 100%;
-            }
-            
-            .cookie-btn {
-                flex: 1;
+
+            .mobile-menu-button {
+                min-width: 44px;
+                min-height: 44px;
             }
         }
 
@@ -630,377 +488,12 @@
                 padding: 1.5rem;
             }
         }
-
-        /* Focus styles for accessibility */
-        button:focus,
-        a:focus,
-        input:focus,
-        select:focus,
-        textarea:focus {
-            outline: 2px solid var(--primary-color);
-            outline-offset: 2px;
-        }
-
-        /* Print styles */
-        @media print {
-            .cookie-consent-banner {
-                display: none;
-            }
-        }
-        /* Poprawki dla nagłówka na mobile */
-        @media (max-width: 768px) {
-            header {
-                padding: 0.8rem 1rem;
-            }
-
-            .logo-container {
-                flex: 1;
-                min-width: 200px;
-            }
-
-            header h1 {
-                font-size: 1.4rem;
-            }
-
-            .tagline {
-                font-size: 0.8rem;
-            }
-
-            header img {
-                width: 60px;
-            }
-
-            .nav-container {
-                gap: 1rem;
-            }
-
-            .cta-button {
-                padding: 0.6rem 1rem;
-                font-size: 0.9rem;
-                white-space: nowrap;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .logo-text {
-                display: none; /* Ukrywamy tekst logo na bardzo małych ekranach */
-            }
-
-            header h1 {
-                font-size: 1.2rem;
-            }
-        }
-
-        /* Poprawki dla sekcji hero na mobile */
-        @media (max-width: 768px) {
-            .hero {
-                padding: 2rem 1rem;
-            }
-
-            .hero h1 {
-                font-size: 1.8rem;
-                line-height: 1.3;
-                margin-bottom: 1rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-                margin-bottom: 1.5rem;
-            }
-
-            .hero-benefits {
-                gap: 0.8rem;
-                margin-bottom: 1.5rem;
-            }
-
-            .hero-benefit {
-                font-size: 0.9rem;
-            }
-
-            .hero-actions {
-                flex-direction: column;
-                gap: 0.8rem;
-            }
-
-            .cta-button-large {
-                padding: 1rem 1.5rem;
-                font-size: 1rem;
-            }
-        }
-
-        /* Poprawki dla trust indicators na mobile */
-        @media (max-width: 768px) {
-            .trust-indicators {
-                padding: 1.5rem 1rem;
-                gap: 1.5rem;
-            }
-
-            .trust-item {
-                flex: 0 0 calc(50% - 1rem);
-            }
-
-            .trust-icon {
-                font-size: 1.5rem;
-            }
-
-            .trust-text {
-                font-size: 0.8rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .trust-item {
-                flex: 0 0 100%;
-            }
-        }
-
-        /* Poprawki dla sekcji features na mobile */
-        @media (max-width: 768px) {
-            .features {
-                padding: 3rem 1rem;
-            }
-
-            .section-header {
-                margin-bottom: 2rem;
-            }
-
-            .section-header h2 {
-                font-size: 1.8rem;
-            }
-
-            .section-header p {
-                font-size: 1rem;
-            }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .feature {
-                padding: 1.5rem;
-            }
-
-            .feature-icon {
-                width: 60px;
-                height: 60px;
-                font-size: 1.8rem;
-            }
-        }
-
-        /* Poprawki dla pricing section na mobile */
-        @media (max-width: 768px) {
-            .pricing {
-                padding: 3rem 1rem;
-            }
-
-            .pricing-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .pricing-card.featured {
-                transform: none;
-                order: -1; /* Polecany kurs na górze */
-            }
-
-            .pricing-card {
-                padding: 1.5rem;
-            }
-
-            .level-badge {
-                position: relative;
-                top: auto;
-                right: auto;
-                transform: none;
-                width: auto;
-                margin-bottom: 1rem;
-                clip-path: none;
-                border-radius: 6px;
-                padding: 0.5rem 1rem;
-            }
-
-            .price-header {
-                flex-direction: column;
-                gap: 0.5rem;
-                align-items: center;
-            }
-
-            .pricing-price {
-                font-size: 2rem;
-            }
-        }
-
-        /* Poprawki dla testimonials na mobile */
-        @media (max-width: 768px) {
-            .testimonials {
-                padding: 3rem 1rem;
-            }
-
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .testimonial {
-                padding: 1.5rem;
-            }
-        }
-
-        /* Poprawki dla FAQ na mobile */
-        @media (max-width: 768px) {
-            .faq-section {
-                padding: 3rem 1rem;
-            }
-
-            .faq-question {
-                padding: 1.25rem 1rem;
-                font-size: 1rem;
-            }
-
-            .faq-number {
-                min-width: 25px;
-                margin-right: 0.75rem;
-            }
-
-            .faq-answer-content {
-                padding: 0 1rem 1.5rem;
-            }
-
-            .payment-methods {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .faq-cta {
-                padding: 2rem 1rem;
-            }
-
-            .faq-cta-buttons {
-                flex-direction: column;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .payment-methods {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Poprawki dla stopki na mobile */
-        @media (max-width: 768px) {
-            footer {
-                padding: 2rem 1rem 1rem;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-                text-align: center;
-            }
-
-            .footer-column h3::after {
-                margin: 0.5rem auto;
-            }
-
-            .social-links {
-                justify-content: center;
-            }
-        }
-
-        /* Poprawki dla sticky CTA na mobile */
-        @media (max-width: 768px) {
-            .sticky-cta {
-                bottom: 1rem;
-                right: 1rem;
-            }
-
-            .phone-cta {
-                padding: 0.8rem;
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-            }
-
-            .phone-cta span {
-                display: none;
-            }
-        }
-
-        /* Zapobieganie poziomemu przewijaniu */
-        body {
-            overflow-x: hidden;
-            max-width: 100%;
-        }
-
-        /* Lepsze zarządzanie przestrzenią na bardzo małych ekranach */
-        @media (max-width: 360px) {
-            .hero h1 {
-                font-size: 1.5rem;
-            }
-
-            .feature {
-                padding: 1rem;
-            }
-
-            .pricing-card {
-                padding: 1rem;
-            }
-        }
-
-        /* Poprawki czytelności tekstu na mobile */
-        @media (max-width: 768px) {
-            body {
-                font-size: 14px;
-            }
-
-            h1, h2, h3 {
-                word-wrap: break-word;
-            }
-
-            .hero-text, .section-header, .feature, .pricing-card {
-                text-align: center;
-            }
-        }
-
-        /* Lepsze odstępy dla elementów dotykowych */
-        @media (max-width: 768px) {
-            nav a, .cta-button, .faq-question {
-                min-height: 44px; /* Minimalny rozmiar dotykowy */
-                display: flex;
-                align-items: center;
-            }
-
-            .mobile-menu-button {
-                min-width: 44px;
-                min-height: 44px;
-            }
-        }
     </style>
-
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '2092523381239454');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=2092523381239454&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
 </head>
 
 <body>
-    <!-- Skip to main content link for accessibility -->
     <a href="#main-content" class="skip-link">Przejdź do treści</a>
 
-    <!-- Header -->
     <header id="header">
         <div class="logo-container">
             <a href="index.html" aria-label="Step Up Speak - Strona główna">
@@ -1022,165 +515,235 @@
             <a href="contacts.html" class="cta-button">
                 <i class="fas fa-paper-plane"></i> Skontaktuj się
             </a>
-            <button class="mobile-menu-button" id="mobile-menu-button" aria-label="Menu mobilne" aria-expanded="false" aria-controls="main-nav">
+            <button class="mobile-menu-button" id="mobile-menu-button" aria-label="Menu mobilne" aria-expanded="false"
+                aria-controls="main-nav">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
     </header>
 
-    <!-- Main Content -->
     <main id="main-content">
-        <!-- Legal Hero Section -->
         <section class="legal-hero">
             <div class="legal-hero-content">
                 <h1>Regulamin świadczenia usług</h1>
-                <p>Niniejszy regulamin określa zasady korzystania z platformy edukacyjnej Step Up Speak oraz warunki uczestnictwa w naszych kursach językowych.</p>
+                <p>Niniejszy regulamin określa zasady korzystania z platformy edukacyjnej Step Up Speak oraz warunki
+                    uczestnictwa w naszych kursach językowych.</p>
             </div>
         </section>
 
-        <!-- Legal Section -->
         <section class="legal-section">
-            <div class="section-container">
-                <div class="section-title">
-                    <h2>Regulamin Step Up Speak</h2>
-                    <p>Zapoznaj się z warunkami korzystania z naszych usług edukacyjnych</p>
-                </div>
-
-                <div class="legal-container">
-                    <div class="legal-content">
-                        <div class="legal-item">
-                            <h2>1. Postanowienia ogólne</h2>
-                            <p>1.1. Usługodawcą jest Step Up Speak z siedzibą w Warszawie przy Al. Jana Pawła II 20, NIP: [WPISZ_NIP], REGON: [WPISZ_REGON].</p>
-                            <p>1.2. Platformą edukacyjną jest serwis internetowy dostępny pod adresem: <a href="https://stepupspeak.com">stepupspeak.com</a>.</p>
-                            <p>1.3. Korzystanie z usług oznacza akceptację niniejszego regulaminu.</p>
+            <div class="legal-container">
+                <div class="legal-content">
+                    <div class="legal-section-numbered">
+                        <h2>Postanowienia ogólne</h2>
+                        <div class="legal-point">
+                            1.1. Niniejszy regulamin (zwany dalej "Regulaminem") określa zasady świadczenia usług drogą
+                            elektroniczną przez Step Up Speak.
                         </div>
+                        <div class="legal-point">
+                            1.2. Usługodawcą jest firma Step Up Speak z siedzibą w Warszawie, adres: [ADRES_SIEDZIBY],
+                            NIP: [NUMER_NIP], REGON: [NUMER_REGON], adres e-mail: stepupspeakofficial@gmail.com,
+                            telefon: +48 576 076 648.
+                        </div>
+                        <div class="legal-point">
+                            1.3. Usługobiorcą jest osoba fizyczna zawierająca Umowę o świadczenie usług edukacyjnych ze
+                            Step Up Speak.
+                        </div>
+                        <div class="legal-point">
+                            1.4. Warunkiem skorzystania z Usług jest zapoznanie się z Regulaminem oraz zaakceptowanie
+                            jego postanowień.
+                        </div>
+                    </div>
 
-                        <div class="legal-item">
-                            <h2>2. Definicje</h2>
+                    <div class="legal-section-numbered">
+                        <h2>Definicje</h2>
+                        <div class="legal-point">
+                            2.1. <strong>Usługodawca</strong> - Step Up Speak, podmiot świadczący usługi edukacyjne.
+                        </div>
+                        <div class="legal-point">
+                            2.2. <strong>Usługobiorca</strong> - osoba fizyczna korzystająca z Usług, która ukończyła 16
+                            rok życia.
+                        </div>
+                        <div class="legal-point">
+                            2.3. <strong>Umowa</strong> - umowa o świadczenie usług edukacyjnych zawierana pomiędzy
+                            Usługodawcą a Usługobiorcą.
+                        </div>
+                        <div class="legal-point">
+                            2.4. <strong>Kurs</strong> - cykl zajęć językowych oferowany w formie online, prowadzony
+                            przez wykwalifikowanego lektora.
+                        </div>
+                    </div>
+
+                    <div class="legal-section-numbered">
+                        <h2>Warunki uczestnictwa</h2>
+                        <div class="legal-point">
+                            3.1. Warunkiem uczestnictwa w Kursach jest:
                             <ul>
-                                <li><strong>Usługodawca</strong> - Step Up Speak świadczący usługi edukacyjne</li>
-                                <li><strong>Użytkownik</strong> - osoba fizyczna korzystająca z usług</li>
-                                <li><strong>Kurs</strong> - cykl zajęć językowych oferowany przez platformę (A1, A2, B1, B2, C1, C1+)</li>
-                                <li><strong>Materiały kursowe</strong> - podręczniki, ćwiczenia i inne zasoby dostarczane w ramach kursu</li>
+                                <li>ukończenie 16 roku życia</li>
+                                <li>posiadanie pełnej zdolności do czynności prawnych lub wyrażenie zgody przez
+                                    przedstawiciela ustawowego</li>
+                                <li>zaakceptowanie postanowień niniejszego Regulaminu</li>
                             </ul>
                         </div>
-
-                        <div class="legal-item">
-                            <h2>3. Warunki uczestnictwa</h2>
-                            <p>3.1. Wymagania techniczne:</p>
+                        <div class="legal-point">
+                            3.2. Wymagania techniczne:
                             <ul>
-                                <li>Dostęp do internetu (min. 5 Mb/s)</li>
-                                <li>Przeglądarka: Chrome, Firefox, Edge w najnowszej wersji</li>
-                                <li>Mikrofon i kamera (do zajęć konwersacyjnych)</li>
-                            </ul>
-
-                            <p>3.2. Rejestracja:</p>
-                            <ul>
-                                <li>Wymagane podanie prawdziwych danych</li>
-                                <li>Minimalny wiek: 16 lat (dla młodszych wymagana zgoda opiekuna)</li>
-                                <li>Akceptacja regulaminu i polityki prywatności</li>
+                                <li>stabilne łącze internetowe (min. 5 Mb/s)</li>
+                                <li>aktualna przeglądarka internetowa (Chrome, Firefox, Edge, Safari)</li>
+                                <li>mikrofon i kamera internetowa</li>
                             </ul>
                         </div>
+                    </div>
 
-                        <div class="legal-item">
-                            <h2>4. Płatności i zasady rezygnacji</h2>
-
-                            <div class="highlight">
-                                <p><i class="fas fa-exclamation-circle"></i> <strong>Kluczowe informacje:</strong> Kursy językowe są produktami cyfrowymi dostarczanymi w całości, co wpływa na warunki zwrotu.</p>
-                            </div>
-
-                            <h3>4.1. Sposoby płatności</h3>
+                    <div class="legal-section-numbered">
+                        <h2>Rodzaje usług i zasady uczestnictwa</h2>
+                        <div class="legal-point">
+                            4.1. Step Up Speak oferuje następujące rodzaje usług:
                             <ul>
-                                <li>Przelewy online (Przelewy24, PayU)</li>
-                                <li>Karty płatnicze (Visa, Mastercard)</li>
-                                <li>BLIK</li>
-                                <li>Przelew tradycyjny</li>
+                                <li><strong>Kursy grupowe</strong> - English Start (A1-A2), English Boost (B1-B2),
+                                    English Pro (C1-C2)</li>
+                                <li><strong>Zajęcia indywidualne</strong> - Personal English Plan</li>
+                                <li><strong>Rozmowy klubowe</strong> - English Talk Club</li>
                             </ul>
+                        </div>
+                        <div class="legal-point">
+                            4.2. Kursy grupowe uruchamiane są po zebraniu minimalnej liczby 4 uczestników.
+                        </div>
+                    </div>
 
-                            <h3>4.2. Zasady zwrotów</h3>
+                    <div class="legal-section-numbered">
+                        <h2>Płatności</h2>
+                        <div class="legal-point">
+                            5.1. Cennik Usług dostępny jest na stronie internetowej stepupspeak.com.
+                        </div>
+                        <div class="legal-point">
+                            5.2. Aktualne ceny Kursów:
                             <ul>
-                                <li><strong>Przed otrzymaniem dostępu:</strong>
-                                    <ul>
-                                        <li>Pełny zwrot minus 15% opłaty administracyjnej</li>
-                                        <li>Termin: 7 dni od zakupu</li>
-                                    </ul>
+                                <li>English Start (A1-A2): 279 zł za pakiet miesięczny (8 zajęć)</li>
+                                <li>English Boost (B1-B2): 329 zł za pakiet miesięczny (8 zajęć)</li>
+                                <li>English Pro (C1-C2): 429 zł za pakiet miesięczny (8 zajęć)</li>
+                                <li>Zajęcia indywidualne: 600 zł za pakiet 10 zajęć</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="legal-section-numbered">
+                        <h2>Prawo do odstąpienia od umowy</h2>
+                        <div class="legal-warning-box">
+                            <p><i class="fas fa-exclamation-circle"></i> <strong>WAŻNE:</strong> Zgodnie z art. 38
+                                ustawy o prawach konsumenta, konsument traci prawo do odstąpienia od umowy w przypadku,
+                                gdy przedsiębiorca wykonał w pełni usługę za wyraźną zgodą konsumenta, który został
+                                poinformowany o utracie prawa odstąpienia po wykonaniu usługi.</p>
+                        </div>
+                        <div class="legal-point">
+                            6.1. Usługobiorca będący konsumentem ma prawo odstąpić od Umowy w terminie 14 dni od jej
+                            zawarcia bez podawania przyczyny.
+                        </div>
+                        <div class="legal-point">
+                            6.2. W przypadku Kursów, prawo do odstąpienia przysługuje tylko do momentu rozpoczęcia
+                            świadczenia usługi.
+                        </div>
+                    </div>
+
+                    <div class="legal-section-numbered">
+                        <h2>Zasady dotyczące nieobecności i braku zwrotów</h2>
+                        <div class="legal-warning-box">
+                            <p><i class="fas fa-exclamation-triangle"></i> <strong>KLUCZOWA INFORMACJA:</strong> Step Up
+                                Speak <strong>NIE ZWRACA</strong> pieniędzy za nieodbyte zajęcia, zarówno grupowe jak i
+                                indywidualne. Zakup kursu oznacza rezerwację miejsca i czasu lektora, niezależnie od
+                                obecności uczestnika.</p>
+                        </div>
+                        <div class="legal-point">
+                            7.1. Usługobiorca zobowiązuje się do punktualnego uczestnictwa w zajęciach.
+                        </div>
+                        <div class="legal-point">
+                            7.2. <strong>Nieobecność na zajęciach NIE upoważnia do żądania zwrotu opłaty za te zajęcia
+                                ani do przeniesienia opłaty na inne zajęcia.</strong>
+                        </div>
+                        <div class="legal-point">
+                            7.3. W przypadku zajęć indywidualnych, Usługobiorca może odwołać zajęcia najpóźniej na 24
+                            godziny przed planowanym terminem. W przeciwnym razie zajęcia uznaje się za odbyte i
+                            <strong>NIE przysługuje zwrot.</strong>
+                        </div>
+                    </div>
+
+                    <div class="legal-section-numbered">
+                        <h2>Reklamacje</h2>
+                        <div class="legal-point">
+                            8.1. Usługobiorca ma prawo złożyć reklamację dotyczącą świadczonych Usług.
+                        </div>
+                        <div class="legal-point">
+                            8.2. Reklamację należy złożyć w formie pisemnej na adres e-mail:
+                            stepupspeakofficial@gmail.com.
+                        </div>
+                    </div>
+
+                    <div class="legal-section-numbered">
+                        <h2>Odpowiedzialność</h2>
+                        <div class="legal-point">
+                            9.1. Usługodawca dokłada należytej staranności w świadczeniu Usług, jednak nie gwarantuje
+                            określonych rezultatów nauki.
+                        </div>
+                        <div class="legal-point">
+                            9.2. Usługodawca nie ponosi odpowiedzialności za:
+                            <ul>
+                                <li>przerwy w dostępie do Platformy spowodowane awariami technicznymi lub konserwacją
                                 </li>
-
-                                <li><strong>Po otrzymaniu dostępu:</strong>
-                                    <ul>
-                                        <li>Zwrot 50% wartości kursu jeśli nie pobrano materiałów</li>
-                                        <li>Po pobraniu materiałów - brak możliwości zwrotu</li>
-                                    </ul>
-                                </li>
-
-                                <li><strong>Wyłączenia:</strong>
-                                    <ul>
-                                        <li>Kursy w promocji (oznaczone jako "non-refundable")</li>
-                                        <li>Pakietowe oferty kursów</li>
-                                    </ul>
-                                </li>
+                                <li>niemożność uczestnictwa w zajęciach wynikającą z problemów technicznych po stronie
+                                    Usługobiorcy</li>
                             </ul>
-
-                            <div class="highlight">
-                                <p><i class="fas fa-info-circle"></i> <strong>Procedura zwrotu:</strong> Wniosek należy wysłać mailem na adres <a href="mailto:stepupspeakofficial@gmail.com">stepupspeakofficial@gmail.com</a> z podaniem numeru zamówienia.</p>
-                            </div>
                         </div>
+                    </div>
 
-                        <div class="legal-item">
-                            <h2>5. Dostęp do kursów</h2>
-                            <p>5.1. Użytkownik otrzymuje:</p>
+                    <div class="legal-section-numbered">
+                        <h2>Ochrona własności intelektualnej</h2>
+                        <div class="legal-point">
+                            10.1. Wszystkie materiały edukacyjne stanowią własność intelektualną Step Up Speak.
+                        </div>
+                        <div class="legal-point">
+                            10.2. Zabrania się:
                             <ul>
-                                <li>Dostęp do wszystkich materiałów kursu natychmiast po zakupie</li>
-                                <li>Termin ważności dostępu: 12 miesięcy od daty zakupu</li>
-                                <li>Możliwość uczestnictwa w zajęciach grupowych według harmonogramu</li>
-                            </ul>
-
-                            <p>5.2. Obowiązki użytkownika:</p>
-                            <ul>
-                                <li>Zakaz udostępniania konta i materiałów osobom trzecim</li>
-                                <li>Zakaz kopiowania i rozpowszechniania materiałów</li>
-                                <li>Przestrzeganie netykiety podczas zajęć online</li>
+                                <li>kopiowania, modyfikowania, rozpowszechniania materiałów poza gronem uczestników
+                                    Kursu</li>
+                                <li>wykorzystywania materiałów w celach komercyjnych</li>
+                                <li>nagrywania zajęć bez wyraźnej zgody Usługodawcy</li>
                             </ul>
                         </div>
+                    </div>
 
-                        <div class="legal-item">
-                            <h2>6. Odpowiedzialność</h2>
-                            <p>6.1. Usługodawca nie gwarantuje:</p>
-                            <ul>
-                                <li>Określonych rezultatów nauki</li>
-                                <li>Dostępności platformy 24/7 (planowane przerwy techniczne)</li>
-                            </ul>
-
-                            <p>6.2. Usługodawca zastrzega sobie prawo do:</p>
-                            <ul>
-                                <li>Zmiany harmonogramu zajęć z powodu force majeure</li>
-                                <li>Zmiany lektora prowadzącego kurs</li>
-                                <li>Modyfikacji programu kursu w celu poprawy jakości</li>
-                            </ul>
+                    <div class="legal-section-numbered">
+                        <h2>Ochrona danych osobowych</h2>
+                        <div class="legal-point">
+                            11.1. Administratorem danych osobowych jest Step Up Speak z siedzibą w Warszawie.
                         </div>
-
-                        <div class="legal-item">
-                            <h2>7. Ochrona własności intelektualnej</h2>
-                            <p>7.1. Wszystkie materiały (nagrania, ćwiczenia, prezentacje) są własnością Step Up Speak.</p>
-                            <p>7.2. Zabrania się:</p>
-                            <ul>
-                                <li>Nagrywania zajęć bez zgody</li>
-                                <li>Komercyjnego wykorzystywania materiałów</li>
-                                <li>Tworzenia pochodnych treści</li>
-                                <li>Udostępniania materiałów osobom trzecim</li>
-                            </ul>
+                        <div class="legal-point">
+                            11.2. Szczegółowe informacje dotyczące przetwarzania danych osobowych znajdują się w
+                            Polityce Prywatności dostępnej na stronie internetowej.
                         </div>
+                    </div>
 
-                        <div class="legal-item">
-                            <h2>8. Postanowienia końcowe</h2>
-                            <p>8.1. Spory rozstrzygane są przez sąd właściwy dla siedziby Usługodawcy.</p>
-                            <p>8.2. Zmiany regulaminu obowiązują po 14 dniach od publikacji na stronie.</p>
-                            <p>8.3. Regulamin wchodzi w życie z dniem 1 czerwca 2024 r.</p>
+                    <div class="legal-section-numbered">
+                        <h2>Postanowienia końcowe</h2>
+                        <div class="legal-point">
+                            12.1. Usługodawca zastrzega sobie prawo do zmiany Regulaminu z ważnych przyczyn.
                         </div>
+                        <div class="legal-point">
+                            12.2. O zmianach Usługobiorcy zostaną poinformowani z 14-dniowym wyprzedzeniem drogą
+                            mailową.
+                        </div>
+                        <div class="legal-point">
+                            12.3. Niniejszy Regulamin wchodzi w życie z dniem 1 czerwca 2024 roku.
+                        </div>
+                        <div class="contact-info-legal">
+                            <h3>Dane kontaktowe do reklamacji i odstąpienia od umowy:</h3>
+                            <p><strong>Step Up Speak</strong><br>
+                                E-mail: stepupspeakofficial@gmail.com<br>
+                                Telefon: +48 576 076 648</p>
+                        </div>
+                    </div>
 
-                        <div class="update-date">
-                            <p>Ostatnia aktualizacja: 1 maja 2025 r.</p>
-                        </div>
+                    <div class="update-date">
+                        <p>Ostatnia aktualizacja: 1 czerwca 2024 r.</p>
                     </div>
                 </div>
             </div>
@@ -1191,15 +754,19 @@
         <div class="footer-content">
             <div class="footer-column">
                 <h3>Step Up Speak</h3>
-                <p>Profesjonalne kursy językowe online, które pomogą Ci osiągnąć płynność językową i pewność siebie w komunikacji.</p>
+                <p>Profesjonalne kursy językowe online, które pomogą Ci osiągnąć płynność językową i pewność siebie w
+                    komunikacji.</p>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/groups/1007789447828292" target="_blank" rel="noopener" aria-label="Facebook">
+                    <a href="https://www.facebook.com/groups/1007789447828292" target="_blank" rel="noopener"
+                        aria-label="Facebook">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="https://www.instagram.com/stepupspeak_english/" target="_blank" rel="noopener" aria-label="Instagram">
+                    <a href="https://www.instagram.com/stepupspeak_english/" target="_blank" rel="noopener"
+                        aria-label="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://www.linkedin.com/company/stepupspeak" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/company/stepupspeak" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                     <a href="https://www.tiktok.com/@stepupspeak" target="_blank" rel="noopener" aria-label="TikTok">
@@ -1211,8 +778,11 @@
             <div class="footer-column">
                 <h3>Kursy</h3>
                 <ul>
-                    <li><a href="courses.html">Angielski ogólny (A1–C1+)</a></li>
-                    <li><a href="pricing.html#individual">Zajęcia indywidualne</a></li>
+                    <li><a href="courses.html#pricing">English Start (A1-A2)</a></li>
+                    <li><a href="courses.html#pricing">English Boost (B1-B2)</a></li>
+                    <li><a href="courses.html#pricing">English Pro (C1-C2)</a></li>
+                    <li><a href="courses.html#individual">Zajęcia indywidualne</a></li>
+                    <li><a href="courses.html#speakclub">English Speaking Club</a></li>
                 </ul>
             </div>
 
@@ -1220,8 +790,10 @@
                 <h3>Informacje</h3>
                 <ul>
                     <li><a href="tel:+48576076648"><i class="fas fa-phone-alt"></i> +48 576 076 648</a></li>
-                    <li><a href="mailto:stepupspeakofficial@gmail.com"><i class="fas fa-envelope"></i> stepupspeakofficial@gmail.com</a></li>
-                    <li><a href="contacts.html"><i class="fas fa-clock"></i> Pn-Pt: 8:00-20:00, Sb: 9:00 - 15:00</a></li>
+                    <li><a href="mailto:stepupspeakofficial@gmail.com"><i class="fas fa-envelope"></i>
+                            stepupspeakofficial@gmail.com</a></li>
+                    <li><a href="contacts.html"><i class="fas fa-clock"></i> Pn-Pt: 8:00-20:00, Sb: 9:00 - 15:00</a>
+                    </li>
                 </ul>
             </div>
 
@@ -1231,9 +803,7 @@
                     <li><a href="terms-of-service.html">Regulamin</a></li>
                     <li><a href="privacy-policy.html">Polityka prywatności</a></li>
                     <li><a href="blog.html">Blog</a></li>
-                    <li><a href="#faq">FAQ</a></li>
                     <li><a href="index.html#testimonials-heading">Opinie studentów</a></li>
-                    <li><a href="careers.html">Kariera</a></li>
                 </ul>
             </div>
         </div>
@@ -1243,39 +813,22 @@
         </div>
     </footer>
 
-    <!-- Cookie Consent Banner -->
-    <div id="cookie-consent-banner" class="cookie-consent-banner">
-        <div class="cookie-consent-container">
-            <div class="cookie-consent-text">
-                <p>Ta strona korzysta z plików cookie, aby zapewnić najlepszą jakość usług. 
-                    <a href="privacy-policy.html" target="_blank">Dowiedz się więcej</a>
-                </p>
-            </div>
-            <div class="cookie-consent-buttons">
-                <button id="reject-cookies" class="cookie-btn secondary-btn">Odrzuć</button>
-                <button id="accept-cookies" class="cookie-btn primary-btn">Akceptuję</button>
-            </div>
-        </div>
-    </div>
-
     <script>
-        // Mobile menu functionality
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mainNav = document.getElementById('main-nav');
-            
+
             if (mobileMenuButton && mainNav) {
-                mobileMenuButton.addEventListener('click', function() {
+                mobileMenuButton.addEventListener('click', function () {
                     const isExpanded = this.getAttribute('aria-expanded') === 'true';
                     this.setAttribute('aria-expanded', !isExpanded);
                     mainNav.classList.toggle('active');
                 });
             }
-            
-            // Header scroll effect
+
             const header = document.getElementById('header');
             if (header) {
-                window.addEventListener('scroll', function() {
+                window.addEventListener('scroll', function () {
                     if (window.scrollY > 50) {
                         header.classList.add('scrolled');
                     } else {
@@ -1283,34 +836,8 @@
                     }
                 });
             }
-            
-            // Cookie consent functionality
-            const cookieBanner = document.getElementById('cookie-consent-banner');
-            const acceptCookies = document.getElementById('accept-cookies');
-            const rejectCookies = document.getElementById('reject-cookies');
-            
-            // Check if user has already made a choice
-            if (!localStorage.getItem('cookieConsent')) {
-                // Show banner after a short delay
-                setTimeout(() => {
-                    cookieBanner.classList.add('active');
-                }, 1000);
-            }
-            
-            if (acceptCookies) {
-                acceptCookies.addEventListener('click', function() {
-                    localStorage.setItem('cookieConsent', 'accepted');
-                    cookieBanner.classList.remove('active');
-                });
-            }
-            
-            if (rejectCookies) {
-                rejectCookies.addEventListener('click', function() {
-                    localStorage.setItem('cookieConsent', 'rejected');
-                    cookieBanner.classList.remove('active');
-                });
-            }
         });
     </script>
 </body>
+
 </html>
